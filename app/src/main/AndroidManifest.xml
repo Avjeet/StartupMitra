@@ -19,10 +19,12 @@
         </activity>
         <activity android:name=".ShowActivity.ShowActivity" />
         <activity
-            android:name=".Feedback.Feedback"
-            android:label="@string/title_activity_feedback"
+            android:name=".FeedBack.ShowFeedback"
+            android:label="@string/title_activity_show_feedback"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Feedback.Post"></activity>
+        <activity android:name=".FeedBack.Add"
+            android:theme="@style/AppThemeee"
+            ></activity>
     </application>
 
 </manifest>

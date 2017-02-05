@@ -14,10 +14,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 
+import com.teamshunya.silencio.FeedBack.ShowFeedback;
 import com.teamshunya.silencio.R;
 import com.teamshunya.silencio.ShowActivity.Fragments.Arrival;
 import com.teamshunya.silencio.ShowActivity.Fragments.Departure;
-import com.teamshunya.silencio.ShowActivity.Fragments.Feeback;
 import com.teamshunya.silencio.ShowActivity.Fragments.Offers;
 
 import java.util.ArrayList;
@@ -36,7 +36,7 @@ public class ShowActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //back button
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -52,7 +52,7 @@ public class ShowActivity extends AppCompatActivity {
         adapter.addFragment(new Arrival(), "Arrivals");
         adapter.addFragment(new Departure(), "Departure");
         adapter.addFragment(new Offers(), "Offers");
-        adapter.addFragment(new Feeback(), "Feedback");
+
 
         viewPager.setAdapter(adapter);
     }
@@ -101,6 +101,7 @@ public class ShowActivity extends AppCompatActivity {
      switch (item.getItemId()) {
 
          case R.id.menu_bookmark:
+             startActivity(new Intent(ShowActivity.this, ShowFeedback.class));
 
      }
      return true;
