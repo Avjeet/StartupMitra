@@ -97,7 +97,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="fd40986f8d9a8693a85eebf28160e83bc68bd943">
+        sha1="68d0c8559fd0375b2f6bbbd43ec444c27e3be6cd">
         <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9e68eb1cd081f0c223a74120c71edb0d398fd484/classes.dex" />
     </item>
     <item
@@ -178,7 +178,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="1ee5b3acd7f478b85754da70ceb9e9dac4bffa20">
+        sha1="c0f1c7c211cb8aff6351754189bf8e17b6bc3d35">
         <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_28c385b7dbeb6da2472eb5ddb1be6f485f04e772/classes.dex" />
     </item>
     <item

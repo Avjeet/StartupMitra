@@ -37,6 +37,7 @@ public class ShowActivity extends AppCompatActivity {
 
         //back button
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setTitle("Silencio");
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
