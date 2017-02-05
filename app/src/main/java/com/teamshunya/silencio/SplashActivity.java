@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.menu.ShowableListMenu;
 
+import com.clevertap.android.sdk.CleverTapAPI;
 import com.teamshunya.silencio.ShowActivity.ShowActivity;
 
 public class SplashActivity extends AppCompatActivity {
@@ -17,6 +18,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
 
         new Handler().postDelayed(new Runnable() {
 

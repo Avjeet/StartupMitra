@@ -14,6 +14,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 
+import com.clevertap.android.sdk.CleverTapAPI;
+import com.clevertap.android.sdk.exceptions.CleverTapMetaDataNotFoundException;
+import com.clevertap.android.sdk.exceptions.CleverTapPermissionsNotSatisfied;
 import com.teamshunya.silencio.FeedBack.ShowFeedback;
 import com.teamshunya.silencio.R;
 import com.teamshunya.silencio.ShowActivity.Fragments.Arrival;
@@ -27,10 +30,21 @@ public class ShowActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    CleverTapAPI cleverTap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
+        //open app
+
+        try {
+            cleverTap = CleverTapAPI.getInstance(getApplicationContext());
+        } catch (CleverTapMetaDataNotFoundException e) {
+            // thrown if you haven't specified your CleverTap Account ID or Token in your AndroidManifest.xml
+        } catch (CleverTapPermissionsNotSatisfied e) {
+            // thrown if you haven’t requested the required permissions in your AndroidManifest.xml
+        }
+
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

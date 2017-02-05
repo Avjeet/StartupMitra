@@ -21,6 +21,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-10.0.1_aa1949b7ded875159d78628448c50222e5a039d0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -57,21 +66,21 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-10.0.1_6b0ec0b88ae637a366012cdc5270b47efe4ae892/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
         <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.1_4fd2dc216f7cb2e5f4142049aa19509bcf0323e8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4ef8ab5fee042023018249474bc93bd4b2b9c17e">
-        <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.0.0_33a1b525e9ac383c0444a8648433db081fd072e0/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -97,7 +106,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="68d0c8559fd0375b2f6bbbd43ec444c27e3be6cd">
+        sha1="934b46678ea219f1d2c865b516e354976ddc0f9c">
         <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9e68eb1cd081f0c223a74120c71edb0d398fd484/classes.dex" />
     </item>
     <item
@@ -129,21 +138,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6f65c144283b31b4b9a70e6e7aa4c4a1c897d4b8">
-        <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.0.0_e2d4980de6b83d482afa695a4bcda9903720ac5e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
         <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.1_b79f11ca23042d1c417d7c59aedefd0ac4bcde09/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
+        <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-10.0.1_ac7d146646b7a61ee8870e53238afe8aec02bc4b/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -156,21 +165,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.0/jars/classes.jar"
+        jar="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/exploded-aar/com.clevertap.android/clevertap-android-sdk/3.1.2/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="ea4b54dcbfe5ac05efb0a314105f07258118d3a7">
-        <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.0.0_72eb6b3308340018dc345cb15ac12660c3d894a6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0dc8ab07eeceda5e99b305c8069765056b6e5c9d">
-        <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.0.0_7b4d323909d608d87dea0e76cb9a54fbd1dcdbff/classes.dex" />
+        sha1="cefd4d4b1cb3c2468c9551127b05b1179afcd2a6">
+        <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.clevertap.android-clevertap-android-sdk-3.1.2_b207d7d53d5d46dbb05547a49f2c421747c696fa/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -178,7 +178,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="c0f1c7c211cb8aff6351754189bf8e17b6bc3d35">
+        sha1="4733613127792867d353d1538f039690d7e72c80">
         <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_28c385b7dbeb6da2472eb5ddb1be6f485f04e772/classes.dex" />
     </item>
     <item
@@ -216,6 +216,15 @@
         revision="25.0.2"
         sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
         <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.1.1_57e4bdefe94d50efb7fa1aa540c7a4dac83d7d04/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/SIlencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-10.0.1_d66b7ac0947b7cb77d7463ca6702c545e71ceeb9/classes.dex" />
     </item>
     <item
         is-multidex="true"

@@ -14,15 +14,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.clevertap.android.sdk.CleverTapAPI;
 import com.teamshunya.silencio.R;
 import com.teamshunya.silencio.ShowActivity.ShowActivity;
 
 public class ShowFeedback extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    CleverTapAPI cleverTap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //saw fedddback
+
         setContentView(R.layout.activity_show_feedback);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

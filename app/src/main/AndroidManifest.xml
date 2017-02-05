@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.teamshunya.silencio">
-
+    <!-- Required to allow the app to send events and user profile information -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Recommended so that CleverTap knows when to attempt a network call -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name="com.clevertap.android.sdk.Application"
+        >
+        <meta-data
+            android:name="CLEVERTAP_NOTIFICATION_ICON"
+            android:value="logoo"/> <!-- name of your file in the drawable directory without the file extension. -->
+
+        <service
+            android:name="com.clevertap.android.sdk.FcmTokenListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.clevertap.android.sdk.FcmMessageListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.clevertap.android.sdk.InstallReferrerBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+
+
+        <meta-data
+            android:name="CLEVERTAP_ACCOUNT_ID"
+            android:value="8WW-K8W-584Z"/>
+        <meta-data
+            android:name="CLEVERTAP_TOKEN"
+            android:value="0b3-00b"/>
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppThemee">
@@ -17,6 +54,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.clevertap.android.sdk.InAppNotificationActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden"/>
         <activity android:name=".ShowActivity.ShowActivity" />
         <activity
             android:name=".FeedBack.ShowFeedback"
