@@ -1,11 +1,10 @@
 package com.teamshunya.silencio.ShowActivity;
 
-import android.content.Intent;
-import android.support.design.widget.TabLayout;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -17,25 +16,68 @@ import android.view.MenuItem;
 import com.clevertap.android.sdk.CleverTapAPI;
 import com.clevertap.android.sdk.exceptions.CleverTapMetaDataNotFoundException;
 import com.clevertap.android.sdk.exceptions.CleverTapPermissionsNotSatisfied;
-import com.teamshunya.silencio.FeedBack.ShowFeedback;
-import com.teamshunya.silencio.R;
-import com.teamshunya.silencio.ShowActivity.Fragments.Arrival;
-import com.teamshunya.silencio.ShowActivity.Fragments.Departure;
-import com.teamshunya.silencio.ShowActivity.Fragments.Offers;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import com.teamshunya.silencio.R;
+import com.teamshunya.silencio.ShowActivity.Fragments.DealsFragment;
 
 public class ShowActivity extends AppCompatActivity {
-    private Toolbar toolbar;
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
+
+    private Fragment fragment;
+    private FragmentManager fragmentManager;
     CleverTapAPI cleverTap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
         //open app
+        BottomNavigationView bottomNavigation = (BottomNavigationView)findViewById(R.id.bottom_navigation);
+        bottomNavigation.inflateMenu(R.menu.bottom_menu);
+
+        fragmentManager = getSupportFragmentManager();
+        BottomNavigationViewHelper.disableShiftMode(bottomNavigation);
+        bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                switch (id){
+                    case R.id.action_search:
+                        fragment = new DealsFragment();
+                        break;
+                    case R.id.action_cart:
+                        fragment = new DealsFragment();
+                        break;
+                    case R.id.action_hot_deals:
+                        fragment = new DealsFragment();
+                        break;
+                    case R.id.action_feedback:
+                        fragment = new DealsFragment();
+                        break;
+                }
+                final FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.main_container, fragment).commit();
+                return true;
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         try {
             cleverTap = CleverTapAPI.getInstance(getApplicationContext());
@@ -46,60 +88,18 @@ public class ShowActivity extends AppCompatActivity {
         }
 
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+
 
         //back button
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setTitle("Silencio");
 
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
-        setupViewPager(viewPager);
 
-        tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(1).select();//sets default fragment as view
     }
 
-    private void setupViewPager(ViewPager viewPager) {
-
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new Arrival(), "Arrivals");
-        adapter.addFragment(new Departure(), "Departure");
-        adapter.addFragment(new Offers(), "Offers");
 
 
-        viewPager.setAdapter(adapter);
-    }
 
-    class ViewPagerAdapter extends FragmentPagerAdapter {
-        private final List<Fragment> mFragmentList = new ArrayList<>();
-        private final List<String> mFragmentTitleList = new ArrayList<>();
-
-        public ViewPagerAdapter(FragmentManager manager) {
-            super(manager);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            return mFragmentList.get(position);
-        }
-
-        @Override
-        public int getCount() {
-            return mFragmentList.size();
-        }
-
-        public void addFragment(Fragment fragment, String title) {
-            mFragmentList.add(fragment);
-            mFragmentTitleList.add(title);
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return mFragmentTitleList.get(position);
-        }
-    }
     @Override
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -114,12 +114,15 @@ public class ShowActivity extends AppCompatActivity {
  public boolean onOptionsItemSelected(MenuItem item) {
 
      switch (item.getItemId()) {
-
+//feedback
          case R.id.menu_bookmark:
-             startActivity(new Intent(ShowActivity.this, ShowFeedback.class));
+
+
 
      }
      return true;
  }
+
+
 
 }

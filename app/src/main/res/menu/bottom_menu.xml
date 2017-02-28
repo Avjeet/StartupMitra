@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:title="Arrival"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/arrival">
+    </item>
+    <item
+        android:id="@+id/action_cart"
+        android:title="Departure"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/takeoff">
+    </item>
+    <item
+        android:id="@+id/action_hot_deals"
+        android:title="Offers"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/food">
+    </item>
+    <item
+        android:id="@+id/action_feedback"
+        android:title="Feedback"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/feedback">
+    </item>
+
+</menu>
