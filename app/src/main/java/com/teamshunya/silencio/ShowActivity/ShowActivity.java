@@ -19,7 +19,10 @@ import com.clevertap.android.sdk.exceptions.CleverTapPermissionsNotSatisfied;
 
 
 import com.teamshunya.silencio.R;
+import com.teamshunya.silencio.ShowActivity.Fragments.Arrival;
 import com.teamshunya.silencio.ShowActivity.Fragments.DealsFragment;
+import com.teamshunya.silencio.ShowActivity.Fragments.Departure;
+import com.teamshunya.silencio.ShowActivity.Fragments.Feedback;
 
 public class ShowActivity extends AppCompatActivity {
 
@@ -36,22 +39,23 @@ public class ShowActivity extends AppCompatActivity {
 
         fragmentManager = getSupportFragmentManager();
         BottomNavigationViewHelper.disableShiftMode(bottomNavigation);
+
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
                 switch (id){
                     case R.id.action_search:
-                        fragment = new DealsFragment();
+                        fragment = new Arrival();
                         break;
                     case R.id.action_cart:
-                        fragment = new DealsFragment();
+                        fragment = new Departure();
                         break;
                     case R.id.action_hot_deals:
                         fragment = new DealsFragment();
                         break;
                     case R.id.action_feedback:
-                        fragment = new DealsFragment();
+                        fragment = new Feedback();
                         break;
                 }
                 final FragmentTransaction transaction = fragmentManager.beginTransaction();
