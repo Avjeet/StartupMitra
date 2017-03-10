@@ -18,6 +18,13 @@
         android:icon="@drawable/takeoff">
     </item>
     <item
+        android:id="@+id/action_profile"
+        android:title="Profile"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/account">
+    </item>
+    <item
         android:id="@+id/action_hot_deals"
         android:title="Offers"
         app:showAsAction="ifRoom"
@@ -31,5 +38,6 @@
         android:enabled="true"
         android:icon="@drawable/feedback">
     </item>
+
 
 </menu>

@@ -3,39 +3,39 @@
 
     <item
         is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.2.0/jars/classes.jar"
+        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.2.0_c780e4cb46a5ea37377a220919902096059e0ebb/classes.dex" />
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_9ae8cefca7550a2643c83beba6f8810ffc992777/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/10.2.0/jars/classes.jar"
+        jar="/Users/himanshusingh/.android/build-cache/b671cc1d202695e93f2a8f3ed7b167816588d13e/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="1df6d719c4e264d66bb98baa5cb637495b8cca66">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-common-10.2.0_03bf78b646bb617d38cc391d687e55064dc2fda5/classes.dex" />
+        sha1="3d6951cb416ebf8c66a32b9480808ca247b68344">
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8d616964b6d0b7cb2bc71d3096e78e08bfee5e3c/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.2.0/jars/classes.jar"
+        jar="/Users/himanshusingh/.android/build-cache/877616808d6ce933c10f53b66ba92025fd78bc36/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8e1d31656bc9f1889283836e025e6cb703acd38a">
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_68c752079ddc9a91254f3e57c101d91576bed678/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/himanshusingh/.android/build-cache/dcb63768aacd3b23c7dea5dd86ed7ea201d769a1/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="30a4938ea5235ccf532b3e9f04200e68547e36ad">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-25.2.0_cec0f98aab85fd907eb812cde84ace69dd2a1fcf/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.2.0_5cf8d795c2021ae0b641a59d458f474319e0491c/classes.dex" />
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9ebfd3268f0ea86900436c752de7f1ca54bb2570/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -43,233 +43,116 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="d5c680d46e0268ec8dd48e842245807204fa98ea">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a44a7b70d42d5aec8fef004eb6814be403563445/classes.dex" />
+        sha1="9b859a002ff34efa031e94c1050ae79852b648e5">
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a44a7b70d42d5aec8fef004eb6814be403563445/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.2.0_d4559083dd5fefb49b48de6e3ab4181ad4566dd7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8e1d31656bc9f1889283836e025e6cb703acd38a">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-10.2.0_45a1ecfe3900bc4758e8140503f8248f399479cb/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0e301f24b283f14b564f660c9abe863af6be5896">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-10.2.0_698547a7c3ba9b7a1f244fe64fac99b05938edf9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.2.0_a35778057e99b16497c2e0931addb970af2aad0d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.clevertap.android/clevertap-android-sdk/3.1.2/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cefd4d4b1cb3c2468c9551127b05b1179afcd2a6">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.clevertap.android-clevertap-android-sdk-3.1.2_0274124d0424b459492373e7b2504d4dfb87af41/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="94fca868854457ede6df15c902938468c71d579e">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-10.2.0_3714a9565e6dfe134668ece0012bbebd545f3dff/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.roughike/bottom-bar/2.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b034fc34b6f13e95ccaaff6aa76819c34c6bce41">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.roughike-bottom-bar-2.1.1_1c79e9b08159b2ebcb94496d2b32d927dd36d4a1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.2.0_53b9ce8485d9a268236756dcb72490236e7e4bec/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.2.0_1da35b684f99794f134d537a4b2c8778d53345e4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.2.0_cc3c89cc9648b2f56a6d3853ee3592e623fc5ed5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1ac56e5801e986583cbe27f2cce57f626cc7ff93">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-10.2.0_b6df91fb768b848394eceb6b04d0187d311c01fa/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.2.0_b14ddc341555acf3541139b80bc2e754725e6e19/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-database/1.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4e7ccc1d51d89540ea7ad426a1934204b674939b">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.firebaseui-firebase-ui-database-1.1.1_ea0950a80560edcf911e63ab6a039385542dd50e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.2.0_00c892f5d9294e7ba6759918f708d4f13c588a00/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ce9112e08a027c8620ae693983e38cdbb9f6371b">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-10.2.0_e5069058931796752548df6e216dde4ba4dc4297/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="9f82a34dac964d447187a66d689490f3884d681c">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9ae8cefca7550a2643c83beba6f8810ffc992777/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.android.support/design/25.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.2.0_6a744b3717b1187ca2d39b387c790c6268637326/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3d6951cb416ebf8c66a32b9480808ca247b68344">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-10.2.0_b2432434f518ff2dee0a1a7575a0cfbba6d94631/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/10.2.0/jars/classes.jar"
+        jar="/Users/himanshusingh/.android/build-cache/f58ed3f5c4adf126ee46451d34db5c42f9998baf/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="0d5cbbbfe040201c7569478b70a13b58fd11aab4">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-10.2.0_f3fbd30c8f5337476a52b89fb6c445a5f4852892/classes.dex" />
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_81a0ea8da485953dca57e5f25cc1a1b44cad8820/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.0/jars/classes.jar"
+        jar="/Users/himanshusingh/.android/build-cache/5bc2e721561d56dfc2ea0a3ec9ef26f71a21681f/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="bd75f9f0296fe220da6d0ad961831b04541c4452">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-10.2.0_59051e767b7d6b0d4a69b02041621ef56590a8d5/classes.dex" />
+        sha1="1ac56e5801e986583cbe27f2cce57f626cc7ff93">
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b8d9e89a266abac69cb7eaaba13edbb0b1c4438f/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.2.0/jars/classes.jar"
+        jar="/Users/himanshusingh/.android/build-cache/7cacc1e5f40f1861cbd330af4ed90e029fe53cae/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94fca868854457ede6df15c902938468c71d579e">
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_85c239bb4246b52bdeb5c7e3e4e3cd6df5f4375d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/himanshusingh/.android/build-cache/90953a4ccb9200c9061821b74f5e578f40f8a4ec/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4e7ccc1d51d89540ea7ad426a1934204b674939b">
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2f037556a565b77c7931088f1ccf42f5d9c10bd3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/himanshusingh/.android/build-cache/44d90d3cead2d0bba0656bd3718630788c2bfaf5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b034fc34b6f13e95ccaaff6aa76819c34c6bce41">
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7f4677123c0f638b656c4a914bc2978b43720891/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/himanshusingh/.android/build-cache/a2f390e95fa704ab5200796113cfe2f5b8376d7a/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="a61e7010aa7be5da53cd1bc5279630510c9a4912">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-10.2.0_19ddb7eccbc9ad7b6522edff4f530fa6e978d0da/classes.dex" />
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_48cde72a09a0c124fe10815aa921665e9038cb29/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/10.2.0/jars/classes.jar"
+        jar="/Users/himanshusingh/.android/build-cache/94c83108621f029edc20502718789131613645be/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="75575883f0348fc5d2be85f23bd10b050095cf17">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-10.2.0_a8a331079a12755f01cb27236e2db8c3d5472deb/classes.dex" />
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_573bc4038bf13171b47c9c320169596621c8378f/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.android.support/transition/25.2.0/jars/classes.jar"
+        jar="/Users/himanshusingh/.android/build-cache/ccc7cc0de2c7c30cb505103bd6e5c3c1b93a2fad/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="e51c2f662bb72419632af5192553c37e33890a99">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.2.0_d767f364774a96114d08701a33c32233a9dfbe88/classes.dex" />
+        sha1="ce9112e08a027c8620ae693983e38cdbb9f6371b">
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2cc3f49d37772b6b5858707fc47c3b068341f07c/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/jars/classes.jar"
+        jar="/Users/himanshusingh/.android/build-cache/4e28b4846209edd7e95804d7acdeaaf1b2d1f17f/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.2.0_68ce1738c441e0c7d72bf98b69566223862fa9ae/classes.dex" />
+        sha1="0e301f24b283f14b564f660c9abe863af6be5896">
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7d60d12d86cb4b27c40b290f8cf3587e65d143e6/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/jars/classes.jar"
+        jar="/Users/himanshusingh/.android/build-cache/341e4befce0ae8cd4e17d4796618d0a13bd31ddf/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
-        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.2.0_a65e30a3b1381075fda71466c2597966c0727353/classes.dex" />
+        sha1="1df6d719c4e264d66bb98baa5cb637495b8cca66">
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_11a77b84d1229243eae3f944004ae9c9620364ee/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/himanshusingh/.android/build-cache/59d203db852cee459c20211b3565def5be9576dc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bd75f9f0296fe220da6d0ad961831b04541c4452">
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2fd37c3edc8a5fed92e90716849f6268bacc5e7c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/himanshusingh/.android/build-cache/63cb0279db2ef0b4166781ed4ab1331e5629506c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cefd4d4b1cb3c2468c9551127b05b1179afcd2a6">
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cc38d587a64dfeaf2dec0abdfbb757698083e1a3/classes.dex" />
     </item>
 
 </items>

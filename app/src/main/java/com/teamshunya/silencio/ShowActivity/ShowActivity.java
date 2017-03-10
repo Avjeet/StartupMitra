@@ -8,9 +8,11 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Layout;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 
 import com.clevertap.android.sdk.CleverTapAPI;
@@ -23,6 +25,7 @@ import com.teamshunya.silencio.ShowActivity.Fragments.Arrival;
 import com.teamshunya.silencio.ShowActivity.Fragments.DealsFragment;
 import com.teamshunya.silencio.ShowActivity.Fragments.Departure;
 import com.teamshunya.silencio.ShowActivity.Fragments.Feedback;
+import com.teamshunya.silencio.ShowActivity.Fragments.Profile;
 
 public class ShowActivity extends AppCompatActivity {
 
@@ -36,7 +39,7 @@ public class ShowActivity extends AppCompatActivity {
         //open app
         BottomNavigationView bottomNavigation = (BottomNavigationView)findViewById(R.id.bottom_navigation);
         bottomNavigation.inflateMenu(R.menu.bottom_menu);
-
+        final View includedLayout = findViewById(R.id.cardBoarding);
         fragmentManager = getSupportFragmentManager();
         BottomNavigationViewHelper.disableShiftMode(bottomNavigation);
 
@@ -46,16 +49,24 @@ public class ShowActivity extends AppCompatActivity {
                 int id = item.getItemId();
                 switch (id){
                     case R.id.action_search:
+                        includedLayout.setVisibility(View.VISIBLE);
                         fragment = new Arrival();
                         break;
                     case R.id.action_cart:
+                        includedLayout.setVisibility(View.VISIBLE);
                         fragment = new Departure();
                         break;
                     case R.id.action_hot_deals:
+                        includedLayout.setVisibility(View.VISIBLE);
                         fragment = new DealsFragment();
                         break;
                     case R.id.action_feedback:
+                        includedLayout.setVisibility(View.GONE);
                         fragment = new Feedback();
+                        break;
+                    case R.id.action_profile:
+                        includedLayout.setVisibility(View.GONE);
+                        fragment = new Profile();
                         break;
                 }
                 final FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -63,6 +74,7 @@ public class ShowActivity extends AppCompatActivity {
                 return true;
             }
         });
+       // bottomNavigation.setBackgroundColor(getResources().getColor(R.color.bb_darkBackgroundColor));
 
 
 
