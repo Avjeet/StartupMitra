@@ -43,15 +43,20 @@ public class Profile  extends android.support.v4.app.Fragment  {
                 }
                 else {
                     onSignedOutCleanup();
+
                     startActivityForResult(
                             AuthUI.getInstance()
+
                                     .createSignInIntentBuilder()
                                     .setIsSmartLockEnabled(false)
                                     .setProviders(
                                             providers
                                     )
+
+                                    .setLogo(R.drawable.logo)
                                     .setTheme(R.style.profile)
                                     .build(),RC_SIGN_IN);
+
 
                 }
             }
@@ -62,8 +67,10 @@ public class Profile  extends android.support.v4.app.Fragment  {
 
     }
 
-    private void onSignedInInitialize(String displayName) {
+    private void onSignedInInitialize(String displayName)
+    {
 username.setText(displayName);
+
     }
     
 
