@@ -1,13 +1,16 @@
 package com.teamshunya.silencio.ShowActivity.Fragments;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,6 +26,7 @@ public class Profile  extends android.support.v4.app.Fragment  {
     public static final int RC_SIGN_IN =1;
     private FirebaseAuth mFirebaseAuth;
     TextView username;
+    ImageView imageView;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
     public Profile() {
@@ -39,7 +43,7 @@ public class Profile  extends android.support.v4.app.Fragment  {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(user !=null){
-                    onSignedInInitialize(user.getDisplayName());
+                    onSignedInInitialize(user.getDisplayName(),user.getPhotoUrl());
                 }
                 else {
                     onSignedOutCleanup();
@@ -60,18 +64,20 @@ public class Profile  extends android.support.v4.app.Fragment  {
 
                 }
             }
+
+            private void onSignedInInitialize(String displayName, Uri photoUrl) {
+                    username.setText(displayName);
+                Glide.with(getContext()).load(photoUrl).into(imageView);
+            }
+            };
         };
-    }
+
 
     private void onSignedOutCleanup() {
 
     }
 
-    private void onSignedInInitialize(String displayName)
-    {
-username.setText(displayName);
 
-    }
     
 
     @Override
@@ -91,6 +97,7 @@ username.setText(displayName);
 
         View view =  lf.inflate(R.layout.fragment_profile, container, false);
         username = (TextView) view.findViewById(R.id.username); //
+        imageView = (ImageView) view.findViewById(R.id.imageView); //
         return view;
     }
 }

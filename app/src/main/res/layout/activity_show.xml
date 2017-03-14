@@ -17,11 +17,10 @@
     <FrameLayout
         android:id="@+id/main_container"
         android:layout_below="@+id/cardBoarding"
-        android:layout_marginTop="5dp"
-        android:paddingRight="8dp"
-        android:paddingLeft="8dp"
 
-        android:paddingTop="8dp"
+
+
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottom_navigation"
