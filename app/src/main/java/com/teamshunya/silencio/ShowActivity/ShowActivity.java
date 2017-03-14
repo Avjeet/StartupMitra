@@ -20,6 +20,7 @@ import com.clevertap.android.sdk.exceptions.CleverTapMetaDataNotFoundException;
 import com.clevertap.android.sdk.exceptions.CleverTapPermissionsNotSatisfied;
 
 
+import com.heinrichreimersoftware.singleinputform.SingleInputFormActivity;
 import com.teamshunya.silencio.R;
 import com.teamshunya.silencio.ShowActivity.Fragments.Arrival;
 import com.teamshunya.silencio.ShowActivity.Fragments.DealsFragment;
@@ -28,7 +29,6 @@ import com.teamshunya.silencio.ShowActivity.Fragments.Feedback;
 import com.teamshunya.silencio.ShowActivity.Fragments.Profile;
 
 public class ShowActivity extends AppCompatActivity {
-
     private Fragment fragment;
     private FragmentManager fragmentManager;
     CleverTapAPI cleverTap;
