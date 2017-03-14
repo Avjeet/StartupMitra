@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide;
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.teamshunya.silencio.Classes.CircleTransform;
 import com.teamshunya.silencio.R;
 
 import java.util.Arrays;
@@ -67,7 +68,7 @@ public class Profile  extends android.support.v4.app.Fragment  {
 
             private void onSignedInInitialize(String displayName, Uri photoUrl) {
                     username.setText(displayName);
-                Glide.with(getContext()).load(photoUrl).into(imageView);
+                Glide.with(getContext()).load(photoUrl).transform(new CircleTransform(getContext())).into(imageView);
             }
             };
         };
