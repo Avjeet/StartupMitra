@@ -1,33 +1,45 @@
 package com.teamshunya.silencio.ShowActivity.Fragments;
 
+import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.teamshunya.silencio.Classes.CircleTransform;
+import com.teamshunya.silencio.Classes.FontChangeCrawler;
 import com.teamshunya.silencio.R;
+import com.teamshunya.silencio.ShowActivity.ShowActivity;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class Profile  extends android.support.v4.app.Fragment  {
     public static final String TAG ="LoginActivity";
+
     public static final String ANONYMOUS ="anonymous";
     public static final int DEFAULT_MSG_LENGTH_LIMIT =1000;
     public static final int RC_SIGN_IN =1;
     private FirebaseAuth mFirebaseAuth;
-    TextView username;
+    TextView username,emailID;
     ImageView imageView;
+    Button Logout;
+
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
     public Profile() {
@@ -44,7 +56,7 @@ public class Profile  extends android.support.v4.app.Fragment  {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(user !=null){
-                    onSignedInInitialize(user.getDisplayName(),user.getPhotoUrl());
+                    onSignedInInitialize(user.getDisplayName(),user.getPhotoUrl(),user.getEmail());
                 }
                 else {
                     onSignedOutCleanup();
@@ -66,8 +78,9 @@ public class Profile  extends android.support.v4.app.Fragment  {
                 }
             }
 
-            private void onSignedInInitialize(String displayName, Uri photoUrl) {
+            private void onSignedInInitialize(String displayName, Uri photoUrl, String email) {
                     username.setText(displayName);
+                    emailID.setText(email);
                 Glide.with(getContext()).load(photoUrl).transform(new CircleTransform(getContext())).into(imageView);
             }
             };
@@ -79,7 +92,7 @@ public class Profile  extends android.support.v4.app.Fragment  {
     }
 
 
-    
+
 
     @Override
     public void onResume() {
@@ -96,9 +109,19 @@ public class Profile  extends android.support.v4.app.Fragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LayoutInflater lf = getActivity().getLayoutInflater();
 
+
+
         View view =  lf.inflate(R.layout.fragment_profile, container, false);
         username = (TextView) view.findViewById(R.id.username); //
+        Logout = (Button) view.findViewById(R.id.logout); //
+
+        emailID = (TextView) view.findViewById(R.id.emailid); //
         imageView = (ImageView) view.findViewById(R.id.imageView); //
         return view;
     }
+
+
+
+
+
 }

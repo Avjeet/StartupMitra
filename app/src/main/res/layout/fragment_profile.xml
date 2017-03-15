@@ -1,41 +1,88 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    tools:context="com.teamshunya.silencio.ShowActivity.Fragments.Profile">
-
-    <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="250dp"
-        android:background="#c2c2c2"
-        android:id="@+id/imageView"
-        />
-
-    <TextView
+    android:layout_weight="1"
+    >
+    <LinearLayout
         android:layout_width="match_parent"
-
-        android:layout_height="match_parent"
-        android:id="@+id/username"
-        android:text="@string/hello_blank_fragment"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
-        android:layout_width="wrap_content"
+       android:orientation="vertical"
+        android:layout_weight="0.4"
+        android:gravity="center"
+android:background="@drawable/background"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:id="@+id/imageView"
+            android:background="@drawable/stroke"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:textSize="22dp"
+            android:textColor="#fff"
+            android:layout_marginTop="40dp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c2c2c2"/>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/share"
-        app:layout_anchor="@+id/imageView"
-        app:layout_anchorGravity="bottom|right|end"
-        android:layout_marginRight="24dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="24dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_weight="0.6"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
 
-</RelativeLayout>
+            android:layout_weight="1"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                >
+
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:src="@drawable/gmail"
+
+            android:layout_marginLeft="10sp"
+            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Email ID"
+            android:textColor="#000"
+                android:textAlignment="center"
+
+                android:id="@+id/emailid"
+                android:textSize="20sp"
+                />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:background="@drawable/curve"
+                android:text="Logout"
+                android:id="@+id/logout"
+               android:layout_marginBottom="30dp"
+                android:textColor="#fff"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

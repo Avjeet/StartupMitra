@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:background="#eef3f7"
+
 
 
     android:layout_height="match_parent"
