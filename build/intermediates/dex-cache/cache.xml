@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="b378507d85880e0347e4b4094fa6daa8c988fb03">
+        sha1="b757eb58f20253df4f617a304fc5a7e1c1d592ad">
         <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a44a7b70d42d5aec8fef004eb6814be403563445/classes.dex" />
     </item>
     <item
@@ -74,6 +74,15 @@
         <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/pre-dexed/debug/classes_5860ec85f75606f349831a0c50d6871a8bf1bf41.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/himanshusingh/.android/build-cache/a7f1ea251395e00ffe2dd15bbd058a4670aeb524/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="12b7e8b3bf0bda244dd2660fab68520a780065f1">
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f0ee209e71056a33c9a43df893360a720acb63e9/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/himanshusingh/.android/build-cache/369fcfa883c3565aade3cd95cd1210780442165f/output/jars/classes.jar"
         jumboMode="false"
@@ -108,6 +117,15 @@
         revision="25.0.2"
         sha1="1df6d719c4e264d66bb98baa5cb637495b8cca66">
         <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/pre-dexed/debug/classes_11a77b84d1229243eae3f944004ae9c9620364ee.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/himanshusingh/.android/build-cache/073db3c8d3ec89b3a3eacead224d5d4c0a490b09/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a8ae156c2726ac9c56daaf4b49452ec2cdb7bba9">
+        <dex dex="/Users/himanshusingh/Documents/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_561d91d7aee35bdb12a53b8a90393c4e5e750d35/classes.dex" />
     </item>
     <item
         is-multidex="false"

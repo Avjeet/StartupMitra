@@ -20,7 +20,6 @@ import com.clevertap.android.sdk.exceptions.CleverTapMetaDataNotFoundException;
 import com.clevertap.android.sdk.exceptions.CleverTapPermissionsNotSatisfied;
 
 
-import com.heinrichreimersoftware.singleinputform.SingleInputFormActivity;
 import com.teamshunya.silencio.R;
 import com.teamshunya.silencio.ShowActivity.Fragments.Arrival;
 import com.teamshunya.silencio.ShowActivity.Fragments.DealsFragment;
