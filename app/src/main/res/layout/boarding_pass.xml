@@ -33,11 +33,11 @@
                    android:paddingTop="10dp"
                     android:paddingBottom="5dp"
                     android:layout_height="wrap_content">
-                    <TextView
+                    <com.teamshunya.silencio.Classes.CustomFontTextView
                         android:layout_width="wrap_content"
                         android:textSize="30sp"
                         android:layout_weight="0.3"
-                        android:textStyle="bold"
+
                         android:layout_marginRight="10dp"
                         android:layout_height="wrap_content"
                         android:text="SRC"
@@ -50,13 +50,13 @@
                         android:layout_weight="0.2"
                         android:src="@drawable/flight"
                         />
-                    <TextView
+                    <com.teamshunya.silencio.Classes.CustomFontTextView
                         android:layout_width="wrap_content"
                         android:textSize="30sp"
                         android:layout_weight="0.4"
                         android:layout_height="wrap_content"
                         android:text="Des"
-                        android:textStyle="bold"
+
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textAllCaps="true"
@@ -83,7 +83,7 @@
                         android:layout_weight="0.25"
                         android:padding="10dp"
                         >
-                        <TextView
+                        <com.teamshunya.silencio.Classes.CustomFontTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="flight"
@@ -91,7 +91,7 @@
                             android:textAllCaps="true"
 
                             />
-                        <TextView
+                        <com.teamshunya.silencio.Classes.CustomFontTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="SU254"
@@ -111,7 +111,7 @@
                         android:gravity="center"
                         android:padding="10dp"
                         >
-                        <TextView
+                        <com.teamshunya.silencio.Classes.CustomFontTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="gate"
@@ -119,7 +119,7 @@
                             android:textAllCaps="true"
 
                             />
-                        <TextView
+                        <com.teamshunya.silencio.Classes.CustomFontTextView
                             android:textStyle="bold"
                             android:textSize="18sp"
                             android:layout_width="wrap_content"
@@ -139,7 +139,7 @@
                         android:gravity="center"
                         android:padding="10dp"
                         >
-                        <TextView
+                        <com.teamshunya.silencio.Classes.CustomFontTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Seat"
@@ -148,7 +148,7 @@
                             android:textAllCaps="true"
 
                             />
-                        <TextView
+                        <com.teamshunya.silencio.Classes.CustomFontTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="12F"
@@ -168,7 +168,7 @@
                         android:layout_weight="0.25"
                         android:padding="10dp"
                         >
-                        <TextView
+                        <com.teamshunya.silencio.Classes.CustomFontTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="ETD"
@@ -176,7 +176,7 @@
                             android:textAllCaps="true"
 
                             />
-                        <TextView
+                        <com.teamshunya.silencio.Classes.CustomFontTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2200"

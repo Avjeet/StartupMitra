@@ -9,7 +9,7 @@
        android:orientation="vertical"
         android:layout_weight="0.4"
         android:gravity="center"
-android:background="@drawable/background"
+        android:background="@drawable/background"
         android:layout_height="wrap_content">
         <ImageView
             android:layout_width="150dp"
@@ -18,7 +18,7 @@ android:background="@drawable/background"
             android:id="@+id/imageView"
             android:background="@drawable/stroke"
             />
-        <TextView
+        <com.teamshunya.silencio.Classes.CustomFontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/username"
@@ -59,7 +59,7 @@ android:background="@drawable/background"
 
             android:layout_marginLeft="10sp"
             />
-            <TextView
+            <com.teamshunya.silencio.Classes.CustomFontTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 

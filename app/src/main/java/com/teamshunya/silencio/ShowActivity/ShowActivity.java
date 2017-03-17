@@ -74,7 +74,7 @@ public class ShowActivity extends AppCompatActivity {
                 return true;
             }
         });
-       // bottomNavigation.setBackgroundColor(getResources().getColor(R.color.bb_darkBackgroundColor));
+
 
 
 
