@@ -9,7 +9,7 @@
        android:orientation="vertical"
         android:layout_weight="0.4"
         android:gravity="center"
-        android:background="@drawable/background"
+        android:background="@color/colorRed"
         android:layout_height="wrap_content">
         <ImageView
             android:layout_width="150dp"
