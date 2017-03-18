@@ -75,6 +75,7 @@
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
+            android:layout_marginBottom="20dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:orientation="vertical"
@@ -83,6 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+
                 >
                 <com.teamshunya.silencio.Classes.CustomFontTextView
                     android:layout_width="match_parent"
@@ -102,6 +104,14 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/feedbk"
+            android:textColorHint="#fff"
+            android:padding="20dp"
+            android:background="@drawable/edittext"
+            />
 
     </LinearLayout>
 </ScrollView>
