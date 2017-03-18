@@ -23,14 +23,14 @@ import static com.twitter.sdk.android.core.TwitterCore.TAG;
 public class Feedback extends android.support.v4.app.Fragment  {
     SmileRating smileRating;
     public Feedback() {
+
     }
 
 
 
     private void bindViews(View rootLayout) {
          smileRating = (SmileRating)rootLayout.findViewById(R.id.smile_rating);
-
-        smileRating.setOnSmileySelectionListener(new SmileRating.OnSmileySelectionListener() {
+         smileRating.setOnSmileySelectionListener(new SmileRating.OnSmileySelectionListener() {
             @Override
             public void onSmileySelected(@BaseRating.Smiley int smiley, boolean reselected) {
                 // reselected is false when user selects different smiley that previously selected one
