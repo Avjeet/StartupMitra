@@ -18,4 +18,7 @@ import retrofit2.http.GET;
 public interface APIInterface {
     @GET("/arrival")
     Call<ArrivalList> getFlightDetails();
+
+    @GET("/offer")
+    Call<ArrivalList> getOffer();
 }
