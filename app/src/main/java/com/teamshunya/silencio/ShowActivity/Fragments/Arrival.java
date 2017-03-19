@@ -42,13 +42,8 @@ public class Arrival extends android.support.v4.app.Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         loadArrivalList();
         super.onActivityCreated(savedInstanceState);
-        Bundle bundle = getArguments();
 
-        }
-
-
-
-
+    }
 
 
     @Override
@@ -68,7 +63,6 @@ public class Arrival extends android.support.v4.app.Fragment {
         arrivalList = new ArrayList<>();
 
 
-
     }
 
 
@@ -77,10 +71,11 @@ public class Arrival extends android.support.v4.app.Fragment {
         parentView = view.findViewById(R.id.parentLayout);
         listView = (ListView) view.findViewById(R.id.arrival_list);
         listView.setDivider(null);
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Snackbar.make(parentView, arrivalList.get(position).getSource() + " => " + arrivalList.get(position).getEta(), Snackbar.LENGTH_LONG).show();
+                Snackbar.make(parentView,"Flight from "+ arrivalList.get(position).getSource() + " is expected to be here at " + arrivalList.get(position).getEta() + " hrs." + "Collect your baggage from "+ arrivalList.get(position).getGate() +" Counter :)", Snackbar.LENGTH_LONG).show();
             }
         });
 

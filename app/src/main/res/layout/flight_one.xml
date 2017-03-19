@@ -22,7 +22,6 @@
         android:fadingEdgeLength="2dp"
         android:orientation="horizontal"
         android:shadowColor="#000"
-
         android:shadowDx="00"
         android:shadowDy="30">
 
@@ -107,7 +106,7 @@
                         android:text="Des"
                         android:id="@+id/status_text"
                         android:textAllCaps="true"
-                        android:textSize="14sp"
+                        android:textSize="22sp"
                         android:textStyle="normal" />
                 </LinearLayout>
 
@@ -149,7 +148,7 @@
                         android:text="SU254"
                         android:id="@+id/flight_text"
                         android:textAllCaps="true"
-                        android:textSize="14sp" />
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -177,7 +176,7 @@
                         android:text="22A"
                         android:id="@+id/terminal_text"
                         android:textAllCaps="true"
-                        android:textSize="14sp" />
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -203,7 +202,7 @@
                         android:text="2200"
                         android:textAllCaps="true"
                         android:id="@+id/time_text"
-                        android:textSize="14sp" />
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 

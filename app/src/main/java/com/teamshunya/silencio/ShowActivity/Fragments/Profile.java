@@ -1,5 +1,6 @@
 package com.teamshunya.silencio.ShowActivity.Fragments;
 
+import android.icu.text.SimpleDateFormat;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.firebase.ui.auth.AuthUI;
@@ -19,6 +21,7 @@ import com.teamshunya.silencio.Classes.CustomFontTextView;
 import com.teamshunya.silencio.R;
 
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
 
 public class Profile  extends android.support.v4.app.Fragment  {
@@ -34,6 +37,7 @@ public class Profile  extends android.support.v4.app.Fragment  {
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
     public Profile() {
+
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         final List<AuthUI.IdpConfig> providers = Arrays.asList(
@@ -71,7 +75,11 @@ public class Profile  extends android.support.v4.app.Fragment  {
                 Glide.with(getContext()).load(photoUrl).transform(new CircleTransform(getContext())).into(imageView);
             }
             };
-        };
+        }
+
+
+
+
 
 
     private void onSignedOutCleanup() {
