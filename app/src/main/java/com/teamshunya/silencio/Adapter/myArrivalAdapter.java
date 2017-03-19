@@ -57,7 +57,7 @@ public class myArrivalAdapter extends ArrayAdapter<Arrival> {
 
         Arrival item = getItem(position);
 
-        vh.status_text.setText(item.getDelay());
+        vh.status_text.setText(item.getDelay() + " Delayed");
         vh.src_text.setText(item.getSource());
         vh.time_text.setText(item.getGate());
         vh.flight_text.setText(item.getFlightNo());

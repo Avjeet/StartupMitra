@@ -39,7 +39,21 @@ public class Arrival extends android.support.v4.app.Fragment {
     }
 
     @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        loadArrivalList();
+        super.onActivityCreated(savedInstanceState);
+        Bundle bundle = getArguments();
+
+        }
+
+
+
+
+
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        loadArrivalList();
         return inflater.inflate(R.layout.fragment_arrival, container, false);
 
 
@@ -48,16 +62,18 @@ public class Arrival extends android.support.v4.app.Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        loadArrivalList();
         super.onViewCreated(view, savedInstanceState);
         bindViews(view);
         arrivalList = new ArrayList<>();
-        loadArrivalList();
+
 
 
     }
 
 
     private void bindViews(View view) {
+        loadArrivalList();
         parentView = view.findViewById(R.id.parentLayout);
         listView = (ListView) view.findViewById(R.id.arrival_list);
         listView.setDivider(null);

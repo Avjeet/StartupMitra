@@ -36,6 +36,7 @@ public class ShowActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
+        launchArrival();
         //open app
         BottomNavigationView bottomNavigation = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         bottomNavigation.inflateMenu(R.menu.bottom_menu);
@@ -51,19 +52,15 @@ public class ShowActivity extends AppCompatActivity {
                         fragment = new Arrival();
                         break;
                     case R.id.action_cart:
-
                         fragment = new Departure();
                         break;
                     case R.id.action_hot_deals:
-
                         fragment = new DealsFragment();
                         break;
                     case R.id.action_feedback:
-
                         fragment = new Feedback();
                         break;
                     case R.id.action_profile:
-
                         fragment = new Profile();
                         break;
                 }
@@ -73,7 +70,6 @@ public class ShowActivity extends AppCompatActivity {
             }
         });
 
-
         try {
             cleverTap = CleverTapAPI.getInstance(getApplicationContext());
         } catch (CleverTapMetaDataNotFoundException e) {
@@ -81,10 +77,12 @@ public class ShowActivity extends AppCompatActivity {
         } catch (CleverTapPermissionsNotSatisfied e) {
             // thrown if you haven’t requested the required permissions in your AndroidManifest.xml
         }
-
-
-        //back button
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+    }
+    private void launchArrival() {
+        Fragment fragment = new Arrival();
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(R.id.main_container, fragment).commit();
 
 
     }
