@@ -31,14 +31,14 @@ public class ShowActivity extends AppCompatActivity {
     private Fragment fragment;
     private FragmentManager fragmentManager;
     CleverTapAPI cleverTap;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
         //open app
-        BottomNavigationView bottomNavigation = (BottomNavigationView)findViewById(R.id.bottom_navigation);
+        BottomNavigationView bottomNavigation = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         bottomNavigation.inflateMenu(R.menu.bottom_menu);
-        final View includedLayout = findViewById(R.id.cardBoarding);
         fragmentManager = getSupportFragmentManager();
         BottomNavigationViewHelper.disableShiftMode(bottomNavigation);
 
@@ -46,25 +46,24 @@ public class ShowActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-                switch (id){
+                switch (id) {
                     case R.id.action_search:
-                        includedLayout.setVisibility(View.VISIBLE);
                         fragment = new Arrival();
                         break;
                     case R.id.action_cart:
-                        includedLayout.setVisibility(View.VISIBLE);
+
                         fragment = new Departure();
                         break;
                     case R.id.action_hot_deals:
-                        includedLayout.setVisibility(View.VISIBLE);
+
                         fragment = new DealsFragment();
                         break;
                     case R.id.action_feedback:
-                        includedLayout.setVisibility(View.GONE);
+
                         fragment = new Feedback();
                         break;
                     case R.id.action_profile:
-                        includedLayout.setVisibility(View.GONE);
+
                         fragment = new Profile();
                         break;
                 }
@@ -73,25 +72,6 @@ public class ShowActivity extends AppCompatActivity {
                 return true;
             }
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         try {
@@ -103,16 +83,11 @@ public class ShowActivity extends AppCompatActivity {
         }
 
 
-
-
-
         //back button
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
 
     }
-
-
 
 
     @Override
@@ -124,20 +99,18 @@ public class ShowActivity extends AppCompatActivity {
 
     }
 
- @Override
+    @Override
 
- public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
 
-     switch (item.getItemId()) {
+        switch (item.getItemId()) {
 //feedback
-         case R.id.menu_bookmark:
+            case R.id.menu_bookmark:
 
 
-
-     }
-     return true;
- }
-
+        }
+        return true;
+    }
 
 
 }

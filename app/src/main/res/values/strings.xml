@@ -12,4 +12,6 @@
     <string name="feedbk">Any other thing you want us to now ?</string>
     <string name="feedback">Lets us serve you better the next time.</string>
     <string name="title_activity_show_feedback">ShowFeedback</string>
+    <string name="string_getting_json_title">getFlightDetails</string>
+    <string name="string_getting_json_message">Please Keep Patiece</string>
 </resources>
