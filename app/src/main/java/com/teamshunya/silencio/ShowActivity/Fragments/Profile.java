@@ -93,7 +93,7 @@ public class Profile  extends android.support.v4.app.Fragment  {
         LayoutInflater lf = getActivity().getLayoutInflater();
         View view =  lf.inflate(R.layout.fragment_profile, container, false);
         username = (CustomFontTextView) view.findViewById(R.id.username);
-        Logout = (Button) view.findViewById(R.id.logout);
+        Logout = (Button) view.findViewById(R.id.logut);
         emailID = (CustomFontTextView) view.findViewById(R.id.emailid);
         imageView = (ImageView) view.findViewById(R.id.imageView);
         return view;

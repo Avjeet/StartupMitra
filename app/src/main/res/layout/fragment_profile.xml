@@ -1,88 +1,76 @@
-<LinearLayout android:layout_width="match_parent"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:diagonal="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_weight="1"
-    >
-    <LinearLayout
+    android:orientation="vertical">
+
+    <developer.shivam.library.DiagonalView
+        android:id="@+id/diagonal_view"
         android:layout_width="match_parent"
-       android:orientation="vertical"
-        android:layout_weight="0.4"
-        android:gravity="center"
-        android:background="@color/colorRed"
-        android:layout_height="wrap_content">
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorPrimary"
+        diagonal:angle="10"
+        diagonal:backgroundColor="@color/colorPrimary"
+        diagonal:diagonalColor="#FFFFFF"
+        diagonal:diagonalGravity="left" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="-100dp">
+
+
+
+
+
+
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
             android:id="@+id/imageView"
-            android:background="@drawable/stroke"
-            />
-        <com.teamshunya.silencio.Classes.CustomFontTextView
+            android:layout_marginTop="40dp"
+            android:background="@drawable/stroke" />
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/username"
-            android:textSize="22dp"
-            android:textColor="#fff"
-            android:layout_marginTop="40dp"
-            />
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#c2c2c2"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.6"
-        android:orientation="vertical"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
 
-            android:layout_weight="1"
-            >
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_weight="0.5"
-                android:gravity="center_vertical"
-                >
-
-        <ImageView
-            android:layout_width="25sp"
-            android:layout_height="25sp"
-            android:src="@drawable/gmail"
-
-            android:layout_marginLeft="10sp"
-            />
             <com.teamshunya.silencio.Classes.CustomFontTextView
-                android:layout_width="match_parent"
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Bebe Rexha"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
 
-                android:text="Email ID"
-            android:textColor="#000"
-                android:textAlignment="center"
-
+            <com.teamshunya.silencio.Classes.CustomFontTextView
                 android:id="@+id/emailid"
-                android:textSize="20sp"
-                />
-            </LinearLayout>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="musician, singer, songwriter"
+                android:textSize="14sp" />
 
             <Button
+                android:id="@+id/logut"
                 android:layout_width="wrap_content"
-                android:background="@drawable/curve"
-                android:text="Logout"
-                android:id="@+id/logout"
-               android:layout_marginBottom="30dp"
-                android:textColor="#fff"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@drawable/curve" />
         </LinearLayout>
-
     </LinearLayout>
-
 </LinearLayout>
