@@ -4,7 +4,8 @@
     xmlns:diagonal="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="match_parent"
+
     android:background="@color/background"
     android:orientation="vertical">
 
@@ -12,22 +13,20 @@
         android:id="@+id/diagonal_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
         android:scaleType="centerCrop"
         android:src="@drawable/back"
+        android:layout_weight="2"
         diagonal:angle="10"
         diagonal:diagonalColor="@color/background"
         diagonal:diagonalGravity="left" />
-
     <LinearLayout
 
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="30dp"
-        android:layout_marginStart="20dp"
+
         android:layout_marginTop="-100dp"
-        android:layout_weight="5"
         android:orientation="vertical">
 
 
@@ -44,8 +43,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="bottom"
 
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="12dp"
+
 
             android:orientation="vertical">
 
@@ -68,14 +66,15 @@
 
             <Button
                 android:id="@+id/logut"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_gravity="bottom"
-                android:background="@drawable/curve"
+               android:background="@color/colorPrimary"
                 android:text="Logout"
                 android:layout_marginTop="24dp"
                 android:textColor="#fff" />
         </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>

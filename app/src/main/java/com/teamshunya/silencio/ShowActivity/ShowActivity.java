@@ -49,8 +49,7 @@ public class ShowActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show);
         launchDeparture();
         toolbar();
-        slideUpAnimation = AnimationUtils.loadAnimation(getApplicationContext(),
-                R.anim.slide_from_left);
+
 
         //open app
 
@@ -159,7 +158,6 @@ public class ShowActivity extends AppCompatActivity {
                                 FragmentManager manager = getSupportFragmentManager();
                                 FragmentTransaction transaction = manager.beginTransaction();
                                 transaction.add(R.id.main_container, fragment)
-                                        .setCustomAnimations(R.anim.slide_in_right,R.anim.slide_from_right)
                                         .commit();
 
                         }
