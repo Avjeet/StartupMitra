@@ -10,11 +10,22 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-
+        android:elevation="5dp"
+        android:background="@color/bottom"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary" >
-
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize">
+        <com.teamshunya.silencio.Classes.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/toolbar_title"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/view"
+            android:layout_alignStart="@+id/view" />
     </android.support.v7.widget.Toolbar>
 
 
@@ -24,7 +35,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbar"
         android:layout_above="@+id/bottom_navigation"
-        android:layout_alignParentTop="true"></FrameLayout>
+        ></FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -32,4 +43,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:itemBackground="@color/bottom"></android.support.design.widget.BottomNavigationView>
+
+
 </RelativeLayout>

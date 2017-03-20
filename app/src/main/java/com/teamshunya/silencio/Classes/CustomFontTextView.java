@@ -46,7 +46,7 @@ public class CustomFontTextView extends TextView {
         switch (textStyle) {
             case Typeface.BOLD: // bold
 //                return FontCache.getTypeface("SourceSansPro-Bold.ttf", context);
-                return Typeface.createFromAsset(context.getAssets(), "fonts/OpenSans-SemiBold.ttf");
+                return Typeface.createFromAsset(context.getAssets(), "fonts/OpenSans-Semibold.ttf");
 
             case Typeface.ITALIC: // italic
 //                return FontCache.getTypeface("SourceSansPro-Italic.ttf", context);

@@ -1,6 +1,9 @@
 package com.teamshunya.silencio.ShowActivity;
 
+import android.app.ActivityOptions;
+import android.content.Intent;
 import android.os.Build;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomNavigationView;
@@ -15,6 +18,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Toast;
 
 
 import com.clevertap.android.sdk.CleverTapAPI;
@@ -31,9 +37,11 @@ import com.teamshunya.silencio.ShowActivity.Fragments.Profile;
 
 public class ShowActivity extends AppCompatActivity {
     private Fragment fragment;
+    Animation slideUpAnimation;
     private FragmentManager fragmentManager;
     CleverTapAPI cleverTap;
     private Toolbar toolbar;
+    boolean doubleBackToExitPressedOnce = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +49,8 @@ public class ShowActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show);
         launchDeparture();
         toolbar();
+        slideUpAnimation = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.slide_from_left);
 
         //open app
 
@@ -89,9 +99,17 @@ public class ShowActivity extends AppCompatActivity {
 
     private void toolbar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(getResources().getString(R.string.app_name));
-        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+        toolbar.setNavigationIcon(R.drawable.ic_menu_camera);
+        setTitle("  ");
         setSupportActionBar(toolbar);
+
+        toolbar.findViewById(R.id.toolbar_title).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ShowActivity.class));
+            }
+        });
+
     }
 
 
@@ -106,7 +124,27 @@ public class ShowActivity extends AppCompatActivity {
 
 
     @Override
+    public void onBackPressed() {
 
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        }, 2000);
+    }
+
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.inflateMenu(R.menu.menu);
@@ -120,7 +158,9 @@ public class ShowActivity extends AppCompatActivity {
                                 Fragment fragment = new Profile();
                                 FragmentManager manager = getSupportFragmentManager();
                                 FragmentTransaction transaction = manager.beginTransaction();
-                                transaction.add(R.id.main_container, fragment).commit();
+                                transaction.add(R.id.main_container, fragment)
+                                        .setCustomAnimations(R.anim.slide_in_right,R.anim.slide_from_right)
+                                        .commit();
 
                         }
 
@@ -131,7 +171,6 @@ public class ShowActivity extends AppCompatActivity {
 
         return true;
     }
-
 
 
 
