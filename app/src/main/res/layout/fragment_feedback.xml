@@ -20,7 +20,7 @@
             android:text="@string/feedback"
             android:textColor="#fff"
             android:textSize="25sp" />
-
+        <!--question0-->
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,17 +36,20 @@
                     android:layout_height="wrap_content"
                     android:background="#334255"
                     android:padding="10dp"
-                    android:text="Airport Hospitality"
+                    android:text="@string/hospitality"
                     android:textColor="#fff" />
 
                 <com.hsalf.smilerating.SmileRating
-                    android:id="@+id/smile_rating"
+                    android:id="@+id/smile_rating0"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
+
+
+        <!--question1-->
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
@@ -68,7 +71,7 @@
                     android:textColor="#fff" />
 
                 <com.hsalf.smilerating.SmileRating
-                    android:id="@+id/smile_rating"
+                    android:id="@+id/smile_rating1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
@@ -76,6 +79,96 @@
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
+        <!--question2-->
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.teamshunya.silencio.Classes.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#334255"
+                    android:padding="10dp"
+                    android:text="@string/clean"
+                    android:textColor="#fff" />
+
+                <com.hsalf.smilerating.SmileRating
+                    android:id="@+id/smile_rating2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <!--question3-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.teamshunya.silencio.Classes.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#334255"
+                    android:padding="10dp"
+                    android:text="@string/transport"
+                    android:textColor="#fff" />
+
+                <com.hsalf.smilerating.SmileRating
+                    android:id="@+id/smile_rating3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <!--4-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.teamshunya.silencio.Classes.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#334255"
+                    android:padding="10dp"
+                    android:text="@string/parking"
+                    android:textColor="#fff" />
+
+                <com.hsalf.smilerating.SmileRating
+                    android:id="@+id/smile_rating4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <!--5-->
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -95,20 +188,108 @@
                     android:layout_height="wrap_content"
                     android:background="#334255"
                     android:padding="10dp"
-
-                    android:text="Airport Cleaniness"
+                    android:text="@string/lounge"
                     android:textColor="#fff" />
 
                 <com.hsalf.smilerating.SmileRating
-                    android:id="@+id/smile_rating"
+                    android:id="@+id/smile_rating5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="5dp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
+        <!--6-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.teamshunya.silencio.Classes.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#334255"
+                    android:padding="10dp"
+                    android:text="@string/eat"
+                    android:textColor="#fff" />
+
+                <com.hsalf.smilerating.SmileRating
+                    android:id="@+id/smile_rating6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <!--7-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.teamshunya.silencio.Classes.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#334255"
+                    android:padding="10dp"
+                    android:text="@string/Baggage"
+                    android:textColor="#fff" />
+
+                <com.hsalf.smilerating.SmileRating
+                    android:id="@+id/smile_rating7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <!--8-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.teamshunya.silencio.Classes.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#334255"
+                    android:padding="10dp"
+                    android:text="@string/nav"
+                    android:textColor="#fff" />
+
+                <com.hsalf.smilerating.SmileRating
+                    android:id="@+id/smile_rating8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <!--0 to 8 qstn ends-->
 
         <EditText
+            android:id="@+id/textFeedbackFromUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -119,17 +300,26 @@
             android:textColor="#fff"
             android:textColorHint="#e2e2e2" />
 
-        <android.support.design.widget.FloatingActionButton
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/submitButoon"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="5dp"
-            android:backgroundTint="#FFEB3B"
-            android:src="@drawable/arrowblack" />
-
+            android:background="@color/cardview_light_background"
+            android:text="@string/Submit"
+            android:textAlignment="center"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="20sp" />
+        <!--
+        FAB is unable to pass through infalator dont know whats the problem -vaibhav
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/floatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#FFEB3B"
+                    android:src="@drawable/arrowblack" />
+                    -->
     </LinearLayout>
 </ScrollView>
-
-
-

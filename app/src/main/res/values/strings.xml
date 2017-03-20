@@ -14,4 +14,13 @@
     <string name="title_activity_show_feedback">ShowFeedback</string>
     <string name="string_getting_json_title">getFlightDetails</string>
     <string name="string_getting_json_message">Please Keep Patiece</string>
+    <string name="Submit">Submit</string>
+    <string name="transport">Transport Services To City</string>
+    <string name="parking">Parking</string>
+    <string name="lounge">Lounge</string>
+    <string name="eat">Eating Area</string>
+    <string name="Baggage">Baggage Claim</string>
+    <string name="nav">Navigation Ease</string>
+    <string name="clean">Airport Cleanliness</string>
+    <string name="hospitality">Airport Hospitality</string>
 </resources>
