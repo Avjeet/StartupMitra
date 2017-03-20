@@ -1,6 +1,8 @@
 package com.teamshunya.silencio.ShowActivity;
 
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -31,17 +33,22 @@ public class ShowActivity extends AppCompatActivity {
     private Fragment fragment;
     private FragmentManager fragmentManager;
     CleverTapAPI cleverTap;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
-        launchArrival();
+        launchDeparture();
+        toolbar();
+
         //open app
+
         BottomNavigationView bottomNavigation = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         bottomNavigation.inflateMenu(R.menu.bottom_menu);
         fragmentManager = getSupportFragmentManager();
         BottomNavigationViewHelper.disableShiftMode(bottomNavigation);
+        bottomNavigation.getMenu().getItem(2).setChecked(true);
 
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -78,8 +85,18 @@ public class ShowActivity extends AppCompatActivity {
             // thrown if you haven’t requested the required permissions in your AndroidManifest.xml
         }
     }
-    private void launchArrival() {
-        Fragment fragment = new Arrival();
+
+
+    private void toolbar() {
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(getResources().getString(R.string.app_name));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+        setSupportActionBar(toolbar);
+    }
+
+
+    private void launchDeparture() {
+        Fragment fragment = new Departure();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(R.id.main_container, fragment).commit();
@@ -91,24 +108,31 @@ public class ShowActivity extends AppCompatActivity {
     @Override
 
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        return true;
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.inflateMenu(R.menu.menu);
+        toolbar.setOnMenuItemClickListener(
+                new Toolbar.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch (item.getItemId()) {
 
+                            case R.id.menu_profile:
+                                Fragment fragment = new Profile();
+                                FragmentManager manager = getSupportFragmentManager();
+                                FragmentTransaction transaction = manager.beginTransaction();
+                                transaction.add(R.id.main_container, fragment).commit();
+
+                        }
+
+
+                        return onOptionsItemSelected(item);
+                    }
+                });
+
+        return true;
     }
 
-    @Override
 
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-//feedback
-            case R.id.menu_bookmark:
-
-
-        }
-        return true;
-    }
 
 
 }

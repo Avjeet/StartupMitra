@@ -3,6 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/action_profile"
+        android:title="Maps"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/place">
+    </item>
+    <item
         android:id="@+id/action_search"
         android:title="Arrival"
         app:showAsAction="ifRoom"
@@ -14,16 +21,9 @@
         android:title="Departure"
         app:showAsAction="ifRoom"
         android:enabled="true"
-
         android:icon="@drawable/takeoff">
     </item>
-    <item
-        android:id="@+id/action_profile"
-        android:title="Profile"
-        app:showAsAction="ifRoom"
-        android:enabled="true"
-        android:icon="@drawable/account">
-    </item>
+
     <item
         android:id="@+id/action_hot_deals"
         android:title="Offers"

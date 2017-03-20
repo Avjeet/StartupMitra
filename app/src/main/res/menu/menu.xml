@@ -4,10 +4,10 @@
     <!-- Single menu item
          Set id, icon and Title for each menu item
     -->
-    <item android:id="@+id/menu_bookmark"
+    <item android:id="@+id/menu_profile"
         app:showAsAction="always"
-
-        android:title="Feedback" />
+        android:icon="@drawable/me"
+        android:title="Profile" />
 
 
 </menu>

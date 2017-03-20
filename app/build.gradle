@@ -30,12 +30,11 @@ dependencies {
 
     //clevertap
 
+    // GSON with Retrofit
     compile 'com.firebaseui:firebase-ui:1.2.0'
     compile 'com.github.sujithkanna:smileyrating:1.5.0'
     compile 'com.squareup.picasso:picasso:2.4.0'
     compile 'com.github.developer-shivam:Diagonalify:1.1'
-
-    // GSON with Retrofit
     compile 'com.google.code.gson:gson:2.6.2'
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
