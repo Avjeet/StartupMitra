@@ -2,6 +2,7 @@ package com.teamshunya.silencio.Rest;
 
 
 import com.teamshunya.silencio.Models.ArrivalList;
+import com.teamshunya.silencio.Models.DepartureList;
 import com.teamshunya.silencio.ShowActivity.Fragments.Arrival;
 
 
@@ -19,6 +20,6 @@ public interface APIInterface {
     @GET("/arrival")
     Call<ArrivalList> getFlightDetails();
 
-    @GET("/offer")
-    Call<ArrivalList> getOffer();
+    @GET("/departure")
+    Call<DepartureList> getFlightDetail();
 }

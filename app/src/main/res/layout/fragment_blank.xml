@@ -7,11 +7,12 @@
     <include layout="@layout/boarding_pass"
         android:visibility="gone"
         android:id="@+id/cardBoarding"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dep"
-        android:textStyle="bold"
-        android:layout_gravity="center"/>
+    <ListView
+        android:id="@+id/arrival_list"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
 
 </FrameLayout>

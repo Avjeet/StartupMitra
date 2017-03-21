@@ -36,15 +36,11 @@ public class Arrival extends android.support.v4.app.Fragment {
     private myArrivalAdapter adapter;
 
     public Arrival() {
-
-
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         final ProgressDialog dialog;
-
-
         super.onActivityCreated(savedInstanceState);
 
     }
@@ -52,31 +48,22 @@ public class Arrival extends android.support.v4.app.Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         return inflater.inflate(R.layout.fragment_arrival, container, false);
-
-
     }
-
-
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         loadArrivalList();
         super.onViewCreated(view, savedInstanceState);
         bindViews(view);
         arrivalList = new ArrayList<>();
-
-
     }
 
 
     private void bindViews(View view) {
-
         loadArrivalList();
         parentView = view.findViewById(R.id.parentLayout);
         listView = (ListView) view.findViewById(R.id.arrival_list);
         listView.setDivider(null);
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -87,14 +74,11 @@ public class Arrival extends android.support.v4.app.Fragment {
     }
 
     private void loadArrivalList() {
-
         APIInterface api = ApiClient.getApiService();
         Call<ArrivalList> call = api.getFlightDetails();
         call.enqueue(new Callback<ArrivalList>() {
             @Override
             public void onResponse(Call<ArrivalList> call, Response<ArrivalList> response) {
-
-
                 if (response.isSuccessful()) {
                     try {
                         arrivalList = response.body().getArrivals();

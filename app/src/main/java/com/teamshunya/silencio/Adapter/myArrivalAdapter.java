@@ -69,7 +69,7 @@ public class myArrivalAdapter extends ArrayAdapter<Arrival> {
         return vh.rootView;
     }
 
-    private static class ViewHolder {
+    public static class ViewHolder {
         public final LinearLayout rootView;
         public final ImageView imageView;
         public final CustomFontTextView status_text;
