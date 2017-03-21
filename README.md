@@ -1,6 +1,7 @@
 # Silencio
 An App for Airport to make it noise free. A part of Smart India Hackathon.
-We also have added the Feedback system for user present at Airport:)
+We are adding all features in it keeping the UX in mind.
+The Hackathon is on 1st -2nd April . 
 
 
 
