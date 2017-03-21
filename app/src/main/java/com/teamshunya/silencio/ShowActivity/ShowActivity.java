@@ -113,6 +113,7 @@ public class ShowActivity extends AppCompatActivity {
 
 
     private void launchDeparture() {
+
         Fragment fragment = new Departure();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();

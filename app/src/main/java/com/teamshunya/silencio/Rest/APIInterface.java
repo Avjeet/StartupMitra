@@ -3,11 +3,8 @@ package com.teamshunya.silencio.Rest;
 
 import com.teamshunya.silencio.Models.ArrivalList;
 import com.teamshunya.silencio.Models.DepartureList;
-import com.teamshunya.silencio.ShowActivity.Fragments.Arrival;
+import com.teamshunya.silencio.Models.OfferList;
 
-
-import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -22,4 +19,7 @@ public interface APIInterface {
 
     @GET("/departure")
     Call<DepartureList> getFlightDetail();
+
+    @GET("/offers")
+    Call<OfferList> getOfferDetail();
 }
