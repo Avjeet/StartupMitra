@@ -13,9 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.animation.Animation;
-import android.widget.Toast;
 
 
 import com.clevertap.android.sdk.CleverTapAPI;
@@ -46,11 +44,10 @@ public class ShowActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.enter_from_left, R.anim.exit_to_right);
         setContentView(R.layout.activity_show);
         launchDeparture();
         toolbar();
-
-
         //open app
         toolbar_title = (CustomFontTextView) findViewById(R.id.toolbar_title);
         bottomNavigation = (BottomNavigationView) findViewById(R.id.bottom_navigation);
@@ -58,13 +55,13 @@ public class ShowActivity extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
         BottomNavigationViewHelper.disableShiftMode(bottomNavigation);
         bottomNavigation.getMenu().getItem(2).setChecked(true);
-
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
                 switch (id) {
                     case R.id.action_search:
+
                         fragment = new Arrival();
                         break;
                     case R.id.action_cart:
@@ -85,7 +82,6 @@ public class ShowActivity extends AppCompatActivity {
                 return true;
             }
         });
-
         try {
             cleverTap = CleverTapAPI.getInstance(getApplicationContext());
         } catch (CleverTapMetaDataNotFoundException e) {
@@ -95,51 +91,57 @@ public class ShowActivity extends AppCompatActivity {
         }
     }
 
-
     private void toolbar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setNavigationIcon(R.drawable.ic_menu_camera);
+        toolbar.setNavigationIcon(R.drawable.cloud);
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Fragment fragment = new Camera();
+                FragmentManager manager = getSupportFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
+                transaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
+                transaction.replace(R.id.main_container, fragment)
+                        .commit();
+                bottomNavigation.setVisibility(View.GONE);
+                toolbar_title.setText("Weather");
             }
         });
         setTitle("  ");
         toolbar.findViewById(R.id.toolbar_title).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(getApplicationContext(), ShowActivity.class));
             }
         });
 
     }
 
-
     private void launchDeparture() {
 
         Fragment fragment = new Departure();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
+        transaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
         transaction.add(R.id.main_container, fragment).commit();
 
 
     }
 
-
     @Override
     public void onBackPressed() {
-
         if (doubleBackToExitPressedOnce) {
             super.onBackPressed();
             return;
         }
-
         this.doubleBackToExitPressedOnce = true;
         Fragment fragment = new Departure();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
+        transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left);
+
         transaction.replace(R.id.main_container, fragment)
                 .commit();
         bottomNavigation.setVisibility(View.VISIBLE);
@@ -155,7 +157,6 @@ public class ShowActivity extends AppCompatActivity {
         }, 2000);
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -170,15 +171,13 @@ public class ShowActivity extends AppCompatActivity {
                                 Fragment fragment = new Profile();
                                 FragmentManager manager = getSupportFragmentManager();
                                 FragmentTransaction transaction = manager.beginTransaction();
+                                transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left);
                                 transaction.replace(R.id.main_container, fragment)
                                         .commit();
+
                                 bottomNavigation.setVisibility(View.GONE);
                                 toolbar_title.setText("Profile");
-
-
                         }
-
-
                         return onOptionsItemSelected(item);
                     }
                 });
