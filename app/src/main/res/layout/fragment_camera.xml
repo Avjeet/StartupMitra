@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.teamshunya.silencio.ShowActivity.SwipableLayout.Camera">
+    tools:context=".Activities.ShowActivity.SwipableLayout.Camera">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

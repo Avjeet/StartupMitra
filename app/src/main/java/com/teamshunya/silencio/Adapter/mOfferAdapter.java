@@ -49,8 +49,8 @@ final mOfferAdapter.ViewHolder vh;
 
         Offer item = getItem(position);
         vh.name_company.setText(item.getName());
-        vh.tags.setText(item.getTag());
-        vh.expiry.setText(item.getExpiry());
+        vh.offer.setText("Offer: "+ item.getOffer());
+        vh.expiry.setText("Expiry Date: " + item.getExpiry());
         Picasso.with(context).load(item.getImg()).placeholder(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher).into(vh.imageView);
 
         return vh.rootView;
@@ -59,15 +59,15 @@ private static class ViewHolder {
     public final LinearLayout rootView;
     public final ImageView imageView;
     public final CustomFontTextView name_company;
-    public final CustomFontTextView tags;
+    public final CustomFontTextView offer;
     public final CustomFontTextView expiry;
 
 
-    private ViewHolder(LinearLayout rootView, ImageView imageView, CustomFontTextView name_company, CustomFontTextView expiry, CustomFontTextView tags) {
+    private ViewHolder(LinearLayout rootView, ImageView imageView, CustomFontTextView name_company, CustomFontTextView expiry, CustomFontTextView offer) {
         this.rootView = rootView;
         this.imageView = imageView;
         this.name_company = name_company;
-        this.tags = tags;
+        this.offer = offer;
         this.expiry = expiry;
 
     }
@@ -76,8 +76,8 @@ private static class ViewHolder {
         ImageView imageView = (ImageView) rootView.findViewById(R.id.logo);
         CustomFontTextView name_company = (CustomFontTextView) rootView.findViewById(R.id.name_company);
         CustomFontTextView expiry = (CustomFontTextView) rootView.findViewById(R.id.expiry);
-        CustomFontTextView tags = (CustomFontTextView) rootView.findViewById(R.id.tags);
-        return new mOfferAdapter.ViewHolder(rootView, imageView, name_company, expiry, tags);
+        CustomFontTextView offer = (CustomFontTextView) rootView.findViewById(R.id.offer);
+        return new mOfferAdapter.ViewHolder(rootView, imageView, name_company, expiry, offer);
     }
 }
 }

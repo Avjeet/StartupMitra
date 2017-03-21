@@ -1,6 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/parentt"
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
@@ -8,7 +9,7 @@
         android:visibility="gone"
         android:id="@+id/cardBoarding"/>
     <ListView
-        android:id="@+id/arrival_list"
+        android:id="@+id/arrivall_list"
         android:scrollbars="none"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

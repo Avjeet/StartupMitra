@@ -4,10 +4,8 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.view.menu.ShowableListMenu;
 
-import com.clevertap.android.sdk.CleverTapAPI;
-import com.teamshunya.silencio.ShowActivity.ShowActivity;
+import com.teamshunya.silencio.Activities.ShowActivity.ShowActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
