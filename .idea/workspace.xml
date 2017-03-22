@@ -15,9 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ed48fd8-559f-4a08-825f-fc2682e5fa3a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/Fragments/Arrival.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/Fragments/Arrival.java" />
     </list>
     <ignored path="Silencio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,8 +121,8 @@
       <file leaf-file-name="GPSTracker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Classes/GPSTracker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-943">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="2">
+              <caret line="82" column="55" selection-start-line="82" selection-start-column="55" selection-end-line="82" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -2299,7 +2297,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/backgroundtitle.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/anim.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_from_right.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_from_left.xml" />
@@ -2350,6 +2347,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Models/OpenWeatherMap.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/SwipableLayout/Camera.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/Fragments/Arrival.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Classes/GPSTracker.java" />
       </list>
     </option>
   </component>
@@ -3018,7 +3016,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32763532" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21995927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3029,7 +3027,7 @@
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48433048" sideWeight="0.49675325" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32763532" sideWeight="0.49512988" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32763532" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4031339" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4031339" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -3455,8 +3453,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Classes/GPSTracker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-943">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="2">
+          <caret line="82" column="55" selection-start-line="82" selection-start-column="55" selection-end-line="82" selection-end-column="55" />
           <folding />
         </state>
       </provider>
