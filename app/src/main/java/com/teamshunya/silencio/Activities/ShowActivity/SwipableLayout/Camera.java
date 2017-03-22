@@ -47,7 +47,6 @@ public class Camera extends Fragment {
         if(gps.canGetLocation()){
             latitude = gps.getLatitude();
             longitude = gps.getLongitude();
-            Toast.makeText(getContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
             weatherFont = Typeface.createFromAsset(getContext().getAssets(), "fonts/weathericons-regular-webfont.ttf");
             Function.placeIdTask asyncTask =new Function.placeIdTask(new Function.AsyncResponse() {
                 public void processFinish(String weather_city, String weather_description, String weather_temperature, String weather_humidity, String weather_pressure, String weather_updatedOn, String weather_iconText, String sun_rise) {
@@ -55,7 +54,7 @@ public class Camera extends Fragment {
                     cityField.setText(weather_city);
                     updatedField.setText(weather_updatedOn);
                     detailsField.setText(weather_description);
-                    currentTemperatureField.setText(weather_temperature);
+                    currentTemperatureField.setText(weather_temperature +"C");
                     humidity_field.setText("Humidity: "+weather_humidity);
                     pressure_field.setText("Pressure: "+weather_pressure);
                     weatherIcon.setText(Html.fromHtml(weather_iconText));
