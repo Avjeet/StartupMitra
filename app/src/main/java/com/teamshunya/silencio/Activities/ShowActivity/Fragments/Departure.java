@@ -1,5 +1,6 @@
 package com.teamshunya.silencio.Activities.ShowActivity.Fragments;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -61,11 +62,19 @@ public class Departure extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                Snackbar.make(parentView, "Flight from " + departureList.get(position).getSource() + " is expected to depart at " + departureList.get(position).getEta() + " hrs." + "Kindly check-in from" + departureList.get(position).getGate() + " Counter :)", Snackbar.LENGTH_LONG).show();
+                showAlert(departureList.get(position));
+//                Snackbar.make(parentView, "Flight from " + departureList.get(position).getSource() + " is expected to depart at " + departureList.get(position).getEta() + " hrs." + "Kindly check-in from" + departureList.get(position).getGate() + " Counter :)", Snackbar.LENGTH_LONG).show();
             }
         });
 
+    }
+
+    private void showAlert(com.teamshunya.silencio.Models.Departure departure) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        AlertDialog dialog = builder.create();
+        dialog.setTitle(departure.getSource());
+        dialog.setMessage(departure.getGate());
+        dialog.show();
     }
 
     private void loadDepartureList() {
