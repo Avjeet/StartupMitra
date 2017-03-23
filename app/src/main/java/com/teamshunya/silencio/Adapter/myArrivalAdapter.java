@@ -59,7 +59,7 @@ public class myArrivalAdapter extends ArrayAdapter<Arrival> {
 
         vh.status_text.setText(item.getDelay() );
         vh.src_text.setText(item.getSource());
-        vh.time_text.setText(item.getGate());
+        vh.time_text.setText("Ter: "+item.getGate());
         vh.flight_text.setText(item.getFlightNo());
         vh.terminal_text.setText(item.getEta());
 

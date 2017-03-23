@@ -83,7 +83,7 @@
                         android:paddingRight="20dp"
                         android:text="Des"
                         android:textAllCaps="true"
-                        android:textSize="18sp"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
