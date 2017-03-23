@@ -72,7 +72,7 @@ public class Arrival extends android.support.v4.app.Fragment implements SwipeRef
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Snackbar.make(parentView, "Flight from " + arrivalList.get(position).getSource() + " is expected to be here at " + arrivalList.get(position).getEta() + " hrs." + "Collect your baggage from " + arrivalList.get(position).getGate() + " Counter :)", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(parentView, "Flight from " + arrivalList.get(position).getSource() + " is expected to be here at " + arrivalList.get(position).getEta() + " hrs." + "Baggage will be available at  " + arrivalList.get(position).getGate() + " Counter :)", Snackbar.LENGTH_LONG).show();
             }
         });
     }
