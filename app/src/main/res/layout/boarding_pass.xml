@@ -3,11 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
     android:orientation="vertical">
-
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,18 +17,15 @@
         android:shadowDy="30"
         app:cardCornerRadius="5dp"
         app:cardElevation="2dp">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:background="@color/colorPrimary"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingBottom="5dp"
@@ -62,17 +57,11 @@
                     android:layout_weight="0.4"
                     android:gravity="center"
                     android:text="Des"
-
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="30sp"
                     android:textStyle="normal" />
-
             </LinearLayout>
-
-
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -95,9 +84,7 @@
                         android:text="flight"
                         android:textAllCaps="true"
                         android:textColor="@color/fontText"
-
                         />
-
                     <com.teamshunya.silencio.Classes.CustomFontTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -106,7 +93,6 @@
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
-
                 </LinearLayout>
 
 
@@ -124,7 +110,6 @@
                         android:text="gate"
                         android:textAllCaps="true"
                         android:textColor="@color/fontText"
-
                         />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
@@ -133,10 +118,8 @@
                         android:text="22A"
                         android:textAllCaps="true"
                         android:textStyle="bold"
-
                         android:textColor="@color/white"
                         android:textSize="18sp" />
-
                 </LinearLayout>
 
 
@@ -155,7 +138,6 @@
                         android:textAllCaps="true"
                         android:textColor="@color/fontText"
                         android:textStyle="normal"
-
                         />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
@@ -164,10 +146,8 @@
                         android:text="12F"
                         android:textAllCaps="true"
                         android:textStyle="bold"
-
                         android:textColor="@color/white"
                         android:textSize="18sp" />
-
                 </LinearLayout>
 
 
@@ -192,15 +172,10 @@
                         android:text="2200"
                         android:textAllCaps="true"
                         android:textStyle="bold"
-
                         android:textColor="@color/white"
                         android:textSize="18sp" />
-
                 </LinearLayout>
-
-
             </LinearLayout>
-
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>
