@@ -66,7 +66,8 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name=".Activities.ShowActivity.ShowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemee"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
