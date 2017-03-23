@@ -1,6 +1,7 @@
 package com.teamshunya.silencio.Activities.ShowActivity.Fragments;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.teamshunya.silencio.Adapter.mDepartureAdapter;
+import com.teamshunya.silencio.Classes.CustomFontTextView;
 import com.teamshunya.silencio.Models.*;
 import com.teamshunya.silencio.R;
 import com.teamshunya.silencio.Rest.APIInterface;
@@ -70,10 +72,18 @@ public class Departure extends Fragment {
     }
 
     private void showAlert(com.teamshunya.silencio.Models.Departure departure) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        AlertDialog dialog = builder.create();
+        final Dialog dialog = new Dialog((getActivity()));
+        dialog.setContentView(R.layout.dialog_custom);
+        CustomFontTextView text = (CustomFontTextView)dialog.findViewById(R.id.text_details) ;
+        CustomFontTextView ok = (CustomFontTextView)dialog.findViewById(R.id.ok) ;
         dialog.setTitle(departure.getSource());
-        dialog.setMessage(departure.getGate());
+        text.setText(departure.getEta());
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
         dialog.show();
     }
 
