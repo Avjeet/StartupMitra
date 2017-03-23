@@ -104,8 +104,6 @@ public class Arrival extends android.support.v4.app.Fragment implements SwipeRef
 
     @Override
     public void onRefresh() {
-
-        Toast.makeText(getContext(), "Getting New Flights wait ...", Toast.LENGTH_LONG).show();
         loadArrivalList();
         arrivalSwipeRefreshLayout.setRefreshing(false);
 

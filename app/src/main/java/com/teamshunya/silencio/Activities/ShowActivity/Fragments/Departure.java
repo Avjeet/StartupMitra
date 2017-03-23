@@ -118,7 +118,6 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
     @Override
     public void onRefresh() {
-        Toast.makeText(getContext(), "Getting New Flights wait ...", Toast.LENGTH_LONG).show();
         loadDepartureList();
         departureSwipeRefreshLayout.setRefreshing(false);
 

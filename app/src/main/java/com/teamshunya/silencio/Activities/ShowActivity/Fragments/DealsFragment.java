@@ -98,7 +98,6 @@ public class DealsFragment extends android.support.v4.app.Fragment implements Sw
 
     @Override
     public void onRefresh() {
-        Toast.makeText(getContext(), "Getting New Offers wait ...", Toast.LENGTH_LONG).show();
         loadOfferList();
         dealsSwipeRefreshLayout.setRefreshing(false);
     }
