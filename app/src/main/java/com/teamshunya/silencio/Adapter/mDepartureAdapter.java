@@ -39,23 +39,22 @@ public class mDepartureAdapter extends ArrayAdapter<Departure> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        final myArrivalAdapter.ViewHolder vh;
+        final mDepartureAdapter.ViewHolder vh;
         if (convertView == null) {
             View view = mInflater.inflate(R.layout.flight_dep, parent, false);
-            vh = myArrivalAdapter.ViewHolder.create((LinearLayout) view);
+            vh = mDepartureAdapter.ViewHolder.create((LinearLayout) view);
             view.setTag(vh);
         } else {
-            vh = (myArrivalAdapter.ViewHolder) convertView.getTag();
+            vh = (mDepartureAdapter.ViewHolder) convertView.getTag();
         }
 
         Departure item = getItem(position);
 
         vh.status_text.setText(item.getDelay() );
         vh.src_text.setText(item.getSource());
-        vh.time_text.setText(item.getGate());
         vh.flight_text.setText(item.getFlightNo());
-        vh.terminal_text.setText(item.getEta());
-
+        vh.time_text.setText(item.getEta());
+        vh.statuss.setText(item.getDestination());
 
         Picasso.with(context).load(item.getLogo()).placeholder(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher).into(vh.imageView);
 
@@ -67,18 +66,18 @@ public class mDepartureAdapter extends ArrayAdapter<Departure> {
         public final CustomFontTextView status_text;
         public final CustomFontTextView src_text;
         public final CustomFontTextView flight_text;
-        public final CustomFontTextView terminal_text;
         public final CustomFontTextView time_text;
+        public final CustomFontTextView statuss;
 
 
-        private ViewHolder(LinearLayout rootView, ImageView imageView, CustomFontTextView src_text, CustomFontTextView status_text, CustomFontTextView flight_text, CustomFontTextView time_text, CustomFontTextView terminal_text) {
+        private ViewHolder(LinearLayout rootView,ImageView imageView,CustomFontTextView statuss, CustomFontTextView src_text, CustomFontTextView status_text, CustomFontTextView flight_text, CustomFontTextView time_text) {
             this.rootView = rootView;
             this.imageView = imageView;
             this.src_text = src_text;
             this.flight_text = flight_text;
-            this.terminal_text = terminal_text;
             this.status_text = status_text;
             this.time_text = time_text;
+            this.statuss = statuss;
         }
 
         public static mDepartureAdapter.ViewHolder create(LinearLayout rootView) {
@@ -86,9 +85,9 @@ public class mDepartureAdapter extends ArrayAdapter<Departure> {
             CustomFontTextView src_text = (CustomFontTextView) rootView.findViewById(R.id.src_text);
             CustomFontTextView status_text = (CustomFontTextView) rootView.findViewById(R.id.status_text);
             CustomFontTextView flight_text = (CustomFontTextView) rootView.findViewById(R.id.flight_text);
-            CustomFontTextView terminal_text = (CustomFontTextView) rootView.findViewById(R.id.terminal_text);
             CustomFontTextView time_text = (CustomFontTextView) rootView.findViewById(R.id.time_text);
-            return new mDepartureAdapter.ViewHolder(rootView, imageView, src_text, status_text, flight_text, terminal_text, time_text);
+            CustomFontTextView statuss = (CustomFontTextView) rootView.findViewById(R.id.status);
+            return new mDepartureAdapter.ViewHolder(rootView,imageView,src_text, status_text,statuss, flight_text, time_text);
         }
     }
 }

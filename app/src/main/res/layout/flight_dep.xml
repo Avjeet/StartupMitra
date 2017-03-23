@@ -3,213 +3,125 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="100dp"
     android:layout_gravity="center_horizontal"
-    android:orientation="vertical"
-    android:padding="5dp"
- >
-<android.support.v7.widget.CardView
-    android:layout_width="match_parent"
-    app:cardElevation="5dp"
-    android:layout_height="match_parent"
-    android:padding="8dp"
-    android:elevation="20dp"
-    >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:fadingEdgeLength="2dp"
-        android:orientation="horizontal"
-        android:shadowColor="#000"
-        android:shadowDx="00"
-        android:shadowDy="30">
+    android:orientation="horizontal"
+    android:padding="5dp">
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:src="@mipmap/ic_launcher" />
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        app:cardCornerRadius="5dp"
+
+        android:padding="8dp"
+        app:cardElevation="5dp">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="7.5"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:fadingEdgeLength="2dp"
+            android:orientation="horizontal"
+            android:shadowColor="#000"
+            android:shadowDx="00"
+            android:shadowDy="30">
 
-            <LinearLayout
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingBottom="5dp"
-                android:paddingTop="10dp">
+                android:layout_gravity="end"
+                android:fadingEdgeLength="2dp"
+                android:orientation="vertical"
+                android:shadowColor="#000"
+                android:shadowDx="00"
+                android:shadowDy="30">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:id="@+id/first"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="vertical"
-                    >
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp">
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="Source"
-                        android:textAllCaps="true"
-                        android:textColor="@color/fontText" />
-
-                    <com.teamshunya.silencio.Classes.CustomFontTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="0.2"
-                        android:gravity="center"
-                        android:text="Des"
                         android:id="@+id/src_text"
-                        android:textAllCaps="true"
-                        android:textSize="22sp"
-                        android:textStyle="normal" />
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/flight" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="vertical"
-                    >
-
-                    <com.teamshunya.silencio.Classes.CustomFontTextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="Status"
+                        android:layout_weight="4"
+                        android:gravity="start"
+                        android:text="SRC"
                         android:textAllCaps="true"
-                        android:textColor="@color/fontText" />
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/flightss"
+
+                        />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="0.2"
-                        android:gravity="center"
-                        android:text="Des"
                         android:id="@+id/status_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:gravity="end"
+                        android:paddingRight="20dp"
+                        android:text="Des"
                         android:textAllCaps="true"
-                        android:textSize="22sp"
-                        android:textStyle="normal" />
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#eeeeee" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.25"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp">
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="flight"
-                        android:textAllCaps="true"
-                        android:textColor="@color/fontText"
-
-                        />
-
-                    <com.teamshunya.silencio.Classes.CustomFontTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="SU254"
                         android:id="@+id/flight_text"
-                        android:textAllCaps="true"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.25"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
-
-                    <com.teamshunya.silencio.Classes.CustomFontTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Terminal"
-                        android:textAllCaps="true"
-                        android:textColor="@color/fontText"
-
-                        />
+                        android:gravity="start"
+                        android:layout_weight="3"
+                        android:text="hh:" />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:id="@+id/status"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="22A"
-                        android:id="@+id/terminal_text"
-                        android:textAllCaps="true"
-                        android:textSize="18sp" />
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.25"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                        android:textColor="#de5d61"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="3"
+                        android:text="mm:" />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ETA"
-                        android:textAllCaps="true"
-                        android:textColor="@color/fontText" />
-
-                    <com.teamshunya.silencio.Classes.CustomFontTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="2200"
-                        android:textAllCaps="true"
                         android:id="@+id/time_text"
-                        android:textSize="18sp" />
-
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="start"
+                        android:drawableLeft="@drawable/clock"
+                        android:text="ss" />
                 </LinearLayout>
-
-
             </LinearLayout>
 
         </LinearLayout>
-    </LinearLayout>
-</android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>
 </LinearLayout>
