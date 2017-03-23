@@ -1,39 +1,23 @@
 package com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout;
 
-import android.Manifest;
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.pm.PackageManager;
 import android.graphics.Typeface;
-import android.location.Criteria;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-
 import android.support.v4.app.Fragment;
 import android.text.Html;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import android.widget.Toast;
-
 
 import com.teamshunya.silencio.Classes.CustomFontTextView;
 import com.teamshunya.silencio.Classes.Function;
 import com.teamshunya.silencio.Classes.GPSTracker;
 import com.teamshunya.silencio.R;
 
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-
 public class Camera extends Fragment {
     CustomFontTextView cityField, detailsField, currentTemperatureField, humidity_field, pressure_field, weatherIcon, updatedField;
     Typeface weatherFont;
+
     GPSTracker gps;
     double latitude,longitude;
     public Camera() {
@@ -86,7 +70,6 @@ public class Camera extends Fragment {
 
     private void bindViews(View view) {
 
-
         cityField = (CustomFontTextView)view.findViewById(R.id.city_field);
         updatedField = (CustomFontTextView)view.findViewById(R.id.updated_field);
         detailsField = (CustomFontTextView)view.findViewById(R.id.details_field);
@@ -96,4 +79,6 @@ public class Camera extends Fragment {
         weatherIcon = (CustomFontTextView)view.findViewById(R.id.weather_icon);
         weatherIcon.setTypeface(weatherFont);
     }
+
+
 }

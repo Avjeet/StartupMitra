@@ -4,11 +4,13 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.teamshunya.silencio.Adapter.myArrivalAdapter;
 import com.teamshunya.silencio.Models.ArrivalList;
@@ -24,12 +26,14 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class Arrival extends android.support.v4.app.Fragment {
+public class Arrival extends android.support.v4.app.Fragment implements SwipeRefreshLayout.OnRefreshListener {
     private ListView listView;
     private View parentView;
+    private View view;
     private ProgressDialog dialog;
     private List<com.teamshunya.silencio.Models.Arrival> arrivalList;
     private myArrivalAdapter adapter;
+    private SwipeRefreshLayout arrivalSwipeRefreshLayout;
 
     public Arrival() {
     }
@@ -58,7 +62,11 @@ public class Arrival extends android.support.v4.app.Fragment {
 
     private void bindViews(View view) {
         loadArrivalList();
+
         parentView = view.findViewById(R.id.parentLayout);
+        arrivalSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.arrival_swip);
+        arrivalSwipeRefreshLayout.setOnRefreshListener(this);
+
         listView = (ListView) view.findViewById(R.id.arrival_list);
         listView.setDivider(null);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -67,7 +75,6 @@ public class Arrival extends android.support.v4.app.Fragment {
                 Snackbar.make(parentView, "Flight from " + arrivalList.get(position).getSource() + " is expected to be here at " + arrivalList.get(position).getEta() + " hrs." + "Collect your baggage from " + arrivalList.get(position).getGate() + " Counter :)", Snackbar.LENGTH_LONG).show();
             }
         });
-
     }
 
     private void loadArrivalList() {
@@ -95,5 +102,12 @@ public class Arrival extends android.support.v4.app.Fragment {
 
     }
 
+    @Override
+    public void onRefresh() {
 
+        Toast.makeText(getContext(), "Getting New Flights wait ...", Toast.LENGTH_LONG).show();
+        loadArrivalList();
+        arrivalSwipeRefreshLayout.setRefreshing(false);
+
+    }
 }

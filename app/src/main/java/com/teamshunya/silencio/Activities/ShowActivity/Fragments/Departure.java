@@ -1,22 +1,21 @@
 package com.teamshunya.silencio.Activities.ShowActivity.Fragments;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.teamshunya.silencio.Adapter.mDepartureAdapter;
 import com.teamshunya.silencio.Classes.CustomFontTextView;
-import com.teamshunya.silencio.Models.*;
+import com.teamshunya.silencio.Models.DepartureList;
 import com.teamshunya.silencio.R;
 import com.teamshunya.silencio.Rest.APIInterface;
 import com.teamshunya.silencio.Rest.ApiClient;
@@ -29,9 +28,11 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class Departure extends Fragment {
+public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
     private ListView listView;
     private View parentView;
+    private SwipeRefreshLayout departureSwipeRefreshLayout;
+
     private List<com.teamshunya.silencio.Models.Departure> departureList;
 
     public Departure() {
@@ -59,6 +60,8 @@ public class Departure extends Fragment {
 
     private void bindViews(View view) {
         parentView = view.findViewById(R.id.parentt);
+        departureSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.departure_swip);
+        departureSwipeRefreshLayout.setOnRefreshListener(this);
         listView = (ListView) view.findViewById(R.id.arrivall_list);
         listView.setDivider(null);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -110,6 +113,14 @@ public class Departure extends Fragment {
             }
         });
 
+
+    }
+
+    @Override
+    public void onRefresh() {
+        Toast.makeText(getContext(), "Getting New Flights wait ...", Toast.LENGTH_LONG).show();
+        loadDepartureList();
+        departureSwipeRefreshLayout.setRefreshing(false);
 
     }
 }

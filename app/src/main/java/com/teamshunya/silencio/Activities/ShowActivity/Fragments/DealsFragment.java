@@ -2,10 +2,12 @@ package com.teamshunya.silencio.Activities.ShowActivity.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.teamshunya.silencio.Adapter.mOfferAdapter;
 import com.teamshunya.silencio.Models.Offer;
@@ -21,13 +23,16 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class DealsFragment extends android.support.v4.app.Fragment {
+public class DealsFragment extends android.support.v4.app.Fragment implements SwipeRefreshLayout.OnRefreshListener {
     private ListView listView;
     private View parentView;
     private List<Offer> offerList;
     private mOfferAdapter adapter;
+    private SwipeRefreshLayout dealsSwipeRefreshLayout;
+
     public DealsFragment() {
     }
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -38,6 +43,7 @@ public class DealsFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_deals, container, false);
     }
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         loadOfferList();
@@ -64,16 +70,21 @@ public class DealsFragment extends android.support.v4.app.Fragment {
             }
 
             @Override
-            public void onFailure(Call< OfferList> call, Throwable t) {
+            public void onFailure(Call<OfferList> call, Throwable t) {
             }
         });
 
     }
+
     private void bindViews(View view) {
         loadOfferList();
         parentView = view.findViewById(R.id.parentLayout);
+        dealsSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.deals_swip);
+        dealsSwipeRefreshLayout.setOnRefreshListener(this);
+
         listView = (ListView) view.findViewById(R.id.arrival_list);
         listView.setDivider(null);
+
 //        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //            @Override
 //            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -81,11 +92,14 @@ public class DealsFragment extends android.support.v4.app.Fragment {
 //            }
 //        });
 
+
     }
 
 
-
-
-
-
+    @Override
+    public void onRefresh() {
+        Toast.makeText(getContext(), "Getting New Offers wait ...", Toast.LENGTH_LONG).show();
+        loadOfferList();
+        dealsSwipeRefreshLayout.setRefreshing(false);
+    }
 }
