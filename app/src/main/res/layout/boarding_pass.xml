@@ -3,18 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+
+    android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
-    android:orientation="vertical"
-    android:paddingBottom="8dp"
-    android:paddingLeft="8dp"
-    android:paddingRight="8dp"
-    android:paddingTop="8dp">
+    android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
+        android:background="@color/colorPrimary"
         android:fadingEdgeLength="2dp"
         android:shadowColor="#000"
         android:shadowDx="00"
@@ -25,6 +23,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
+            android:background="@color/colorPrimary"
             android:orientation="vertical">
 
             <LinearLayout
@@ -37,14 +37,15 @@
                 android:paddingTop="10dp">
 
                 <com.teamshunya.silencio.Classes.CustomFontTextView
+                    android:id="@+id/src"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="0.3"
                     android:gravity="center"
                     android:text="SRC"
-                    android:id="@+id/src"
                     android:textAllCaps="true"
+                    android:textColor="@color/white"
                     android:textSize="30sp"
                     android:textStyle="normal" />
 
@@ -61,16 +62,16 @@
                     android:layout_weight="0.4"
                     android:gravity="center"
                     android:text="Des"
+
                     android:textAllCaps="true"
+                    android:textColor="@color/white"
                     android:textSize="30sp"
                     android:textStyle="normal" />
 
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#eeeeee" />
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -101,7 +102,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="SU254"
+                        android:textStyle="bold"
                         android:textAllCaps="true"
+                        android:textColor="@color/white"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -129,6 +132,9 @@
                         android:layout_height="wrap_content"
                         android:text="22A"
                         android:textAllCaps="true"
+                        android:textStyle="bold"
+
+                        android:textColor="@color/white"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -157,6 +163,9 @@
                         android:layout_height="wrap_content"
                         android:text="12F"
                         android:textAllCaps="true"
+                        android:textStyle="bold"
+
+                        android:textColor="@color/white"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -182,6 +191,9 @@
                         android:layout_height="wrap_content"
                         android:text="2200"
                         android:textAllCaps="true"
+                        android:textStyle="bold"
+
+                        android:textColor="@color/white"
                         android:textSize="18sp" />
 
                 </LinearLayout>
