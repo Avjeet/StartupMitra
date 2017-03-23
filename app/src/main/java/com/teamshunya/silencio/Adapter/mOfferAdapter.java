@@ -49,7 +49,7 @@ final mOfferAdapter.ViewHolder vh;
 
         Offer item = getItem(position);
         vh.name_company.setText(item.getName());
-        vh.offer.setText("Offer: "+ item.getOffer());
+        vh.offer.setText( item.getOffer());
         vh.expiry.setText("Expiry Date: " + item.getExpiry());
         Picasso.with(context).load(item.getImg()).placeholder(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher).into(vh.imageView);
 
