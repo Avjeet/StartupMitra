@@ -8,6 +8,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class Departure {
+
     @SerializedName("company")
     @Expose
     private String company;
@@ -35,6 +36,9 @@ public class Departure {
     @SerializedName("pnr")
     @Expose
     private String pnr;
+    @SerializedName("seat")
+    @Expose
+    private String seat;
     @SerializedName("source")
     @Expose
     private String source;
@@ -53,13 +57,14 @@ public class Departure {
      * @param eta
      * @param flightNo
      * @param source
+     * @param seat
      * @param company
      * @param pnr
      * @param delay
      * @param gate
      * @param destination
      */
-    public Departure(String company, String delay, String destination, String eta, String flightNo, String gate, String id, String logo, String pnr, String source) {
+    public Departure(String company, String delay, String destination, String eta, String flightNo, String gate, String id, String logo, String pnr, String seat, String source) {
         super();
         this.company = company;
         this.delay = delay;
@@ -70,6 +75,7 @@ public class Departure {
         this.id = id;
         this.logo = logo;
         this.pnr = pnr;
+        this.seat = seat;
         this.source = source;
     }
 
@@ -143,6 +149,14 @@ public class Departure {
 
     public void setPnr(String pnr) {
         this.pnr = pnr;
+    }
+
+    public String getSeat() {
+        return seat;
+    }
+
+    public void setSeat(String seat) {
+        this.seat = seat;
     }
 
     public String getSource() {

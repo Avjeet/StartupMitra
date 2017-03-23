@@ -9,7 +9,7 @@
     <include
         android:id="@+id/cardBoarding"
         layout="@layout/boarding_pass"
-        android:visibility="gone" />
+        android:visibility="visible" />
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/departure_swip"

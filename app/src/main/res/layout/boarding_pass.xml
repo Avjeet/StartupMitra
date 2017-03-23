@@ -43,6 +43,7 @@
                     android:layout_weight="0.3"
                     android:gravity="center"
                     android:text="SRC"
+                    android:id="@+id/src"
                     android:textAllCaps="true"
                     android:textSize="30sp"
                     android:textStyle="normal" />
