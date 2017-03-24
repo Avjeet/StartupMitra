@@ -3,44 +3,56 @@ package com.teamshunya.silencio.Classes;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.SharedPreferences;
+import android.inputmethodservice.Keyboard;
 import android.preference.PreferenceManager;
+
+import com.teamshunya.silencio.MyApplication;
 
 /**
  * Created by himanshusingh on 24/03/17.
  */
 public class StoreSession {
+    
+    public static StoreSession storeSession; 
+    
+    public static StoreSession getInstance() {
+        if(storeSession == null) {
+            return  new StoreSession();
+        }
+        return storeSession;
+    }
 
-    public static void savePreferencesString(Activity activity, String key, String value){
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(activity.getApplicationContext());
+    public void savePreferencesString(String key, String value){
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(MyApplication.getContext());
         SharedPreferences.Editor editor = sp.edit();
         editor.putString(key, value);
-        editor.commit();
+        editor.apply();
     }
 
-    public static String readPreferencesString(Activity activity, String key, String defaultValue){
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(activity.getApplicationContext());
+    public  String readPreferencesString( String key, String defaultValue){
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(MyApplication.getContext());
         return sp.getString(key, defaultValue);
     }
-    public static void savePreferencesBoolean(Activity activity, String key, Boolean value){
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(activity.getApplicationContext());
+    public  void savePreferencesBoolean( String key, Boolean value){
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(MyApplication.getContext());
         SharedPreferences.Editor editor = sp.edit();
         editor.putBoolean(key, value);
-        editor.commit();
+        editor.apply();
     }
 
-    public static boolean readPreferencesBoolean(Activity activity, String key, Boolean defaultValue){
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(activity.getApplicationContext());
+    public  boolean readPreferencesBoolean( String key, Boolean defaultValue){
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(MyApplication.getContext());
         return sp.getBoolean(key, defaultValue);
     }
-    public static void savePreferencesInt(Activity activity, String key, int value){
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(activity.getApplicationContext());
+    public  void savePreferencesInt( String key, int value){
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(MyApplication.getContext());
         SharedPreferences.Editor editor = sp.edit();
         editor.putInt(key, value);
-        editor.commit();
+        editor.apply();
     }
 
-    public static int readPreferencesInt(Activity activity, String key, int defaultValue){
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(activity.getApplicationContext());
+    public  int readPreferencesInt( String key, int defaultValue){
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(MyApplication.getContext());
         return sp.getInt(key, defaultValue);
     }
 

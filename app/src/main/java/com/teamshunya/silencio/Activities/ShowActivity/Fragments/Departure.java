@@ -18,7 +18,9 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.teamshunya.silencio.Adapter.mDepartureAdapter;
+import com.teamshunya.silencio.Classes.Constants;
 import com.teamshunya.silencio.Classes.CustomFontTextView;
+import com.teamshunya.silencio.Classes.StoreSession;
 import com.teamshunya.silencio.Models.DepartureList;
 import com.teamshunya.silencio.R;
 import com.teamshunya.silencio.Rest.APIInterface;
@@ -43,37 +45,34 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
     private List<com.teamshunya.silencio.Models.Departure> myList;
 
     public Departure() {
-
         loadDepartureList();
     }
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         alertBox();
         return inflater.inflate(R.layout.fragment_blank, container, false);
     }
+
     private void alertBox() {
-        // get prompts.xml view
         LayoutInflater li = LayoutInflater.from(getContext());
         View promptsView = li.inflate(R.layout.pnr_dialog, null);
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
-        // set prompts.xml to alertdialog builder
         alertDialogBuilder.setView(promptsView);
         userInput = (EditText) promptsView
                 .findViewById(R.id.pnr);
-        // set dialog message
         alertDialogBuilder
                 .setCancelable(false)
                 .setPositiveButton("OK",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                // get user input and set it to result
-                                // edit text
-                                PNR = userInput.getText().toString();
-                                fetchInfoByPNR(userInput.getText().toString());
+                                String pnr = userInput.getText().toString();
+                                fetchInfoByPNR(pnr);
                             }
                         })
                 .setNegativeButton("Cancel",
@@ -81,11 +80,17 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
                             public void onClick(DialogInterface dialog, int id) {
                                 dialog.cancel();
                             }
-                        });
-        // create alert dialog
+                        })
+
+        ;
         AlertDialog alertDialog = alertDialogBuilder.create();
-        // show it
         alertDialog.show();
+        alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface dialog) {
+
+            }
+        });
     }
 
     private void fetchInfoByPNR(String s) {
