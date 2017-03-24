@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.teamshunya.silencio.Adapter.mOfferAdapter;
 import com.teamshunya.silencio.Models.Offer;
@@ -81,7 +80,6 @@ public class DealsFragment extends android.support.v4.app.Fragment implements Sw
         parentView = view.findViewById(R.id.parentLayout);
         dealsSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.deals_swip);
         dealsSwipeRefreshLayout.setOnRefreshListener(this);
-
         listView = (ListView) view.findViewById(R.id.arrival_list);
         listView.setDivider(null);
 

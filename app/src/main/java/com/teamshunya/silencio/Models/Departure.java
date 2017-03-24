@@ -42,6 +42,7 @@ public class Departure {
     @SerializedName("source")
     @Expose
     private String source;
+    private Departure departure;
 
     /**
      * No args constructor for use in serialization
@@ -167,4 +168,7 @@ public class Departure {
         this.source = source;
     }
 
+    public Departure getDeparture() {
+        return departure;
+    }
 }

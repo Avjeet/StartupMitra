@@ -26,5 +26,5 @@ public interface APIInterface {
     Call<OfferList> getOfferDetail();
 
     @GET("/departure/{pnr}")
-    Call<DepartureList> getmyDetail(@Path("pnr")String pnr);
+    Call<Departure> getmyDetail(@Path("pnr")String pnr);
 }

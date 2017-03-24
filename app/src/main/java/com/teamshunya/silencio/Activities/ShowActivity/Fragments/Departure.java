@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,38 +46,24 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
         loadDepartureList();
     }
-
-
-
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         alertBox();
-
         return inflater.inflate(R.layout.fragment_blank, container, false);
-
     }
-
     private void alertBox() {
         // get prompts.xml view
         LayoutInflater li = LayoutInflater.from(getContext());
         View promptsView = li.inflate(R.layout.pnr_dialog, null);
-
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                getContext());
-
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
         // set prompts.xml to alertdialog builder
         alertDialogBuilder.setView(promptsView);
-
-     userInput = (EditText) promptsView
+        userInput = (EditText) promptsView
                 .findViewById(R.id.pnr);
-
         // set dialog message
         alertDialogBuilder
                 .setCancelable(false)
@@ -86,8 +73,9 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
                                 // get user input and set it to result
                                 // edit text
                                 PNR = userInput.getText().toString();
-
-                            }})
+                                fetchInfoByPNR(userInput.getText().toString());
+                            }
+                        })
                 .setNegativeButton("Cancel",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
@@ -98,7 +86,23 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
         AlertDialog alertDialog = alertDialogBuilder.create();
         // show it
         alertDialog.show();
+    }
 
+    private void fetchInfoByPNR(String s) {
+        APIInterface apiInterface = ApiClient.getApiService();
+        Call<com.teamshunya.silencio.Models.Departure> call = apiInterface.getmyDetail(s);
+        call.enqueue(new Callback<com.teamshunya.silencio.Models.Departure>() {
+            @Override
+            public void onResponse(Call<com.teamshunya.silencio.Models.Departure> call, Response<com.teamshunya.silencio.Models.Departure> response) {
+                com.teamshunya.silencio.Models.Departure model = response.body().getDeparture();
+                src.setText(model.getSource());
+            }
+
+            @Override
+            public void onFailure(Call<com.teamshunya.silencio.Models.Departure> call, Throwable t) {
+
+            }
+        });
     }
 
 
