@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout_root"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+android:layout_gravity="center"    android:orientation="vertical"
     android:padding="10dp" >
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Type Your Message : "
+        android:text="Please Enter your Pnr "
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText

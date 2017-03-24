@@ -7,13 +7,16 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.animation.LinearOutSlowInInterpolator;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -33,6 +36,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.teamshunya.silencio.R.id.cardBoarding;
+
 
 public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
     private ListView listView;
@@ -43,7 +48,7 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
     EditText userInput;
     private List<com.teamshunya.silencio.Models.Departure> departureList;
     private List<com.teamshunya.silencio.Models.Departure> myList;
-
+    LinearLayout layout;
     public Departure() {
         loadDepartureList();
     }
@@ -73,6 +78,8 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
                             public void onClick(DialogInterface dialog, int id) {
                                 String pnr = userInput.getText().toString();
                                 fetchInfoByPNR(pnr);
+                                layout.setVisibility(View.VISIBLE);
+
                             }
                         })
                 .setNegativeButton("Cancel",
@@ -119,6 +126,7 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
     }
 
     private void bindViews(View view) {
+     layout = (LinearLayout)view.findViewById(R.id.layout);
         parentView = view.findViewById(R.id.parentt);
         src = (CustomFontTextView) view.findViewById(R.id.src);
         departureSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.departure_swip);

@@ -5,12 +5,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:visibility="gone"
+    android:id="@+id/layout"
+    android:layout_height="wrap_content">
     <include
         android:id="@+id/cardBoarding"
         layout="@layout/boarding_pass"
-        android:visibility="visible" />
-
+         />
+</LinearLayout>
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/departure_swip"
         android:layout_width="match_parent"
