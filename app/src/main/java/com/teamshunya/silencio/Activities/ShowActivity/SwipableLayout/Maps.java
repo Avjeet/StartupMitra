@@ -1,5 +1,6 @@
 package com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -19,8 +20,11 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.teamshunya.silencio.Classes.GPSTracker;
 import com.teamshunya.silencio.R;
@@ -33,6 +37,8 @@ public class Maps extends Fragment implements OnMapReadyCallback,GoogleApiClient
     private static final long GEO_DURATION = 60 * 60 * 1000;
     private static final String GEOFENCE_REQ_ID = "My Geofence";
     private static final float GEOFENCE_RADIUS = 500.0f;
+    private int distance;
+
     MapView mMapView;
     View mView;
     private GoogleApiClient googleApiClient;
@@ -109,7 +115,15 @@ public class Maps extends Fragment implements OnMapReadyCallback,GoogleApiClient
         CameraPosition Liberty = CameraPosition.builder().target(new LatLng(latitude,longitude)).zoom(16).bearing(0).tilt(20).build();
         googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(Liberty));
 
+        googleMap.addCircle(new CircleOptions()
+                .strokeWidth(1)
+                .center(new LatLng(latitude, longitude))
+                .radius(300)
+                .fillColor(0x5533cccc));
+
+
     }
+
     // Create a Geofence
     private Geofence createGeofence(LatLng latLng, float radius ) {
         Log.d("Maps", "createGeofence");
@@ -142,4 +156,23 @@ public class Maps extends Fragment implements OnMapReadyCallback,GoogleApiClient
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
+
+
+
+    public void onMarkerDragStart(Marker marker) {
+    }
+
+
+
+    public void onMarkerDrag(Marker marker) {
+    }
+
+
+
+    public void onMarkerDragEnd(Marker marker) {
+        LatLng dragPosition = marker.getPosition();
+        double latitude = dragPosition.latitude;
+        double longitude = dragPosition.longitude;
+    }
+
 }
