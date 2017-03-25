@@ -149,13 +149,7 @@ public class ShowActivity extends AppCompatActivity {
         toolbar_title.setText(getString(R.string.app_name));
 
 
-        new Handler().postDelayed(new Runnable() {
 
-            @Override
-            public void run() {
-                doubleBackToExitPressedOnce = false;
-            }
-        }, 2000);
     }
 
     @Override
