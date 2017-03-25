@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.teamshunya.silencio.Adapter.mDepartureAdapter;
 import com.teamshunya.silencio.Classes.CustomFontTextView;
@@ -62,8 +64,8 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
         View promptsView = li.inflate(R.layout.pnr_dialog, null);
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
         alertDialogBuilder.setView(promptsView);
-        userInput = (EditText) promptsView
-                .findViewById(R.id.pnr);
+        userInput = (EditText) promptsView.findViewById(R.id.pnr);
+
         alertDialogBuilder
                 .setCancelable(false)
                 .setPositiveButton("OK",
@@ -71,7 +73,6 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
                             public void onClick(DialogInterface dialog, int id) {
                                 String pnr = userInput.getText().toString();
                                 fetchInfoByPNR(pnr);
-
                             }
                         })
                 .setNegativeButton("Cancel",
@@ -100,7 +101,6 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
             public void onResponse(Call<com.teamshunya.silencio.Models.Departure> call, Response<com.teamshunya.silencio.Models.Departure> response) {
                 StoreSession.getInstance().savePreferencesString("PNR", s);
                 com.teamshunya.silencio.Models.Departure model = response.body().getDeparture();
-
                 layout.setVisibility(View.VISIBLE);
                 source.setText(model.getSource());
                 destination.setText(model.getDestination());
@@ -132,7 +132,7 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                StoreSession.getInstance().deletePreferencesString("PNR","");
+                StoreSession.getInstance().deletePreferencesString("PNR", "");
                 layout.setVisibility(View.GONE);
             }
         });
@@ -148,7 +148,7 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
         seatnumber = (CustomFontTextView) view.findViewById(R.id.seatnumber);
         parentView = view.findViewById(R.id.parentt);
         source = (CustomFontTextView) view.findViewById(R.id.src);
-        cancel =(ImageView)view.findViewById(R.id.cancel);
+        cancel = (ImageView) view.findViewById(R.id.cancel);
         departureSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.departure_swip);
         departureSwipeRefreshLayout.setOnRefreshListener(this);
         listView = (ListView) view.findViewById(R.id.arrivall_list);
