@@ -14,13 +14,13 @@ import com.teamshunya.silencio.Classes.Function;
 import com.teamshunya.silencio.Classes.GPSTracker;
 import com.teamshunya.silencio.R;
 
-public class Camera extends Fragment {
+public class Weather extends Fragment {
     CustomFontTextView cityField, detailsField, currentTemperatureField, humidity_field, pressure_field, weatherIcon, updatedField;
     Typeface weatherFont;
 
     GPSTracker gps;
     double latitude,longitude;
-    public Camera() {
+    public Weather() {
         // Required empty public constructor
     }
 

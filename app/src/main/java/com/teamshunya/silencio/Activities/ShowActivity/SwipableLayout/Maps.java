@@ -1,12 +1,19 @@
 package com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.Geofence;
+import com.google.android.gms.location.GeofencingRequest;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -20,10 +27,15 @@ import com.teamshunya.silencio.R;
 
 import java.util.Map;
 
-public class Maps extends Fragment implements OnMapReadyCallback{
+public class Maps extends Fragment implements OnMapReadyCallback,GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener{
     GoogleMap mGoogleMap;
+    private static final long GEO_DURATION = 60 * 60 * 1000;
+    private static final String GEOFENCE_REQ_ID = "My Geofence";
+    private static final float GEOFENCE_RADIUS = 500.0f;
     MapView mMapView;
     View mView;
+    private GoogleApiClient googleApiClient;
     GPSTracker gps;
     double latitude,longitude;
     double lat = 12.9218780;
@@ -35,6 +47,7 @@ public class Maps extends Fragment implements OnMapReadyCallback{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        createGoogleApi();
         gps = new GPSTracker(getContext());
         if(gps.canGetLocation()){
             latitude = gps.getLatitude();
@@ -42,6 +55,31 @@ public class Maps extends Fragment implements OnMapReadyCallback{
 
     }
 
+    private void createGoogleApi() {
+        Log.d("Name", "createGoogleApi()");
+        if ( googleApiClient == null ) {
+            googleApiClient = new GoogleApiClient.Builder(getContext().getApplicationContext())
+                    .addConnectionCallbacks( this )
+                    .addOnConnectionFailedListener( this )
+                    .addApi( LocationServices.API )
+                    .build();
+        }
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // Call GoogleApiClient connection when starting the Activity
+        googleApiClient.connect();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // Disconnect GoogleApiClient when stopping Activity
+        googleApiClient.disconnect();
+    }
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -70,6 +108,38 @@ public class Maps extends Fragment implements OnMapReadyCallback{
         googleMap.addMarker(new MarkerOptions().position(new LatLng(latitude,longitude)).title("You are here").snippet("Enjoy your day"));
         CameraPosition Liberty = CameraPosition.builder().target(new LatLng(latitude,longitude)).zoom(16).bearing(0).tilt(20).build();
         googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(Liberty));
+
+    }
+    // Create a Geofence
+    private Geofence createGeofence(LatLng latLng, float radius ) {
+        Log.d("Maps", "createGeofence");
+        return new Geofence.Builder()
+                .setRequestId(GEOFENCE_REQ_ID)
+                .setCircularRegion( latLng.latitude, latLng.longitude, radius)
+                .setExpirationDuration( GEO_DURATION )
+                .setTransitionTypes( Geofence.GEOFENCE_TRANSITION_ENTER
+                        | Geofence.GEOFENCE_TRANSITION_EXIT )
+                .build();
+    }
+    private GeofencingRequest createGeofenceRequest(Geofence geofence ) {
+        Log.d("Maps", "createGeofenceRequest");
+        return new GeofencingRequest.Builder()
+                .setInitialTrigger( GeofencingRequest.INITIAL_TRIGGER_ENTER )
+                .addGeofence( geofence )
+                .build();
+    }
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
 }

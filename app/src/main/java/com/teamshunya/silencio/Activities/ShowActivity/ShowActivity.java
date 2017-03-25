@@ -21,7 +21,7 @@ import com.clevertap.android.sdk.exceptions.CleverTapMetaDataNotFoundException;
 import com.clevertap.android.sdk.exceptions.CleverTapPermissionsNotSatisfied;
 
 
-import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Camera;
+import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Weather;
 import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Maps;
 import com.teamshunya.silencio.Classes.CustomFontTextView;
 import com.teamshunya.silencio.R;
@@ -98,7 +98,7 @@ public class ShowActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment fragment = new Camera();
+                Fragment fragment = new Weather();
                 FragmentManager manager = getSupportFragmentManager();
                 FragmentTransaction transaction = manager.beginTransaction();
                 transaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
