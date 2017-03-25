@@ -2,6 +2,8 @@ package com.teamshunya.silencio.Activities.ShowActivity.Fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -18,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
 import com.teamshunya.silencio.Adapter.mDepartureAdapter;
 import com.teamshunya.silencio.Classes.CustomFontTextView;
 import com.teamshunya.silencio.Classes.StoreSession;
@@ -44,7 +47,7 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
     private List<com.teamshunya.silencio.Models.Departure> departureList;
     private List<com.teamshunya.silencio.Models.Departure> myList;
     LinearLayout layout;
-
+Context context;
     public Departure() {
         loadDepartureList();
     }
@@ -166,10 +169,12 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
     private void showAlert(com.teamshunya.silencio.Models.Departure departure) {
         final Dialog dialog = new Dialog((getActivity()));
         dialog.setContentView(R.layout.dialog_custom);
+        ImageView logo_response = (ImageView)dialog.findViewById(R.id.logo_response);
         CustomFontTextView text = (CustomFontTextView) dialog.findViewById(R.id.text_details);
         CustomFontTextView ok = (CustomFontTextView) dialog.findViewById(R.id.ok);
         dialog.setTitle(departure.getSource());
         text.setText(departure.getEta());
+        Picasso.with(context).load(departure.getLogo()).placeholder(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher).into(logo_response);
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -180,9 +185,9 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
     }
 
     private void loadDepartureList() {
+
         APIInterface api = ApiClient.getApiService();
         Call<DepartureList> call = api.getFlightDetail();
-
         call.enqueue(new Callback<DepartureList>() {
             @Override
             public void onResponse(Call<DepartureList> call, Response<DepartureList> response) {
@@ -191,6 +196,8 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
                         departureList = response.body().getDeparture();
                         mDepartureAdapter adapter = new mDepartureAdapter(getActivity().getApplicationContext(), departureList);
                         listView.setAdapter(adapter);
+
+
                     } catch (Exception e) {
                     }
                 } else {
