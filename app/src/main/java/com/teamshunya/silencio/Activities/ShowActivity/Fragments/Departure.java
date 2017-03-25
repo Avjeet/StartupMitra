@@ -36,9 +36,8 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
     private ListView listView;
     private View parentView;
     private SwipeRefreshLayout departureSwipeRefreshLayout;
-    private CustomFontTextView source,departuree,destination,flightnumber,gatenumber,seatnumber;
+    private CustomFontTextView source, departuree, destination, flightnumber, gatenumber, seatnumber;
     private ImageView cancel;
-    String PNR;
     EditText userInput;
     private List<com.teamshunya.silencio.Models.Departure> departureList;
     private List<com.teamshunya.silencio.Models.Departure> myList;
@@ -130,18 +129,26 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
         } else {
             fetchInfoByPNR(pnr);
         }
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StoreSession.getInstance().deletePreferencesString("PNR","");
+                layout.setVisibility(View.GONE);
+            }
+        });
         departureList = new ArrayList<>();
     }
 
     private void bindViews(View view) {
         layout = (LinearLayout) view.findViewById(R.id.layout);
-        destination = (CustomFontTextView)view.findViewById(R.id.destination);
-        departuree = (CustomFontTextView)view.findViewById(R.id.departure);
-        flightnumber =(CustomFontTextView)view.findViewById(R.id.flightnumber);
-        gatenumber = (CustomFontTextView)view.findViewById(R.id.gatenumber);
-        seatnumber = (CustomFontTextView)view.findViewById(R.id.seatnumber);
+        destination = (CustomFontTextView) view.findViewById(R.id.destination);
+        departuree = (CustomFontTextView) view.findViewById(R.id.departure);
+        flightnumber = (CustomFontTextView) view.findViewById(R.id.flightnumber);
+        gatenumber = (CustomFontTextView) view.findViewById(R.id.gatenumber);
+        seatnumber = (CustomFontTextView) view.findViewById(R.id.seatnumber);
         parentView = view.findViewById(R.id.parentt);
         source = (CustomFontTextView) view.findViewById(R.id.src);
+        cancel =(ImageView)view.findViewById(R.id.cancel);
         departureSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.departure_swip);
         departureSwipeRefreshLayout.setOnRefreshListener(this);
         listView = (ListView) view.findViewById(R.id.arrivall_list);

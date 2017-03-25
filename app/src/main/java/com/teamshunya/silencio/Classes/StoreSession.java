@@ -33,6 +33,11 @@ public class StoreSession {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(MyApplication.getContext());
         return sp.getString(key, defaultValue);
     }
+    public String deletePreferencesString(String key,String defaultValue){
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(MyApplication.getContext());
+        sp.edit().remove(key).apply();
+        return sp.getString(key, defaultValue);
+    }
     public  void savePreferencesBoolean( String key, Boolean value){
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(MyApplication.getContext());
         SharedPreferences.Editor editor = sp.edit();
