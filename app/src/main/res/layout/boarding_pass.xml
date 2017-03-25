@@ -93,8 +93,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="flight"
+                        android:textSize="11sp"
                         android:textAllCaps="true"
-                        android:textColor="@color/fontText" />
+                        android:textColor="@color/white" />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
                         android:layout_width="wrap_content"
@@ -120,8 +121,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="gate"
+                        android:textSize="11sp"
+                        android:textColor="@color/white"
                         android:textAllCaps="true"
-                        android:textColor="@color/fontText" />
+                      />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
                         android:layout_width="wrap_content"
@@ -147,8 +150,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Seat"
+                        android:textSize="11sp"
                         android:textAllCaps="true"
-                        android:textColor="@color/fontText"
+                        android:textColor="@color/white"
                         android:textStyle="normal" />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
@@ -175,8 +179,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ETD"
+                        android:textSize="11sp"
                         android:textAllCaps="true"
-                        android:textColor="@color/fontText" />
+                        android:textColor="@color/white"/>
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
                         android:layout_width="wrap_content"
