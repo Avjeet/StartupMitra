@@ -59,7 +59,7 @@ public class Profile  extends android.support.v4.app.Fragment  {
                                     .setIsSmartLockEnabled(false)
                                     .setProviders(providers
                                     )
-                                    .setLogo(R.drawable.logo)
+                                    .setLogo(R.drawable.logooo)
                                     .setTheme(R.style.profile)
                                     .build(),RC_SIGN_IN);
                 }
