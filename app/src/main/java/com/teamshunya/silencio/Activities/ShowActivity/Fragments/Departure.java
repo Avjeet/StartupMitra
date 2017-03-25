@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.animation.LinearOutSlowInInterpolator;
@@ -49,6 +50,7 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
     private List<com.teamshunya.silencio.Models.Departure> departureList;
     private List<com.teamshunya.silencio.Models.Departure> myList;
     LinearLayout layout;
+
     public Departure() {
         loadDepartureList();
     }
@@ -60,7 +62,6 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        alertBox();
         return inflater.inflate(R.layout.fragment_blank, container, false);
     }
 
@@ -78,7 +79,6 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
                             public void onClick(DialogInterface dialog, int id) {
                                 String pnr = userInput.getText().toString();
                                 fetchInfoByPNR(pnr);
-                                layout.setVisibility(View.VISIBLE);
 
                             }
                         })
@@ -100,13 +100,16 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
         });
     }
 
-    private void fetchInfoByPNR(String s) {
+    private void fetchInfoByPNR(final String s) {
         APIInterface apiInterface = ApiClient.getApiService();
         Call<com.teamshunya.silencio.Models.Departure> call = apiInterface.getmyDetail(s);
         call.enqueue(new Callback<com.teamshunya.silencio.Models.Departure>() {
             @Override
             public void onResponse(Call<com.teamshunya.silencio.Models.Departure> call, Response<com.teamshunya.silencio.Models.Departure> response) {
+                StoreSession.getInstance().savePreferencesString("PNR", s);
                 com.teamshunya.silencio.Models.Departure model = response.body().getDeparture();
+
+                layout.setVisibility(View.VISIBLE);
                 src.setText(model.getSource());
             }
 
@@ -122,11 +125,17 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         bindViews(view);
+        String pnr = StoreSession.getInstance().readPreferencesString("PNR", "");
+        if (pnr.isEmpty()) {
+            alertBox();
+        } else {
+            fetchInfoByPNR(pnr);
+        }
         departureList = new ArrayList<>();
     }
 
     private void bindViews(View view) {
-     layout = (LinearLayout)view.findViewById(R.id.layout);
+        layout = (LinearLayout) view.findViewById(R.id.layout);
         parentView = view.findViewById(R.id.parentt);
         src = (CustomFontTextView) view.findViewById(R.id.src);
         departureSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.departure_swip);

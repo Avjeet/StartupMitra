@@ -40,6 +40,7 @@ public class ShowActivity extends AppCompatActivity {
     private CustomFontTextView toolbar_title;
     boolean doubleBackToExitPressedOnce = false;
     private BottomNavigationView bottomNavigation;
+    private int selectedMenu = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,13 +56,15 @@ public class ShowActivity extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
         BottomNavigationViewHelper.disableShiftMode(bottomNavigation);
         bottomNavigation.getMenu().getItem(2).setChecked(true);
+        selectedMenu = bottomNavigation.getMenu().getItem(2).getItemId();
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
+                if (selectedMenu == id)
+                    return true;
                 switch (id) {
                     case R.id.action_search:
-
                         fragment = new Arrival();
                         break;
                     case R.id.action_cart:
@@ -77,6 +80,7 @@ public class ShowActivity extends AppCompatActivity {
                         fragment = new Maps();
                         break;
                 }
+                selectedMenu = id;
                 final FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.main_container, fragment).commit();
                 return true;
@@ -120,14 +124,11 @@ public class ShowActivity extends AppCompatActivity {
     }
 
     private void launchDeparture() {
-
         Fragment fragment = new Departure();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
         transaction.add(R.id.main_container, fragment).commit();
-
-
     }
 
     @Override
