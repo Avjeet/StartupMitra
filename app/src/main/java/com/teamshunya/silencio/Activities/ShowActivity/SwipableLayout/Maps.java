@@ -163,7 +163,6 @@ public class Maps extends Fragment implements OnMapReadyCallback,GoogleApiClient
     }
 
 
-
     public void onMarkerDrag(Marker marker) {
     }
 
