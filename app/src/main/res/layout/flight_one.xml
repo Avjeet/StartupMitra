@@ -11,13 +11,13 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:elevation="5dp"
-        android:padding="8dp"
         android:layout_marginBottom="1dp"
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
-        app:cardCornerRadius="5dp"
+        android:elevation="5dp"
+        android:padding="8dp"
         app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="5dp"
         app:cardElevation="5dp">
 
         <LinearLayout
@@ -62,7 +62,6 @@
                         android:layout_weight="4"
                         android:gravity="start"
                         android:text="SRC"
-
                         android:textAllCaps="true"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -70,9 +69,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/flightss"
-
-                        />
+                        android:src="@drawable/flightss" />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
                         android:id="@+id/terminal_text"
@@ -100,27 +97,27 @@
                         android:id="@+id/flight_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="start"
-                        android:textAllCaps="true"
                         android:layout_weight="3"
-                        android:text="hh:" />
+                        android:gravity="start"
+                        android:text="hh:"
+                        android:textAllCaps="true" />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
                         android:id="@+id/status_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#de5d61"
-                        android:gravity="center_horizontal"
                         android:layout_weight="3"
-                        android:text="mm:" />
+                        android:gravity="center_horizontal"
+                        android:text="mm:"
+                        android:textColor="#de5d61" />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
                         android:id="@+id/time_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
-                        android:gravity="start"
                         android:drawableLeft="@drawable/clock"
+                        android:gravity="start"
                         android:text="ss" />
 
                 </LinearLayout>
