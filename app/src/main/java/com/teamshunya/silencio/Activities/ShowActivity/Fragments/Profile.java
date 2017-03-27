@@ -42,6 +42,7 @@ public class Profile  extends android.support.v4.app.Fragment  {
                 new AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build(),
                 new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build()
 
+
         );
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -83,16 +84,17 @@ public class Profile  extends android.support.v4.app.Fragment  {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
+    public void onStart() {
+        super.onStart();
         mFirebaseAuth.addAuthStateListener(mAuthStateListener);
     }
 
     @Override
-    public void onPause() {
-        super.onPause();
+    public void onStop() {
+        super.onStop();
         mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LayoutInflater lf = getActivity().getLayoutInflater();
