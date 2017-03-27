@@ -4,10 +4,17 @@
     <!-- Single menu item
          Set id, icon and Title for each menu item
     -->
-    <item android:id="@+id/menu_profile"
-        app:showAsAction="always"
+    <item
+        android:id="@+id/menu_profile"
         android:icon="@drawable/profilemee"
-        android:title="Profile" />
+        android:title="Profile"
+        app:showAsAction="always" />
 
-
+    <item
+        android:id="@+id/action_searchh"
+        android:icon="@drawable/search"
+        android:title="@android:string/search_go"
+        android:visible="true"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always|collapseActionView" />
 </menu>

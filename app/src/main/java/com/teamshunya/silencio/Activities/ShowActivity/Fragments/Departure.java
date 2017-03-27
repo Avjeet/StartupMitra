@@ -1,5 +1,6 @@
 package com.teamshunya.silencio.Activities.ShowActivity.Fragments;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -10,6 +11,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +23,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
+import com.teamshunya.silencio.Activities.ShowActivity.ShowActivity;
 import com.teamshunya.silencio.Adapter.mDepartureAdapter;
 import com.teamshunya.silencio.Classes.CustomFontTextView;
 import com.teamshunya.silencio.Classes.StoreSession;
@@ -37,7 +40,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
+public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshListener, ShowActivity.QuerySearchInterface {
     private ListView listView;
     private View parentView;
     private SwipeRefreshLayout departureSwipeRefreshLayout;
@@ -46,8 +49,10 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
     EditText userInput;
     private List<com.teamshunya.silencio.Models.Departure> departureList;
     private List<com.teamshunya.silencio.Models.Departure> myList;
+    private mDepartureAdapter adapter;
     LinearLayout layout;
-Context context;
+    Activity activity;
+
     public Departure() {
         loadDepartureList();
     }
@@ -169,12 +174,12 @@ Context context;
     private void showAlert(com.teamshunya.silencio.Models.Departure departure) {
         final Dialog dialog = new Dialog((getActivity()));
         dialog.setContentView(R.layout.dialog_custom);
-        ImageView logo_response = (ImageView)dialog.findViewById(R.id.logo_response);
+        ImageView logo_response = (ImageView) dialog.findViewById(R.id.logo_response);
         CustomFontTextView text = (CustomFontTextView) dialog.findViewById(R.id.text_details);
         CustomFontTextView ok = (CustomFontTextView) dialog.findViewById(R.id.ok);
         dialog.setTitle(departure.getSource());
         text.setText(departure.getEta());
-        Picasso.with(context).load(departure.getLogo()).placeholder(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher).into(logo_response);
+        Picasso.with(activity).load(departure.getLogo()).placeholder(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher).into(logo_response);
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -194,7 +199,7 @@ Context context;
                 if (response.isSuccessful()) {
                     try {
                         departureList = response.body().getDeparture();
-                        mDepartureAdapter adapter = new mDepartureAdapter(getActivity().getApplicationContext(), departureList);
+                        adapter = new mDepartureAdapter(getActivity().getApplicationContext(), departureList);
                         listView.setAdapter(adapter);
 
 
@@ -217,5 +222,34 @@ Context context;
         loadDepartureList();
         departureSwipeRefreshLayout.setRefreshing(false);
 
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        this.activity = activity;
+    }
+
+    @Override
+    public void onQueryChange(String text) {
+        List<com.teamshunya.silencio.Models.Departure> filteredDepartureList = new ArrayList<>();
+        for (com.teamshunya.silencio.Models.Departure departure : departureList) {
+            if (departure.getSource().toLowerCase().contains(text.toLowerCase())) {
+                if (!filteredDepartureList.contains(departure))
+                    filteredDepartureList.add(departure);
+            }
+            else if (departure.getDestination().toLowerCase().contains(text.toLowerCase())) {
+                if (!filteredDepartureList.contains(departure))
+                    filteredDepartureList.add(departure);
+            }
+            else if (departure.getFlightNo().toLowerCase().contains(text.toLowerCase())) {
+                if (!filteredDepartureList.contains(departure))
+                    filteredDepartureList.add(departure);
+            }
+        }
+        listView = (ListView) activity.findViewById(R.id.arrivall_list);
+        adapter = new mDepartureAdapter(activity.getApplicationContext(), filteredDepartureList);
+        adapter.notifyDataSetChanged();
+        listView.setAdapter(adapter);
     }
 }

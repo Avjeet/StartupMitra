@@ -1,5 +1,6 @@
 package com.teamshunya.silencio.Activities.ShowActivity.Fragments;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -8,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.teamshunya.silencio.Activities.ShowActivity.ShowActivity;
+import com.teamshunya.silencio.Adapter.mDepartureAdapter;
 import com.teamshunya.silencio.Adapter.mOfferAdapter;
 import com.teamshunya.silencio.Models.Offer;
 import com.teamshunya.silencio.Models.OfferList;
@@ -22,12 +25,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class DealsFragment extends android.support.v4.app.Fragment implements SwipeRefreshLayout.OnRefreshListener {
+public class DealsFragment extends android.support.v4.app.Fragment implements SwipeRefreshLayout.OnRefreshListener, ShowActivity.QuerySearchInterface {
     private ListView listView;
     private View parentView;
     private List<Offer> offerList;
     private mOfferAdapter adapter;
     private SwipeRefreshLayout dealsSwipeRefreshLayout;
+    private Activity activity;
 
     public DealsFragment() {
     }
@@ -93,10 +97,34 @@ public class DealsFragment extends android.support.v4.app.Fragment implements Sw
 
     }
 
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        this.activity = activity;
+    }
 
     @Override
     public void onRefresh() {
         loadOfferList();
         dealsSwipeRefreshLayout.setRefreshing(false);
+    }
+
+    @Override
+    public void onQueryChange(String text) {
+        List<com.teamshunya.silencio.Models.Offer> filteredList = new ArrayList<>();
+        for (com.teamshunya.silencio.Models.Offer offer : offerList) {
+            if (offer.getName().toLowerCase().contains(text.toLowerCase())) {
+                if (!filteredList.contains(offer))
+                    filteredList.add(offer);
+            }
+            else if (offer.getTag().toLowerCase().contains(text.toLowerCase())) {
+                if (!filteredList.contains(offer))
+                    filteredList.add(offer);
+            }
+        }
+        listView = (ListView) activity.findViewById(R.id.arrival_list);
+        adapter = new mOfferAdapter(activity.getApplicationContext(), filteredList);
+        adapter.notifyDataSetChanged();
+        listView.setAdapter(adapter);
     }
 }

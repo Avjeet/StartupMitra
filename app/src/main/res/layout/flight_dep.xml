@@ -14,9 +14,9 @@
         android:layout_marginBottom="1dp"
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
-        app:cardCornerRadius="5dp"
-
+        android:background="#fff"
         android:padding="8dp"
+        app:cardCornerRadius="5dp"
         app:cardElevation="5dp">
 
         <LinearLayout
@@ -98,26 +98,26 @@
                         android:id="@+id/flight_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="start"
                         android:layout_weight="3"
+                        android:gravity="start"
                         android:text="hh:" />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
                         android:id="@+id/status"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#de5d61"
-                        android:gravity="center_horizontal"
                         android:layout_weight="3"
-                        android:text="mm:" />
+                        android:gravity="center_horizontal"
+                        android:text="mm:"
+                        android:textColor="#de5d61" />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
                         android:id="@+id/time_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
-                        android:gravity="start"
                         android:drawableLeft="@drawable/clock"
+                        android:gravity="start"
                         android:text="ss" />
                 </LinearLayout>
             </LinearLayout>

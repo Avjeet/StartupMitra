@@ -7,8 +7,6 @@
     <color name="white">#ffffff</color>
     <color name="bg">#E0E0E0</color>
     <color name="fontText">#c2c2c2</color>
-
-    <color name="title">#757575</color>
     <color name="background">#eef3f7</color>
     <color name="bottom">#f9f9f9</color>
 </resources>

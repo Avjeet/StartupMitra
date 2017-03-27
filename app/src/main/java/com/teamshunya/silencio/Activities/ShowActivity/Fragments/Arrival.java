@@ -1,5 +1,6 @@
 package com.teamshunya.silencio.Activities.ShowActivity.Fragments;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +13,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.teamshunya.silencio.Activities.ShowActivity.ShowActivity;
+import com.teamshunya.silencio.Adapter.mDepartureAdapter;
+import com.teamshunya.silencio.Adapter.mOfferAdapter;
 import com.teamshunya.silencio.Adapter.myArrivalAdapter;
 import com.teamshunya.silencio.Models.ArrivalList;
 import com.teamshunya.silencio.R;
@@ -26,7 +30,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class Arrival extends android.support.v4.app.Fragment implements SwipeRefreshLayout.OnRefreshListener {
+public class Arrival extends android.support.v4.app.Fragment implements SwipeRefreshLayout.OnRefreshListener, ShowActivity.QuerySearchInterface {
     private ListView listView;
     private View parentView;
     private View view;
@@ -34,6 +38,7 @@ public class Arrival extends android.support.v4.app.Fragment implements SwipeRef
     private List<com.teamshunya.silencio.Models.Arrival> arrivalList;
     private myArrivalAdapter adapter;
     private SwipeRefreshLayout arrivalSwipeRefreshLayout;
+    private Activity activity;
 
     public Arrival() {
     }
@@ -103,9 +108,38 @@ public class Arrival extends android.support.v4.app.Fragment implements SwipeRef
     }
 
     @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        this.activity = activity;
+    }
+
+    @Override
     public void onRefresh() {
         loadArrivalList();
         arrivalSwipeRefreshLayout.setRefreshing(false);
 
+    }
+
+    @Override
+    public void onQueryChange(String text) {
+        List<com.teamshunya.silencio.Models.Arrival> filteredList = new ArrayList<>();
+        for (com.teamshunya.silencio.Models.Arrival arrival : arrivalList) {
+            if (arrival.getSource().toLowerCase().contains(text.toLowerCase())) {
+                if (!filteredList.contains(arrival))
+                    filteredList.add(arrival);
+            }
+            else if (arrival.getDestination().toLowerCase().contains(text.toLowerCase())) {
+                if (!filteredList.contains(arrival))
+                    filteredList.add(arrival);
+            }
+            else if (arrival.getFlightNo().toLowerCase().contains(text.toLowerCase())) {
+                if (!filteredList.contains(arrival))
+                    filteredList.add(arrival);
+            }
+        }
+        listView = (ListView) activity.findViewById(R.id.arrival_list);
+        adapter = new myArrivalAdapter(activity.getApplicationContext(), filteredList);
+        adapter.notifyDataSetChanged();
+        listView.setAdapter(adapter);
     }
 }

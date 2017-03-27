@@ -1,5 +1,7 @@
 package com.teamshunya.silencio.Activities.ShowActivity;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -9,7 +11,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -41,6 +45,10 @@ public class ShowActivity extends AppCompatActivity {
     boolean doubleBackToExitPressedOnce = false;
     private BottomNavigationView bottomNavigation;
     private int selectedMenu = 0;
+
+    public interface QuerySearchInterface {
+        public void onQueryChange(String text);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +103,34 @@ public class ShowActivity extends AppCompatActivity {
         }
     }
 
+    private void searchViewListeners(Menu menu) {
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.action_searchh).getActionView();
+        if (null != searchView) {
+            searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+            searchView.setIconifiedByDefault(false);
+        }
+        SearchView.OnQueryTextListener queryTextListener = new SearchView.OnQueryTextListener() {
+            public boolean onQueryTextChange(String newText) {
+                Log.d("search T", newText);
+                updateListAdapter(newText);
+                return true;
+            }
+
+            public boolean onQueryTextSubmit(String query) {
+                return true;
+            }
+        };
+        searchView.setOnQueryTextListener(queryTextListener);
+    }
+
+    private void updateListAdapter(String newText) {
+        if (fragment instanceof QuerySearchInterface) {
+            QuerySearchInterface querySearchInterface = (QuerySearchInterface) fragment;
+            querySearchInterface.onQueryChange(newText);
+        }
+    }
+
     private void toolbar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.cloud);
@@ -124,7 +160,7 @@ public class ShowActivity extends AppCompatActivity {
     }
 
     private void launchDeparture() {
-        Fragment fragment = new Departure();
+        fragment = new Departure();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
@@ -138,7 +174,7 @@ public class ShowActivity extends AppCompatActivity {
             return;
         }
         this.doubleBackToExitPressedOnce = true;
-        Fragment fragment = new Departure();
+        fragment = new Departure();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left);
@@ -147,9 +183,6 @@ public class ShowActivity extends AppCompatActivity {
                 .commit();
         bottomNavigation.setVisibility(View.VISIBLE);
         toolbar_title.setText(getString(R.string.app_name));
-
-
-
     }
 
     @Override
@@ -161,7 +194,6 @@ public class ShowActivity extends AppCompatActivity {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
-
                             case R.id.menu_profile:
                                 Fragment fragment = new Profile();
                                 FragmentManager manager = getSupportFragmentManager();
@@ -176,9 +208,7 @@ public class ShowActivity extends AppCompatActivity {
                         return onOptionsItemSelected(item);
                     }
                 });
-
+        searchViewListeners(menu);
         return true;
     }
-
-
 }
