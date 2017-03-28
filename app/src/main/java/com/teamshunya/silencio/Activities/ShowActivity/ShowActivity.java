@@ -121,7 +121,9 @@ public class ShowActivity extends AppCompatActivity {
                 return true;
             }
         };
-        searchView.setOnQueryTextListener(queryTextListener);
+        try {
+            searchView.setOnQueryTextListener(queryTextListener);
+        }catch (Exception ignored){}
     }
 
     private void updateListAdapter(String newText) {

@@ -7,21 +7,21 @@
         android:title="Maps"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@drawable/place">
+        android:icon="@drawable/mapsimage">
     </item>
     <item
         android:id="@+id/action_search"
         android:title="Arrival"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@drawable/arrival">
+        android:icon="@drawable/arrivalimage">
     </item>
     <item
         android:id="@+id/action_cart"
         android:title="Departure"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@drawable/takeoff">
+        android:icon="@drawable/departureimage">
     </item>
 
     <item
@@ -29,14 +29,14 @@
         android:title="Offers"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@drawable/food">
+        android:icon="@drawable/offerimage">
     </item>
     <item
         android:id="@+id/action_feedback"
         android:title="Feedback"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@drawable/feedback">
+        android:icon="@drawable/feedbackimage">
     </item>
 
 
