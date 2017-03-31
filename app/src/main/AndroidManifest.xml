@@ -77,6 +77,10 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/API_KEY" />
 
+        <activity android:name=".Activities.ShowActivity.Fragments.FeedbackActivities.FeedbackActivity" />
+        <activity android:name=".Activities.ShowActivity.Fragments.FeedbackActivities.SuggestionActivity" />
+        <activity android:name=".Activities.ShowActivity.Fragments.FeedbackActivities.ComplainActivity" />
+        <activity android:name=".Activities.ShowActivity.Fragments.FeedbackActivities.AppreciationActivity"></activity>
     </application>
 
 </manifest>

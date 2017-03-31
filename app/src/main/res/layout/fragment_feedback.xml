@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginRight="3dp"
+            android:id="@+id/feedbackCard"
             android:layout_weight="5"
             app:cardCornerRadius="5dp">
 
@@ -48,6 +49,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:id="@+id/suggestionCard"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="3dp"
             android:layout_weight="5"
@@ -90,7 +92,7 @@
         <android.support.v7.widget.CardView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-
+            android:id="@+id/complainCard"
             android:layout_gravity="center"
             android:layout_marginRight="3dp"
             android:layout_weight="5"
@@ -125,6 +127,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="2dp"
+            android:id="@+id/AppreciationCard"
             android:layout_marginRight="3dp"
             android:layout_weight="5"
             app:cardCornerRadius="5dp">
@@ -158,4 +161,5 @@
         android:layout_height="wrap_content"
         android:src="@drawable/bo"
         />
+
 </LinearLayout>
