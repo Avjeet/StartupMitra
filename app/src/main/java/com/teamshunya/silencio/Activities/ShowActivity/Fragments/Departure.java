@@ -111,13 +111,18 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
             public void onResponse(Call<PersonalDetail> call, Response<PersonalDetail> response) {
                 StoreSession.getInstance().savePreferencesString("PNR", s);
                 PersonalDetail model = response.body();
-                layout.setVisibility(View.VISIBLE);
-                source.setText(model.getSource());
-                destination.setText(model.getDestination());
-                departure_time.setText(model.getEta());
-                flightnumber.setText(model.getFlightNo());
-                gatenumber.setText(model.getGate());
-                seatnumber.setText(model.getSeat());
+                try {
+
+                    layout.setVisibility(View.VISIBLE);
+                    source.setText(model.getSource());
+                    destination.setText(model.getDestination());
+                    departure_time.setText(model.getEta());
+                    flightnumber.setText(model.getFlightNo());
+                    gatenumber.setText(model.getGate());
+                    seatnumber.setText(model.getSeat());
+                }catch (Exception e){
+
+                }
             }
 
             @Override
