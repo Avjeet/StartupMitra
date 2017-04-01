@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/Users/himanshusingh/Documents/AndroidStudioProject/Silencio/Silencio/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/home/vaibhav/AndroidStudioProjects/FinalSilencio/Silencio/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="3e7cc2bd2d27d6c3ae817f36cd4d89dd6747ff90">
-        <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_190c6a9d277d8feff7eb9da89a19c2f4582b19f3/classes.dex" />
+        sha1="10e17a9d516d16d6f5b6655ddc9157350d5a5cbf">
+        <dex dex="/home/vaibhav/AndroidStudioProjects/FinalSilencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_f5cb61ad93a6ff17bc7ab31252b4c35c848a4fa1/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/himanshusingh/Documents/AndroidStudioProject/Silencio/Silencio/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/home/vaibhav/AndroidStudioProjects/FinalSilencio/Silencio/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/Silencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_9d0cdc3654938609d6ad61431432de28b981494b/classes.dex" />
+        <dex dex="/home/vaibhav/AndroidStudioProjects/FinalSilencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_4e6b6f15b1c12a5101e030fb6d11170d04b04110/classes.dex" />
     </item>
 
 </items>

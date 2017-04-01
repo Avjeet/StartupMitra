@@ -19,8 +19,8 @@
         <com.teamshunya.silencio.Classes.CustomFontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/feedbackTitle"
             android:layout_marginBottom="20dp"
+            android:text="@string/feedbackTitle"
             android:textSize="16sp" />
 
         <LinearLayout
@@ -37,11 +37,11 @@
 
             <Spinner
                 android:id="@+id/spinner_airport_name"
-                android:padding="10dp"
                 style="@style/Widget.AppCompat.Spinner.Underlined"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="3" />
+                android:layout_weight="3"
+                android:padding="10dp" />
         </LinearLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/input_password"
+                android:id="@+id/input_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Name" />
@@ -127,7 +127,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
-                android:text="1-7 times "
+                android:text="1-7 times"
                 android:textSize="18sp" />
 
             <RadioButton
@@ -178,7 +178,353 @@
                         android:textColor="#fff" />
 
                     <com.hsalf.smilerating.SmileRating
-                        android:id="@+id/smile_rating0"
+                        android:id="@+id/ground"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#334255"
+                        android:padding="10dp"
+                        android:text="@string/parking"
+                        android:textColor="#fff" />
+
+                    <com.hsalf.smilerating.SmileRating
+                        android:id="@+id/park"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            Availability of Baggage Carts/Trolleys
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#334255"
+                        android:padding="10dp"
+                        android:text="@string/bag"
+                        android:textColor="#fff" />
+
+                    <com.hsalf.smilerating.SmileRating
+                        android:id="@+id/bag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            COURTESY, HELPFULNESS OF CHECK-IN STAFF
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#334255"
+                        android:padding="10dp"
+                        android:text="@string/court"
+                        android:textColor="#fff" />
+
+                    <com.hsalf.smilerating.SmileRating
+                        android:id="@+id/courtesy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            Waiting Time at Passport/Personal Id Inspection
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#334255"
+                        android:padding="10dp"
+                        android:text="@string/waittimes"
+                        android:textColor="#fff" />
+
+                    <com.hsalf.smilerating.SmileRating
+                        android:id="@+id/waittime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            Courtesy and helpfulness of Inspection and Security Staff
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#334255"
+                        android:padding="10dp"
+                        android:text="@string/courtsy"
+                        android:textColor="#fff" />
+
+                    <com.hsalf.smilerating.SmileRating
+                        android:id="@+id/courtesyInspectionandSecurit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            Ease of finding your way through the Airport
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#334255"
+                        android:padding="10dp"
+                        android:text="@string/easeFind"
+                        android:textColor="#fff" />
+
+                    <com.hsalf.smilerating.SmileRating
+                        android:id="@+id/ease"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+
+            Restaurent/Eating Facilities
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#334255"
+                        android:padding="10dp"
+                        android:text="@string/eatRest"
+                        android:textColor="#fff" />
+
+                    <com.hsalf.smilerating.SmileRating
+                        android:id="@+id/eat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            Courtesy and helpfulness of Airport Staff
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#334255"
+                        android:padding="10dp"
+                        android:text="@string/staf"
+                        android:textColor="#fff" />
+
+                    <com.hsalf.smilerating.SmileRating
+                        android:id="@+id/airportStaff"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            Overall satiffaction with Airport
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#334255"
+                        android:padding="10dp"
+                        android:text="@string/satisfaction"
+                        android:textColor="#fff" />
+
+                    <com.hsalf.smilerating.SmileRating
+                        android:id="@+id/satis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+            Shopping Facilities
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#334255"
+                        android:padding="10dp"
+                        android:text="@string/shopping"
+                        android:textColor="#fff" />
+
+                    <com.hsalf.smilerating.SmileRating
+                        android:id="@+id/shop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            Cleanliness of Airport Terminal
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#334255"
+                        android:padding="10dp"
+                        android:text="@string/claening"
+                        android:textColor="#fff" />
+
+                    <com.hsalf.smilerating.SmileRating
+                        android:id="@+id/clean"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+            Availability of Bank/Atm Facilities/Money Changers
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#334255"
+                        android:padding="10dp"
+                        android:text="@string/aval"
+                        android:textColor="#fff" />
+
+                    <com.hsalf.smilerating.SmileRating
+                        android:id="@+id/aval"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -187,5 +533,13 @@
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/submt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+
+            />
     </LinearLayout>
 </ScrollView>

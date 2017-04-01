@@ -24,4 +24,15 @@
     <string name="clean">Airport Cleanliness</string>
     <string name="hospitality">Ground Transportation To/From Airport</string>
     <string name="feedbackTitle">Feedback</string>
+    <string name="bag">Availability of Baggage Carts/Trolleys</string>
+    <string name="court">COURTESY, HELPFULNESS OF CHECK-IN STAFF</string>
+    <string name="waittimes">Waiting Time at Passport/Personal Id Inspection</string>
+    <string name="courtsy">Courtesy and helpfulness of Inspection and Security Staff</string>
+    <string name="easeFind">Ease of finding your way through the Airport</string>
+    <string name="eatRest">Restaurent/Eating Facilities</string>
+    <string name="staf">Courtesy and helpfulness of Airport Staff</string>
+    <string name="satisfaction">Overall satiffaction with Airport</string>
+    <string name="shopping">Shopping Facilities</string>
+    <string name="claening">Cleanliness of Airport Terminal</string>
+    <string name="aval">Availability of Bank/Atm Facilities/Money Changers</string>
 </resources>
