@@ -60,7 +60,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="4"
                         android:gravity="start"
-                        android:text="SRC"
+                        android:text="@string/src"
                         android:textAllCaps="true"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -80,7 +80,7 @@
                         android:layout_weight="4"
                         android:gravity="end"
                         android:paddingRight="20dp"
-                        android:text="Des"
+                        android:text="@string/des"
                         android:textAllCaps="true"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -100,7 +100,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
                         android:gravity="start"
-                        android:text="hh:" />
+                        android:text="@string/hh" />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
                         android:id="@+id/status"
@@ -108,7 +108,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
                         android:gravity="center_horizontal"
-                        android:text="mm:"
+                        android:text="@string/mm"
                         android:textColor="#de5d61" />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
@@ -118,7 +118,7 @@
                         android:layout_weight="3"
                         android:drawableLeft="@drawable/clock"
                         android:gravity="start"
-                        android:text="ss" />
+                        android:text="@string/ss" />
                 </LinearLayout>
             </LinearLayout>
 

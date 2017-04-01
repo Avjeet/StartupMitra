@@ -42,8 +42,8 @@ public class Weather extends Fragment {
                     updatedField.setText(weather_updatedOn);
                     detailsField.setText(weather_description);
                     currentTemperatureField.setText(weather_temperature + "C");
-                    humidity_field.setText("Humidity: " + weather_humidity);
-                    pressure_field.setText("Pressure: " + weather_pressure);
+                    humidity_field.setText(getResources().getString(R.string.humidity) + weather_humidity);
+                    pressure_field.setText(getResources().getString(R.string.pressre) + weather_pressure);
                     weatherIcon.setText(Html.fromHtml(weather_iconText));
 
                 }

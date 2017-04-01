@@ -13,6 +13,8 @@ import android.os.IBinder;
 import android.provider.Settings;
 import android.util.Log;
 
+import com.teamshunya.silencio.R;
+
 /**
  * Created by himanshusingh on 22/03/17.
  */

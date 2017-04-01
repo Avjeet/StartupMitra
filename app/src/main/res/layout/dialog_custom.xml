@@ -2,8 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="300dp"
     android:layout_height="300dp"
-    android:layout_gravity="center"
-   >
+    android:layout_gravity="center">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="300dp"
@@ -28,7 +27,7 @@
             android:layout_below="@+id/logo_response"
             android:maxLines="4"
             android:padding="3dp"
-            android:text="Himahshu" />
+            android:text="@string/Himahshi" />
 
         <com.teamshunya.silencio.Classes.CustomFontTextView
             android:id="@+id/ok"
@@ -38,7 +37,7 @@
             android:layout_gravity="bottom"
             android:background="@color/colorPrimary"
             android:gravity="center"
-            android:text="OK"
+            android:text="@string/OK"
             android:textColor="#fff"
             android:textStyle="bold" />
     </RelativeLayout>

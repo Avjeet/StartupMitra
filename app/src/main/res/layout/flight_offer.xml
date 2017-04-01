@@ -17,8 +17,8 @@
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
         android:elevation="5dp"
-        app:cardBackgroundColor="#fff"
         android:padding="8dp"
+        app:cardBackgroundColor="#fff"
         app:cardCornerRadius="5dp"
         app:cardElevation="5dp">
 
@@ -51,7 +51,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:text="Name"
+                    android:text="@string/name"
                     android:textAllCaps="true"
                     android:textSize="18dp"
                     android:textStyle="bold" />
@@ -61,14 +61,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:text="offer"
+                    android:text="@string/offer"
                     android:textSize="14dp" />
 
                 <com.teamshunya.silencio.Classes.CustomFontTextView
                     android:id="@+id/expiry"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="expiry"
+                    android:text="@string/expiry"
                     android:textColor="#de5d61"
                     android:textSize="12dp"
                     android:textStyle="bold" />

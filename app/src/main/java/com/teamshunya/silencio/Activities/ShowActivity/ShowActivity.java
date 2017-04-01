@@ -146,7 +146,7 @@ public class ShowActivity extends AppCompatActivity {
                 transaction.replace(R.id.main_container, fragment)
                         .commit();
                 bottomNavigation.setVisibility(View.GONE);
-                toolbar_title.setText("Weather");
+                toolbar_title.setText(getResources().getString(R.string.weater));
             }
         });
         setTitle("  ");
@@ -204,7 +204,7 @@ public class ShowActivity extends AppCompatActivity {
                                         .commit();
 
                                 bottomNavigation.setVisibility(View.GONE);
-                                toolbar_title.setText("Profile");
+                                toolbar_title.setText(getResources().getString(R.string.profile));
                         }
                         return onOptionsItemSelected(item);
                     }

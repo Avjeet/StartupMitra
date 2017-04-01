@@ -1,11 +1,11 @@
 package com.teamshunya.silencio.Activities.ShowActivity.Fragments.FeedbackActivities;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -21,7 +21,7 @@ import java.util.List;
 
 public class FeedbackActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private Spinner spinner_airport;
-    private Button Submitbutton;
+    private FloatingActionButton Submitbutton;
     private int radioID;
     private String item;
     String finalRadioValue;
@@ -156,13 +156,14 @@ public class FeedbackActivity extends AppCompatActivity implements AdapterView.O
                         break;
                 }
 
-                DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("Feedback").child(StoreSession.getInstance().readPreferencesString("PNR", ""));
+                DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("Feedback").child(StoreSession.getInstance().readPreferencesString("PNR", "")).child("ACTUAL FEEDBACK");
                 database.child("emailID").setValue(emailidValue);
                 database.child("NAME").setValue(nameValue);
                 database.child("Age").setValue(ageValue);
                 database.child("Number").setValue(numberValue);
                 database.child("FlightNo").setValue(flight_noValue);
                 database.child("RadioValue").setValue(finalRadioValue);
+                database.child("AirportName").setValue(item);
 
                 database.child("ground").setValue(groundRate);
                 database.child("park").setValue(parkkrate);
@@ -200,7 +201,7 @@ public class FeedbackActivity extends AppCompatActivity implements AdapterView.O
 
     private void bindView() {
         spinner_airport = (Spinner) findViewById(R.id.spinner_airport_name);
-        Submitbutton = (Button) findViewById(R.id.submt);
+        Submitbutton = (FloatingActionButton) findViewById(R.id.submt);
         name = (EditText) findViewById(R.id.input_name);
         number = (EditText) findViewById(R.id.input_number);
         email_id = (EditText) findViewById(R.id.input_email);
