@@ -4,10 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_profile"
-        android:title="Maps"
+        android:title="Cabs"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@drawable/mapsimage">
+        android:icon="@drawable/car">
     </item>
     <item
         android:id="@+id/action_search"

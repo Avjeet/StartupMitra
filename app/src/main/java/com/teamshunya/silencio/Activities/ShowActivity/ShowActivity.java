@@ -1,10 +1,8 @@
 package com.teamshunya.silencio.Activities.ShowActivity;
 
 import android.app.SearchManager;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -26,11 +24,8 @@ import com.clevertap.android.sdk.exceptions.CleverTapMetaDataNotFoundException;
 import com.clevertap.android.sdk.exceptions.CleverTapPermissionsNotSatisfied;
 
 
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.messaging.FirebaseMessaging;
-import com.google.firebase.messaging.FirebaseMessagingService;
+import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Cabs;
 import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Weather;
-import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Maps;
 import com.teamshunya.silencio.Classes.CustomFontTextView;
 import com.teamshunya.silencio.R;
 import com.teamshunya.silencio.Activities.ShowActivity.Fragments.Arrival;
@@ -89,7 +84,7 @@ public class ShowActivity extends AppCompatActivity {
                         fragment = new Feedback();
                         break;
                     case R.id.action_profile:
-                        fragment = new Maps();
+                        fragment = new Cabs();
                         break;
                 }
                 selectedMenu = id;
