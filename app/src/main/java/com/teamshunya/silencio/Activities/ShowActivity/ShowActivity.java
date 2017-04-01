@@ -27,6 +27,7 @@ import com.clevertap.android.sdk.exceptions.CleverTapPermissionsNotSatisfied;
 import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Cabs;
 import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Weather;
 import com.teamshunya.silencio.Classes.CustomFontTextView;
+import com.teamshunya.silencio.Classes.StoreSession;
 import com.teamshunya.silencio.R;
 import com.teamshunya.silencio.Activities.ShowActivity.Fragments.Arrival;
 import com.teamshunya.silencio.Activities.ShowActivity.Fragments.DealsFragment;
@@ -47,6 +48,10 @@ public class ShowActivity extends AppCompatActivity {
 
     public interface QuerySearchInterface {
         public void onQueryChange(String text);
+    }
+
+    public interface QRcodeValue {
+        public void getQRCode(String qrCode);
     }
 
     @Override
@@ -211,5 +216,16 @@ public class ShowActivity extends AppCompatActivity {
                 });
         searchViewListeners(menu);
         return true;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("camera", "resume");
+        if (fragment instanceof QRcodeValue) {
+            Log.d("camera", "inside "+StoreSession.getInstance().readPreferencesString("qrCode", ""    ));
+            QRcodeValue querySearchInterface = (QRcodeValue) fragment;
+            querySearchInterface.getQRCode(StoreSession.getInstance().readPreferencesString("qrCode", ""    ));
+        }
     }
 }

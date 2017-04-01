@@ -3,21 +3,552 @@
 
     <item
         is-multidex="true"
-        jar="/home/vaibhav/AndroidStudioProjects/FinalSilencio/Silencio/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/finomena/.android/build-cache/e1efa6410214eaa9cdeddb3825d80cd09f753385/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="10e17a9d516d16d6f5b6655ddc9157350d5a5cbf">
-        <dex dex="/home/vaibhav/AndroidStudioProjects/FinalSilencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_f5cb61ad93a6ff17bc7ab31252b4c35c848a4fa1/classes.dex" />
+        sha1="7308fa2037dac339ea04b90cdd17e87f835ea294">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4f66dc01cd894e1b8406099da87665b64f490a73/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/vaibhav/AndroidStudioProjects/FinalSilencio/Silencio/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/finomena/.android/build-cache/9c0fc0c73fcaabe6aea399855d51449c3e824aca/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ddb7fed808f4331174b59428ccfc46b3696c9812">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_aea1573be2994efee91abda396ee70dabb28a275/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/c96bc3ff379f9bc8878e1286cf4d176858d79b1e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="db4aca1c1ec60f2c098d3b6c91cedfb7838f83ed">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9a6c859fe2d84ed7d304bcd2784a8e6e0edc8d80/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/2e9f440b36c1b2b28b5ddd5dfe7534bf8aa29a88/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1df6d719c4e264d66bb98baa5cb637495b8cca66">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b85cc9e13c61fdc015dcb8bd3cf6933f50b25705/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-tasks-1.4.0_3f1fce23403fa2ab4b792d2d25b1d74cc6f007b1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/50367e48c80c75b4e1ab7411196fb019ce7a2d43/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="760ff0a866a9b3b7fe4a91cfe6439d9dc93cea7c">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_703527f9dbfad6989943ca77b6919818563a81d2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_a80d51548db38ab470f1e8b943d99fb2a4b853be/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/a8ed965f1c3b45a62a5ca33df8aae3390409b260/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_336d2197fbc5b11100317addda221775ca464583/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/3d30f03d9ca5b8e640dd11c8f86d86abaf79f839/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8e1d31656bc9f1889283836e025e6cb703acd38a">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fca4fe2b4f696382d4e3ded7ee4d5fa2cbdfc38c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/43eeae0b9fb087bb3194ba59ab63a38a32fbf3e/retrofit-2.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="043eeae0b9fb087bb3194ba59ab63a38a32fbf3e">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.0.2_d2dec564c394b9aee3a0530d647c000d55bb7568/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/fd21d886e52a5b42be67d434375cf88cd7cec3a8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7d14fe9bd2283b2eb7fcab08458aa0357917e138">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b6be18c5c179e28a7a0b2b2bcac1654f79f4b1c3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.1/constraint-layout-solver-1.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1ad79631209e77b0a2730fc112b4cc0c66a95132">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.1_34017ab3fc7d7258d1552b7744df2ec8bd0a08a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/Silencio/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="/home/vaibhav/AndroidStudioProjects/FinalSilencio/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_4e6b6f15b1c12a5101e030fb6d11170d04b04110/classes.dex" />
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_00622e8ee1029a7acfc25e909dd605da6600c6d1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/bcc504f7038c431b934703dabd7a68c752d6e673/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45e0953544711e0b5a2d227732e88cccb82793bc">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2a8437095627c63e94d0afed93596e3ab0bd8f72/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/751df93dfa4e3b4e82c345f246fff6bfdc55abe0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0558e5b6c171bd6719581340f9ac6be4af5ae265">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f39b5879b2b8841d19805ef4f5adc41312254a02/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/89d5863435a28b4ed1d92e5addfbd64eb3864dcb/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a8ae156c2726ac9c56daaf4b49452ec2cdb7bba9">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_207ec12008df6e20b5c34e976c5524af5a5cd5c5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/b0d2090f62f25af0e050b9ef2d2fd5a682b3caf9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f5bcd9cbfeedc58f493339841a7c5d0347a39f0b">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c96b2bbc6ea83a29cb7a2c05635362e017e17ed9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/c9fad09c30d06d53624b422fc975286a9bc4bc6a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="74c5a91d6510ad42410e8a047d90d2ea6721a0e0">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8df3f7e29171a49bbc9d9eb740b0d0f65b308909/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.2/f8d87f15b94b8d74e7ccf61d7eedb558811cdb30/converter-gson-2.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f8d87f15b94b8d74e7ccf61d7eedb558811cdb30">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.0.2_95ea8597a5f95ef727e0aeb084e04315a77a087b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/6a6bdc70a5935f1c502a9ed93e7808816c39ec6f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="444f9de23145e8caba7bf1c1772acad142ea6013">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_041db363350536b336666abfba2db0ecb2acad83/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/87d8a8dd17d54c04f212d3abb384ef1534adbe6f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9d1d0e1270310e34e2d65afda2bc18605c14cd46">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_394c15725b3624b692bb4a5d8ef2b8ba3ea54272/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/999630bf7d5e1d4ba233612121cc679d8d7369a8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="acc71ccbaecd62b6540ef59fa6b031d6d928eeb6">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_469eeb71e2a30dbfcb9956b5c418bdc9a011b020/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/f15d5271d37d04cf8f1d6dcba80db12042111c96/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a10ed1f1cff990ef081263ad33f13dc6c207eb4e">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c73a3e5c9b21c8adcb77104a8754eff0782caf60/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/07b1aceb5f6725bf611a33208d1ccec0d54ff2ea/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3aaf1e7b5fe9f4d3ff22c4edc0ead631f7389d30">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1299085bc1991ce60033391c756bb100362bb6f9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/b56d9929e321930faf2e4a116087588b58f14d06/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="12b7e8b3bf0bda244dd2660fab68520a780065f1">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8e5ec13a7c154d928b00a669dc5cc92ddc8bea2c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/2aa641d29399f39589afd4298ccafa70a5dbd998/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="654b294d429b56fd18392f2b68ad79954f431f8e">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7892059242ab648f4fb4c9c13edb3b3fee4a8f9a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/83d64bed45b4299c14633dfe3ba297fe5eef0529/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="461cd433c2723981c7536d60acfcf3d86f3105fb">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1bce749eeedf8d18ff6e66dfb39b99062e9e3b3b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/d5da81d79cb24594133f03932c8d90c0d8f397e8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="db48dfabe8ecc46681ceca418d6bd61a5339f818">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_724b065d7aa1b042a217705083414201c3193633/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_4c47745530a020bb0102d90c961b8ae6e35f38bb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/a5fe568c1521b747b9b1436636b0a0dc38a09757/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ab0c7fe28f9506302eb39adf1ebf5858732e18ec">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_85351b95daba23260574cb2437a55f511787e527/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/fb19c349cee4332637ffe5c05b2422bc3cfcda9b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9493f008850469ed3fab9b28658919562882aed">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f823be295cadc08f97303a3bec45c34896ecdb3d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/fbea5d3519b034333dcf4337e9ae1df5e739f909/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cefd4d4b1cb3c2468c9551127b05b1179afcd2a6">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e9b8bd2856fcdd9c91afc76abbe0d7082d2a2215/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.gradle/caches/modules-2/files-2.1/com.twitter/twitter-text/1.13.0/78415b95ae3184c5926d593feab64bfc0b73b2dd/twitter-text-1.13.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="78415b95ae3184c5926d593feab64bfc0b73b2dd">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/twitter-text-1.13.0_9fe4a8ae32583cb92b85094d2c5d3d47ef0728f8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/f97760e3a4d5d2039d37df7132116aaa8ed62a0d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6da05b7498da036b5b37c3beb861cd2060929dcd">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1715ced3ade34aef5559c9fa6b70de3eb5b68b94/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/c894af92f209e3c6c905c02ec3e558695243f145/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="895c63ba9782b04f0c5da69205216f6ec87119eb">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bb576e7aa4d0362fe840d6878832414a43b5718c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/e36500307f1574c9c9aee62082f4b917a855af12/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8bdf5cd702d3d860cd85783a776c26605f557882">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8a4c75b0c8f652ce1ab26a60d212cc5b6feced00/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/316cb3d4b59bb878ff93156860434639a9b9cfb5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="90270132a5f1a33584f453c571257dd35e728201">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_91a1ed25d13be30d547879de08aebb2d4fc90a57/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/c4380b46b4ad08d7bee03cd9c1995cffa65cc3ef/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9d5ae39b0de30b0f73c815513024feff3542f36e">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_aff5e051727ad4750faf06b1d34a39ddf1b005ef/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.1/2287494d4f5f9f3a9a2bb6980e3f32053721b315/core-3.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/core-3.2.1_a702092ae077b00322a90b05465281ddf253b863/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/93aecccf296f8e1ca7f9260a339e83fa7042d30b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="421a5cebe9ff187c98075c59786e9464c5c67d36">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fa62cd5d90aa719193c86529d9b69416c7a01734/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/Silencio/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="14f2900f8de275abe3abb8a4d90289b5d98013de">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_20bfb67a868f8bfea33fdcdde415058ae8fc7651/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/a8ed965f1c3b45a62a5ca33df8aae3390409b260/output/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_ed2f647dcdd658ae16947d5eb91dbffb48f948d4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/9a355c5aaa20d572f5b4b6a6b29466b9a9bbaf7e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="101393e975eaf36e3ff40b277ee9a019e077afef">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f1f05633123259ad202e9c57f0d515aaed465353/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/ab1f2282cef7822af316275b8b8925876c43c724/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cf8c0b6ec17f059cf61ecd101296e16c38562196">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_935addc2a893f5e5adcb64e39b25929084abbd13/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/20d297c558b99c5c499e9a578beea2a17e2eea5b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ceda0650ec225b9c0143ed8ff1c010d4e621a423">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f636279f63f2937b37304170986fc6238c76bde2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/99189cce44c0a126857c168daf746c80a2687c3d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a319fd4d548ba4cc9511561d37109ba922bfbf6a">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8395863dfc4b9b021414000a6366c2914318029a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/daed56044696f9cfd7b337aef3f7d2aea9db5152/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7113302c965566b66df46c6ca75ea301576114a5">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6f731896fd5ec143af8475cf5659cf38cbc225e6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/f968dac97221711a4408411b41c33c0c2e2e9a00/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="423fb69e69759d8b726fa4a4fb6a1ea9fc86d1cd">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1e909904a4fae7a3a05dc70e2c96d3ebd21724a6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/3ecd66107f19c9a68475bfd84d40d19c8e34adab/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea03bbfaed89818f233ee9918fac493f2b63895a">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_12ce9252e443870ae6835209c9dbcc22d7392829/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/8fab86c461c201aadca7caf6258ac46882281d1a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="646b2c48e147b943f0a39842457fdc66d501e4b6">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e0343f8ccab683807a1b0d013b7eb53f3647fb1c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/199e5264ab737dd7a718d8f35cb7a908e378879e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94fca868854457ede6df15c902938468c71d579e">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c6abe3e96452cb0ea401ec6ffb4b1c4755e887ae/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.2/f1bc476cc167b18e66c297df599b2377131a8947/gson-2.6.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f1bc476cc167b18e66c297df599b2377131a8947">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.6.2_7a52c48e226676a1465f266c0ba88b28cf11f271/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/34afb70118b4b18a1040c66f9d4f9b85d88708f2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1bab75be1918fc9871be4da7afe38d7e4d308303">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7ce85ea33d37b368e6866e2fafe0b17c692c8ef3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/023c3c77b7668f7ee230e740dd538f832e3cede4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1395232a7eddc612029353b3c953cb0fced71076">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_25f2622d4fce161ae183ed6f4a9136990843df5c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/bd90a6adba902d88ea1a307e15eea084fbe275b2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="343ad59d9fb3bbf6ab99baafad859eb4b0fecc02">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_eb880a6c9d6db04e538f8324ce53fa405de0d81b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.2.0_28c16566e346615e27c2683946fa10522485bdd7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-applinks-1.4.0_1b60b8e13aa6e9e8d7642a65c616a35e8ff2dfc4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/19d7d289d53dcb58670fe64b2fbe96a45f65640c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c6047a34af07d6ec4e950ba1dc70ce23ac65ecaa">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_79035fb6a9162c6df70d44de6b6f2bb27f893b24/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/a514af8f10b3cc2fcf37588889a4974b860f119c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0e301f24b283f14b564f660c9abe863af6be5896">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e1e2e851503fec06337f2f708955bace95dab7fc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/445fa90cbd0bd980cc9a8540962395ae415e33c2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a3f7595ca32e614b454ceb7b7e241bb037a28e86">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a5ba3591578a1fa9cb207e5140cb67c433a9e552/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/finomena/.android/build-cache/152f410b529e30bdca9ba1ef4c78199fa3ee94da/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8fd2e9eadc9d214966ee7f60d6c5a17a335d7533">
+        <dex dex="/Users/finomena/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4a8632c60e31811a58b939f54768f2943f21c74c/classes.dex" />
     </item>
 
 </items>

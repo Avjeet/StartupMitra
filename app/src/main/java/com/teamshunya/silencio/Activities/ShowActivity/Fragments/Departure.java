@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.squareup.picasso.Picasso;
+import com.teamshunya.silencio.Activities.ShowActivity.QRCodeActivi;
 import com.teamshunya.silencio.Activities.ShowActivity.ShowActivity;
 import com.teamshunya.silencio.Adapter.mDepartureAdapter;
 import com.teamshunya.silencio.Classes.CustomFontTextView;
@@ -37,13 +40,14 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshListener, ShowActivity.QuerySearchInterface {
+public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshListener, ShowActivity.QuerySearchInterface,ShowActivity.QRcodeValue {
     private ListView listView;
     private View parentView;
     private SwipeRefreshLayout departureSwipeRefreshLayout;
     private CustomFontTextView source, departure_time, destination, flightnumber, gatenumber, seatnumber;
     private ImageView cancel;
     EditText userInput;
+    private static String pnrQR = "";
     private List<com.teamshunya.silencio.Models.Departure> departureList;
     private List<com.teamshunya.silencio.Models.Departure> myList;
     private mDepartureAdapter adapter;
@@ -70,7 +74,7 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
         alertDialogBuilder.setView(promptsView);
         userInput = (EditText) promptsView.findViewById(R.id.pnr);
-
+        userInput.setText(pnrQR);
         alertDialogBuilder
                 .setCancelable(false)
                 .setPositiveButton("OK",
@@ -80,10 +84,11 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
                                 fetchInfoByPNR(pnr);
                             }
                         })
-                .setNegativeButton("Cancel",
+                .setNeutralButton("Scan",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
+//                                dialog.cancel();
+                                startActivity(new Intent(activity, QRCodeActivi.class));
                             }
                         })
 
@@ -113,7 +118,6 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
                 flightnumber.setText(model.getFlightNo());
                 gatenumber.setText(model.getGate());
                 seatnumber.setText(model.getSeat());
-
             }
 
             @Override
@@ -149,7 +153,7 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
     private void bindViews(View view) {
         layout = (LinearLayout) view.findViewById(R.id.layout);
         destination = (CustomFontTextView) view.findViewById(R.id.destination);
-        departure_time = (CustomFontTextView) view.findViewById(R.id.departure_time);
+//        departure_time = (CustomFontTextView) view.findViewById(R.id.departure_time);
         flightnumber = (CustomFontTextView) view.findViewById(R.id.flightnumber);
         gatenumber = (CustomFontTextView) view.findViewById(R.id.gatenumber);
         seatnumber = (CustomFontTextView) view.findViewById(R.id.seatnumber);
@@ -167,7 +171,6 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
 //                Snackbar.make(parentView, "Flight from " + departureList.get(position).getSource() + " is expected to depart at " + departureList.get(position).getEta() + " hrs." + "Kindly check-in from" + departureList.get(position).getGate() + " Counter :)", Snackbar.LENGTH_LONG).show();
             }
         });
-
     }
 
     private void showAlert(com.teamshunya.silencio.Models.Departure departure) {
@@ -248,5 +251,12 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
         adapter = new mDepartureAdapter(activity.getApplicationContext(), filteredDepartureList);
         adapter.notifyDataSetChanged();
         listView.setAdapter(adapter);
+    }
+
+    @Override
+    public void getQRCode(String qrCode) {
+        Log.d("camera", "departure"+qrCode);
+        pnrQR = qrCode;
+        alertBox();
     }
 }
