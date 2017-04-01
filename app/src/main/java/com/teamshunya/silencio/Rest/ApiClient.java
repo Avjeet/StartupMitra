@@ -11,7 +11,6 @@ public class ApiClient {
 
     public static final String  BASE_URL="https://himanshoe.pythonanywhere.com";
     public static Retrofit retrofit=null;
-
     public static Retrofit getClient() {
         if (retrofit == null) {
 

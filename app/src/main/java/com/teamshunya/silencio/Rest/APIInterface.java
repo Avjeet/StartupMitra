@@ -5,6 +5,7 @@ import com.teamshunya.silencio.Models.ArrivalList;
 import com.teamshunya.silencio.Models.Departure;
 import com.teamshunya.silencio.Models.DepartureList;
 import com.teamshunya.silencio.Models.OfferList;
+import com.teamshunya.silencio.Models.PersonalDetail;
 
 
 import retrofit2.Call;
@@ -27,4 +28,7 @@ public interface APIInterface {
 
     @GET("/departure/{pnr}")
     Call<Departure> getmyDetail(@Path("pnr")String pnr);
+
+    @GET("departures/{pnr}")
+    Call<PersonalDetail> getmeDetail(@Path("pnr")String pnr);
 }
