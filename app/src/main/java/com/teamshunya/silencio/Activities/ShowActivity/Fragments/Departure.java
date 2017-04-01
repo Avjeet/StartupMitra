@@ -88,6 +88,7 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
                 .setNegativeButton("Cancel",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
+
                                 dialog.cancel();
 
                             }

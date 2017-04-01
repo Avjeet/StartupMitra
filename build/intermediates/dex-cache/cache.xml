@@ -3,12 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="/Users/himanshusingh/.android/build-cache/f46ae1af9f4ee6468c564e5ce5507b4e34f41210/output/jars/classes.jar"
+        jar="/Users/himanshusingh/Documents/AndroidStudioProject/Silencio/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="ceda0650ec225b9c0143ed8ff1c010d4e621a423">
-        <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8bf4067c323f8b88752c5374f8fcd0ba3ce26851/classes.dex" />
+        sha1="d34c0c96b9506684355eb39957425bb6c2723de9">
+        <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6fa967c5caf39eedbc28bd53bb0b453b4fbfa1aa/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -21,21 +21,21 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/himanshusingh/.android/build-cache/f46ae1af9f4ee6468c564e5ce5507b4e34f41210/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ceda0650ec225b9c0143ed8ff1c010d4e621a423">
+        <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8bf4067c323f8b88752c5374f8fcd0ba3ce26851/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/himanshusingh/.android/build-cache/843500192fe9b84446f2ef3e56c9c107e2e28ea7/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="760ff0a866a9b3b7fe4a91cfe6439d9dc93cea7c">
         <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_302404883d3a25851ef8e9efedd33eea23cdda70/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/himanshusingh/Documents/AndroidStudioProject/Silencio/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="15b40519cbeb88dd46d55866e3e7e5edf9541f07">
-        <dex dex="/Users/himanshusingh/Documents/AndroidStudioProject/Silencio/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6fa967c5caf39eedbc28bd53bb0b453b4fbfa1aa/classes.dex" />
     </item>
 
 </items>

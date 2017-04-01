@@ -59,11 +59,7 @@
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemee">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.clevertap.android.sdk.InAppNotificationActivity"
@@ -90,7 +86,14 @@
         <activity
             android:name=".Activities.ShowActivity.Fragments.FeedbackActivities.AppreciationActivity"
             android:theme="@style/AppThemee" />
-        <activity android:name=".Activities.ShowActivity.QRCodeActivi"></activity>
+        <activity android:name=".Activities.ShowActivity.QRCodeActivi" />
+        <activity android:name=".Activities.ShowActivity.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
