@@ -4,12 +4,12 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * Created by himanshusingh on 19/03/17.
+ * Created by himanshusingh on 01/04/17.
  */
 
-public class ApiClient {
+public class MyDetail {
 
-    public static final String  BASE_URL="https://himanshoe.pythonanywhere.com";
+    public static final String  BASE_URL="http://138.197.105.186";
     public static Retrofit retrofit=null;
     public static Retrofit getClient() {
         if (retrofit == null) {
@@ -24,4 +24,3 @@ public class ApiClient {
         return getClient().create(APIInterface.class);
     }
 }
-

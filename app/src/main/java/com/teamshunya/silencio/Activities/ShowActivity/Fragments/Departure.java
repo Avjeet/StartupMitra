@@ -3,15 +3,11 @@ package com.teamshunya.silencio.Activities.ShowActivity.Fragments;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +16,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.teamshunya.silencio.Activities.ShowActivity.ShowActivity;
@@ -28,9 +23,11 @@ import com.teamshunya.silencio.Adapter.mDepartureAdapter;
 import com.teamshunya.silencio.Classes.CustomFontTextView;
 import com.teamshunya.silencio.Classes.StoreSession;
 import com.teamshunya.silencio.Models.DepartureList;
+import com.teamshunya.silencio.Models.PersonalDetail;
 import com.teamshunya.silencio.R;
 import com.teamshunya.silencio.Rest.APIInterface;
 import com.teamshunya.silencio.Rest.ApiClient;
+import com.teamshunya.silencio.Rest.MyDetail;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +41,7 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
     private ListView listView;
     private View parentView;
     private SwipeRefreshLayout departureSwipeRefreshLayout;
-    private CustomFontTextView source, departuree, destination, flightnumber, gatenumber, seatnumber;
+    private CustomFontTextView source, departure_time, destination, flightnumber, gatenumber, seatnumber;
     private ImageView cancel;
     EditText userInput;
     private List<com.teamshunya.silencio.Models.Departure> departureList;
@@ -102,27 +99,29 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
     }
 
     private void fetchInfoByPNR(final String s) {
-        APIInterface apiInterface = ApiClient.getApiService();
-        Call<com.teamshunya.silencio.Models.Departure> call = apiInterface.getmyDetail(s);
-        call.enqueue(new Callback<com.teamshunya.silencio.Models.Departure>() {
+        APIInterface apiInterface = MyDetail.getApiService();
+        Call<PersonalDetail> call = apiInterface.getmeDetail(s);
+        call.enqueue(new Callback<PersonalDetail>() {
             @Override
-            public void onResponse(Call<com.teamshunya.silencio.Models.Departure> call, Response<com.teamshunya.silencio.Models.Departure> response) {
+            public void onResponse(Call<PersonalDetail> call, Response<PersonalDetail> response) {
                 StoreSession.getInstance().savePreferencesString("PNR", s);
-                com.teamshunya.silencio.Models.Departure model = response.body().getDeparture();
+                PersonalDetail model = response.body();
                 layout.setVisibility(View.VISIBLE);
                 source.setText(model.getSource());
                 destination.setText(model.getDestination());
-                seatnumber.setText(model.getSeat());
-                gatenumber.setText(model.getGate());
-                departuree.setText(model.getEta());
+                departure_time.setText(model.getEta());
                 flightnumber.setText(model.getFlightNo());
+                gatenumber.setText(model.getGate());
+                seatnumber.setText(model.getSeat());
 
             }
 
             @Override
-            public void onFailure(Call<com.teamshunya.silencio.Models.Departure> call, Throwable t) {
+            public void onFailure(Call<PersonalDetail> call, Throwable t) {
 
             }
+
+
         });
     }
 
@@ -150,7 +149,7 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
     private void bindViews(View view) {
         layout = (LinearLayout) view.findViewById(R.id.layout);
         destination = (CustomFontTextView) view.findViewById(R.id.destination);
-        departuree = (CustomFontTextView) view.findViewById(R.id.departure);
+        departure_time = (CustomFontTextView) view.findViewById(R.id.departure_time);
         flightnumber = (CustomFontTextView) view.findViewById(R.id.flightnumber);
         gatenumber = (CustomFontTextView) view.findViewById(R.id.gatenumber);
         seatnumber = (CustomFontTextView) view.findViewById(R.id.seatnumber);
@@ -237,12 +236,10 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
             if (departure.getSource().toLowerCase().contains(text.toLowerCase())) {
                 if (!filteredDepartureList.contains(departure))
                     filteredDepartureList.add(departure);
-            }
-            else if (departure.getDestination().toLowerCase().contains(text.toLowerCase())) {
+            } else if (departure.getDestination().toLowerCase().contains(text.toLowerCase())) {
                 if (!filteredDepartureList.contains(departure))
                     filteredDepartureList.add(departure);
-            }
-            else if (departure.getFlightNo().toLowerCase().contains(text.toLowerCase())) {
+            } else if (departure.getFlightNo().toLowerCase().contains(text.toLowerCase())) {
                 if (!filteredDepartureList.contains(departure))
                     filteredDepartureList.add(departure);
             }

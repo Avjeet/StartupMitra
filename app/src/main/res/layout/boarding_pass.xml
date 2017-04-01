@@ -53,13 +53,13 @@
                     android:src="@drawable/flight" />
 
                 <com.teamshunya.silencio.Classes.CustomFontTextView
+                    android:id="@+id/destination"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="0.4"
                     android:gravity="center"
                     android:text="@string/des"
-                    android:id="@+id/destination"
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="30sp"
@@ -93,15 +93,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/flight"
-                        android:textSize="11sp"
                         android:textAllCaps="true"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:id="@+id/flightnumber"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/SU254"
-                        android:id="@+id/flightnumber"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="18sp"
@@ -121,16 +121,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/gate"
-                        android:textSize="11sp"
-                        android:textColor="@color/white"
                         android:textAllCaps="true"
-                      />
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:id="@+id/gatenumber"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/g"
-                        android:id="@+id/gatenumber"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="18sp"
@@ -150,16 +149,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/Seat"
-                        android:textSize="11sp"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
+                        android:textSize="11sp"
                         android:textStyle="normal" />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:id="@+id/seatnumber"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/F"
-                        android:id="@+id/seatnumber"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="18sp"
@@ -179,15 +178,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/ETD"
-                        android:textSize="11sp"
                         android:textAllCaps="true"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
 
                     <com.teamshunya.silencio.Classes.CustomFontTextView
+                        android:id="@+id/departure"
                         android:layout_width="wrap_content"
+
                         android:layout_height="wrap_content"
                         android:text="@string/intvall"
-                        android:id="@+id/departure"
+
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="18sp"
