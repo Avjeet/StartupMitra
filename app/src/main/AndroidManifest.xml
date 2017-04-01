@@ -58,9 +58,7 @@
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemee">
-
-        </activity>
+            android:theme="@style/AppThemee"></activity>
         <activity
             android:name="com.clevertap.android.sdk.InAppNotificationActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -94,6 +92,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activities.ShowActivity.SOS"></activity>
+        <activity android:name=".Activities.ShowActivity.Addnums"></activity>
     </application>
 
 </manifest>

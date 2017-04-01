@@ -17,4 +17,8 @@
         android:visible="true"
         app:actionViewClass="android.support.v7.widget.SearchView"
         app:showAsAction="always|collapseActionView" />
+    <item
+        android:id="@+id/SOS"
+        android:title="Sos"
+        app:showAsAction="never" />
 </menu>

@@ -191,6 +191,7 @@
     <orderEntry type="library" exported="" name="transition-25.2.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-identity-10.2.0" level="project" />
     <orderEntry type="library" exported="" name="constraint-layout-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="dexter-3.0.2" level="project" />
     <orderEntry type="library" exported="" name="firebase-appindexing-10.2.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-awareness-10.2.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-clearcut-10.2.0" level="project" />

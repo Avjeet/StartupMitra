@@ -210,6 +210,8 @@ public class ShowActivity extends AppCompatActivity {
 
                                 bottomNavigation.setVisibility(View.GONE);
                                 toolbar_title.setText(getResources().getString(R.string.profile));
+                            case R.id.SOS:
+                                startActivity(new Intent(ShowActivity.this,SOS.class));
                         }
                         return onOptionsItemSelected(item);
                     }
