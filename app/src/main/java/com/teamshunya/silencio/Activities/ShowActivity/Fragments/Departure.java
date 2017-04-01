@@ -71,7 +71,7 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
     private void alertBox() {
         LayoutInflater li = LayoutInflater.from(getContext());
         View promptsView = li.inflate(R.layout.pnr_dialog, null);
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
         alertDialogBuilder.setView(promptsView);
         userInput = (EditText) promptsView.findViewById(R.id.pnr);
         userInput.setText(pnrQR);
@@ -82,6 +82,14 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
                             public void onClick(DialogInterface dialog, int id) {
                                 String pnr = userInput.getText().toString();
                                 fetchInfoByPNR(pnr);
+
+                            }
+                        })
+                .setNegativeButton("Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+
                             }
                         })
                 .setNeutralButton("Scan",
