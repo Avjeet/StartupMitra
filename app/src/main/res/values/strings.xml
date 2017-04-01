@@ -22,5 +22,6 @@
     <string name="Baggage">Baggage Claim</string>
     <string name="nav">Navigation Ease</string>
     <string name="clean">Airport Cleanliness</string>
-    <string name="hospitality">Airport Hospitality</string>
+    <string name="hospitality">Ground Transportation To/From Airport</string>
+    <string name="feedbackTitle">Feedback</string>
 </resources>

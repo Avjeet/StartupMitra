@@ -1,6 +1,7 @@
 package com.teamshunya.silencio.Activities.ShowActivity;
 
 import android.app.SearchManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
@@ -25,6 +26,9 @@ import com.clevertap.android.sdk.exceptions.CleverTapMetaDataNotFoundException;
 import com.clevertap.android.sdk.exceptions.CleverTapPermissionsNotSatisfied;
 
 
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.messaging.FirebaseMessagingService;
 import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Weather;
 import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Maps;
 import com.teamshunya.silencio.Classes.CustomFontTextView;

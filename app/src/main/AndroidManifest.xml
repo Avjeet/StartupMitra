@@ -77,10 +77,18 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/API_KEY" />
 
-        <activity android:name=".Activities.ShowActivity.Fragments.FeedbackActivities.FeedbackActivity" />
-        <activity android:name=".Activities.ShowActivity.Fragments.FeedbackActivities.SuggestionActivity" />
-        <activity android:name=".Activities.ShowActivity.Fragments.FeedbackActivities.ComplainActivity" />
-        <activity android:name=".Activities.ShowActivity.Fragments.FeedbackActivities.AppreciationActivity"></activity>
+        <activity
+            android:name=".Activities.ShowActivity.Fragments.FeedbackActivities.FeedbackActivity"
+            android:theme="@style/AppThemee" />
+        <activity
+            android:name=".Activities.ShowActivity.Fragments.FeedbackActivities.SuggestionActivity"
+            android:theme="@style/AppThemee" />
+        <activity
+            android:name=".Activities.ShowActivity.Fragments.FeedbackActivities.ComplainActivity"
+            android:theme="@style/AppThemee" />
+        <activity
+            android:name=".Activities.ShowActivity.Fragments.FeedbackActivities.AppreciationActivity"
+            android:theme="@style/AppThemee"></activity>
     </application>
 
 </manifest>

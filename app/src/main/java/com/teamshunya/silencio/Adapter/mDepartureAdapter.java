@@ -35,7 +35,6 @@ public class mDepartureAdapter extends ArrayAdapter<Departure> {
     public Departure getItem(int position) {
         return departureList.get(position);
     }
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         final mDepartureAdapter.ViewHolder vh;
@@ -46,17 +45,13 @@ public class mDepartureAdapter extends ArrayAdapter<Departure> {
         } else {
             vh = (mDepartureAdapter.ViewHolder) convertView.getTag();
         }
-
         Departure item = getItem(position);
-
         vh.status_text.setText(item.getDelay() );
         vh.destination.setText(item.getDestination());
         vh.flight_text.setText(item.getFlightNo());
         vh.time_text.setText(item.getEta());
         vh.source.setText(item.getSource());
-
         Picasso.with(context).load(item.getLogo()).placeholder(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher).into(vh.imageView);
-
         return vh.rootView;
     }
     private static class ViewHolder {
