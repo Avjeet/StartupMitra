@@ -4,21 +4,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_profile"
-        android:title="Cabs"
+        android:title="@string/cabs"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@drawable/car">
     </item>
     <item
         android:id="@+id/action_search"
-        android:title="Arrival"
+        android:title="@string/Arrival"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@drawable/arrivalimage">
     </item>
     <item
         android:id="@+id/action_cart"
-        android:title="Departure"
+        android:title="@string/Departure"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@drawable/dep">
@@ -26,18 +26,17 @@
 
     <item
         android:id="@+id/action_hot_deals"
-        android:title="Offers"
+        android:title="@string/Offers"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@drawable/offerimage">
     </item>
     <item
         android:id="@+id/action_feedback"
-        android:title="Feedback"
+        android:title="@string/Feedback"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@drawable/feedbackimage">
-    </item>
+        android:icon="@drawable/feedbackimage" />
 
 
 </menu>

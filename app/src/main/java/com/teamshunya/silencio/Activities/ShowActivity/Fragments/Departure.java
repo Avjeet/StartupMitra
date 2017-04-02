@@ -76,8 +76,7 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
         userInput = (EditText) promptsView.findViewById(R.id.pnr);
         userInput.setText(pnrQR);
         alertDialogBuilder
-                .setCancelable(false)
-                .setPositiveButton("OK",
+                .setPositiveButton(getResources().getString(R.string.ok),
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 String pnr = userInput.getText().toString();
@@ -85,15 +84,16 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
                             }
                         })
-                .setNegativeButton("Cancel",
+                .setCancelable(true)
+                .setNegativeButton(getResources().getString(R.string.CANCEL),
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
 
-                                dialog.cancel();
+                                dialog.dismiss();
 
                             }
                         })
-                .setNeutralButton("Scan",
+                .setNeutralButton(getResources().getString(R.string.SCAN),
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
 //                                dialog.cancel();

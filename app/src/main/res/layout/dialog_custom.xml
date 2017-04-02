@@ -37,7 +37,7 @@
             android:layout_gravity="bottom"
             android:background="@color/colorPrimary"
             android:gravity="center"
-            android:text="@string/OK"
+            android:text="@string/ok"
             android:textColor="#fff"
             android:textStyle="bold" />
     </RelativeLayout>

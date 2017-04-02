@@ -103,12 +103,16 @@
     <string name="hindi">हिंदी</string>
     <string name="continuee">Continue</string>
     <string name="string">जारी रहना</string>
-
+    <string name="ok">OK</string>
+    <string name="CANCEL">Cancel</string>
+    <string name="SCAN">Scan</string>
     <!--new String-->
-
-
-
-
+    <string name="cabs">Cabs</string>
+    <string name="Arrival">Arrival</string>
+    <string name="Departure">Departure</string>
+    <string name="Offers">Offers</string>
+    <string name="Feedback">Feedback</string>
+    <string name="airpot">Airport Name</string>
 
 
 </resources>

@@ -42,7 +42,7 @@ public class FeedbackActivity extends AppCompatActivity implements AdapterView.O
 
         spinner_airport.setOnItemSelectedListener(this);
         List<String> list = new ArrayList<String>();
-        list.add("Airport Name");
+        list.add(getResources().getString(R.string.airpot));
         list.add("Allahabad");
         list.add("New Delhi");
         list.add("Mumbai");
