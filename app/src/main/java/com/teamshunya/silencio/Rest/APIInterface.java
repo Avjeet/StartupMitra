@@ -31,4 +31,5 @@ public interface APIInterface {
 
     @GET("departures/{pnr}")
     Call<PersonalDetail> getmeDetail(@Path("pnr")String pnr);
+
 }
