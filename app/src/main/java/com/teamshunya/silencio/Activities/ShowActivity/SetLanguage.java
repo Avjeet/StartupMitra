@@ -12,7 +12,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.teamshunya.silencio.Classes.CustomFontTextView;
+import com.teamshunya.silencio.Classes.PrefManager;
 import com.teamshunya.silencio.R;
+import com.teamshunya.silencio.SplashActivity;
 
 import java.util.Locale;
 
@@ -22,18 +24,35 @@ public class SetLanguage extends AppCompatActivity implements RadioGroup.OnCheck
     private CustomFontTextView pick;
     private RadioButton mEng, mHindi;
     private Button Continue;
+    private PrefManager prefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_language);
         loadLocale();
-        Continue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(SetLanguage.this,ShowActivity.class));
-            }
-        });
+        prefManager = new PrefManager(this);
+        if (!prefManager.isFirstTimeLaunch()) {
+            launchHomeScreen();
+            finish();
+        }
+        else {
+            Continue.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    prefManager.setFirstTimeLaunch(false);
+                    startActivity(new Intent(SetLanguage.this,ShowActivity.class));
+                    finish();
+                }
+            });
+        }
+
+
+
+    }
+
+    private void launchHomeScreen() {
+        startActivity(new Intent(SetLanguage.this,SplashActivity.class));
     }
 
     private void loadLocale() {
