@@ -20,20 +20,24 @@ import com.teamshunya.silencio.R;
 
 
 public class Feedback extends android.support.v4.app.Fragment implements View.OnClickListener {
-    CardView feedback,suggestion,complain,appreciation;
+    CardView feedback, suggestion, complain, appreciation;
     Fragment fragment;
+
     public Feedback() {
     }
+
     private void bindViews(View rootLayout) {
-        feedback = (CardView)rootLayout.findViewById(R.id.feedbackCard);
-        suggestion = (CardView)rootLayout.findViewById(R.id.suggestionCard);
-        complain = (CardView)rootLayout.findViewById(R.id.complainCard);
-        appreciation = (CardView)rootLayout.findViewById(R.id.AppreciationCard);
+        feedback = (CardView) rootLayout.findViewById(R.id.feedbackCard);
+        suggestion = (CardView) rootLayout.findViewById(R.id.suggestionCard);
+        complain = (CardView) rootLayout.findViewById(R.id.complainCard);
+        appreciation = (CardView) rootLayout.findViewById(R.id.AppreciationCard);
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_feedback, container, false);
     }
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -46,26 +50,26 @@ public class Feedback extends android.support.v4.app.Fragment implements View.On
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.feedbackCard:
                 Intent feedback = new Intent(getContext().getApplicationContext(), FeedbackActivity.class);
-                Bundle feed = ActivityOptions.makeCustomAnimation(getContext().getApplicationContext(),R.anim.enter_from_right,R.anim.exit_to_left).toBundle();
-                getActivity().startActivity(feedback,feed);
+                Bundle feed = ActivityOptions.makeCustomAnimation(getContext().getApplicationContext(), R.anim.enter_from_right, R.anim.exit_to_left).toBundle();
+                getActivity().startActivity(feedback, feed);
                 break;
             case R.id.suggestionCard:
                 Intent suggestion = new Intent(getContext().getApplicationContext(), SuggestionActivity.class);
-                Bundle suggest = ActivityOptions.makeCustomAnimation(getContext().getApplicationContext(),R.anim.enter_from_right,R.anim.exit_to_left).toBundle();
-                getActivity().startActivity(suggestion,suggest);
+                Bundle suggest = ActivityOptions.makeCustomAnimation(getContext().getApplicationContext(), R.anim.enter_from_right, R.anim.exit_to_left).toBundle();
+                getActivity().startActivity(suggestion, suggest);
                 break;
             case R.id.AppreciationCard:
                 Intent appreciation = new Intent(getContext().getApplicationContext(), AppreciationActivity.class);
-                Bundle appreciate = ActivityOptions.makeCustomAnimation(getContext().getApplicationContext(),R.anim.enter_from_right,R.anim.exit_to_left).toBundle();
-                getActivity().startActivity(appreciation,appreciate);
+                Bundle appreciate = ActivityOptions.makeCustomAnimation(getContext().getApplicationContext(), R.anim.enter_from_right, R.anim.exit_to_left).toBundle();
+                getActivity().startActivity(appreciation, appreciate);
                 break;
             case R.id.complainCard:
                 Intent complaint = new Intent(getContext().getApplicationContext(), ComplainActivity.class);
-                Bundle complain = ActivityOptions.makeCustomAnimation(getContext().getApplicationContext(),R.anim.enter_from_right,R.anim.exit_to_left).toBundle();
-                getActivity().startActivity(complaint,complain);
+                Bundle complain = ActivityOptions.makeCustomAnimation(getContext().getApplicationContext(), R.anim.enter_from_right, R.anim.exit_to_left).toBundle();
+                getActivity().startActivity(complaint, complain);
                 break;
         }
     }

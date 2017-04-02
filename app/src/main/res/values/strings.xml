@@ -102,4 +102,11 @@
 
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
     <string name="play_again">Play Again</string>
+    <string name="Pick">Pick Yor Language</string>
+    <string name="pickHindi">अपनी भाषा चुनें</string>
+    <string name="english">English</string>
+    <string name="hindi">हिंदी</string>
+    <string name="continuee">Continue</string>
+    <string name="string">जारी रहना</string>
+
 </resources>

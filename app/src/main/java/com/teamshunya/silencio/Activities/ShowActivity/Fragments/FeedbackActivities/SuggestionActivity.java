@@ -81,7 +81,7 @@ public class SuggestionActivity extends AppCompatActivity implements AdapterView
                         break;
                 }
                 Boxvalue = String.valueOf(Box.getText());
-               // Log.d("VALUES : ", emailidValue + nameValue + numberValue + ageValue + flight_noValue + finalRadioValue1 + finalRadioValue2 + Boxvalue);
+                // Log.d("VALUES : ", emailidValue + nameValue + numberValue + ageValue + flight_noValue + finalRadioValue1 + finalRadioValue2 + Boxvalue);
 
                 DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("Feedback").child(StoreSession.getInstance().readPreferencesString("PNR", "")).child("SUGGESTION");
                 database.child("emailID").setValue(emailidValue);

@@ -33,6 +33,7 @@ dependencies {
 
     // GSON with Retrofit
     compile 'com.google.firebase:firebase-messaging:10.2.0'
+
     compile 'com.google.firebase:firebase-messaging:10.2.0'
     compile 'me.dm7.barcodescanner:zxing:1.9'
     compile 'com.github.paolorotolo:appintro:4.1.0'
@@ -59,7 +60,6 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.1'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.karumi:dexter:3.0.2'
-
     testCompile 'junit:junit:4.12'
 }
 apply plugin: 'com.google.gms.google-services'
