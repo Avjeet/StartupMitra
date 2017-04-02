@@ -66,7 +66,7 @@ public class AppreciationActivity extends AppCompatActivity implements AdapterVi
                         finalRadioValue1 = "INDIAN";
                         break;
                     case R.id.radioButtonf:
-                        finalRadioValue2 = "FOREIGN";
+                        finalRadioValue2 = "FOREIGNER";
                         break;
                 }
 

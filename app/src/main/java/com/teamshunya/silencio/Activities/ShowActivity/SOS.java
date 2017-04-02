@@ -38,31 +38,14 @@ public class SOS extends AppCompatActivity {
     EditText Msg;
     GPSTracker gps;
     double latitude, longitude;
-Button ClickMe;
+    Button ClickMe;
 
 
 
-    @Override
-    public void onBackPressed() {
-        new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
-                .setMessage("Are you sure, you want to exit?")
-                .setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                        Intent intent = new Intent(Intent.ACTION_MAIN);
-                        intent.addCategory(Intent.CATEGORY_HOME);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);
-                        finish();
-                    }
-                }).setNegativeButton("no", null).show();
-    }
 
     //btnsend
-    public void message(View view)
-    {
-        if(dbhandler.number()==2) {
+    public void message(View view) {
+        if (dbhandler.number() == 2) {
             String phoneNo1 = dbhandler.databaseToPhoneFirst();
             String phoneNo2 = dbhandler.databaseToPhoneSecond();
             Double latitude = 0.0, longitude;
@@ -75,7 +58,7 @@ Button ClickMe;
             if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                 latitude = MyLocationListener.latitude;
                 longitude = MyLocationListener.longitude;
-                message = message + "\n My Location is - " + latitude +","+  longitude;
+                message = message + "\n My Location is - " + latitude + "," + longitude;
                 Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
                 if (latitude == 0.0) {
                     Toast.makeText(getApplicationContext(), "Currently gps has not found your location....", Toast.LENGTH_LONG).show();
@@ -84,7 +67,7 @@ Button ClickMe;
             } else {
                 Toast.makeText(getApplicationContext(), "GPS is currently off...", Toast.LENGTH_LONG).show();
             }
-          try {
+            try {
                 SmsManager smsManager = SmsManager.getDefault();
                 smsManager.sendTextMessage(phoneNo1, null, message, null, null);
                 //Toast.makeText(getApplicationContext(), "SMS1 sent.", Toast.LENGTH_LONG).show();
@@ -101,9 +84,7 @@ Button ClickMe;
                 // Toast.makeText(getApplicationContext(), "SMS2 faild, please try again.", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
-        }
-        else
-        {
+        } else {
             Toast.makeText(getApplicationContext(), "Please add two phone numbers of close ones first.....", Toast.LENGTH_LONG).show();
         }
     }
@@ -114,11 +95,11 @@ Button ClickMe;
         setContentView(R.layout.activity_sos);
 
 
-        ClickMe = (Button)findViewById(R.id.Clickme);
+        ClickMe = (Button) findViewById(R.id.Clickme);
         ClickMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SOS.this,Addnums.class));
+                startActivity(new Intent(SOS.this, Addnums.class));
             }
         });
         withActivity(this)

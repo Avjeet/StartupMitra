@@ -1,81 +1,85 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="16dp"
-    >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="16dp">
 
-        <FrameLayout
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.teamshunya.silencio.Classes.CustomFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp"
+                android:text="Please add your emergency Contact Numbers"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/Number1"
+                android:layout_width="fill_parent"
+
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/Number1Text"
+                android:layout_marginBottom="5dp"
+                android:hint="Phone Number 1"
+
+                android:inputType="phone"
+                android:paddingLeft="@dimen/activity_horizontal_margin" />
+            <!-- This is a comment -->
+
+            <EditText
+                android:id="@+id/Number2"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/Number2Text"
+                android:layout_marginTop="5dp"
+                android:hint="Phone Number 2"
+
+                android:inputType="phone"
+                android:paddingLeft="@dimen/activity_horizontal_margin" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:onClick="Onclick"
+                android:background="@color/colorPrimary"
+                android:text="Done"
+                android:textColor="#fff" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textStyle="normal"
-                    android:textColor="#fff"
-                    android:textSize="14sp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Please add your emergency Contact Numbers"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginTop="30dp" />
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
 
 
-                <EditText
-                    android:layout_width="fill_parent"
-                    android:layout_height="50dp"
-                    android:textColor="#fff"
-
-                    android:id="@+id/Number1"
-                    android:layout_marginBottom="5dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:inputType="phone"
-                    android:layout_below="@+id/Number1Text"
-
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
-                <!-- This is a comment -->
-
-                <EditText
-                    android:layout_width="fill_parent"
-                    android:id="@+id/Number2"
-                    android:textColor="#fff"
-
-                    android:layout_height="50dp"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:inputType="phone"
-                    android:layout_marginTop="5dp"
-                    android:layout_below="@+id/Number2Text"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Done"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
-                    android:layout_centerHorizontal="true"
-                    android:onClick="Onclick"
-                    android:id="@+id/button"
-                    android:textColor="#fff"
-                    />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_gravity="center_horizontal">
-
-
-                </LinearLayout>
             </LinearLayout>
-        </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
 
 </RelativeLayout>

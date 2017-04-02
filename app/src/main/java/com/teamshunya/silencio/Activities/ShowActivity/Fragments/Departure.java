@@ -43,6 +43,7 @@ import retrofit2.Response;
 public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshListener, ShowActivity.QuerySearchInterface,ShowActivity.QRcodeValue {
     private ListView listView;
     private View parentView;
+    View promptsView;
     private SwipeRefreshLayout departureSwipeRefreshLayout;
     private CustomFontTextView source, departure_time, destination, flightnumber, gatenumber, seatnumber;
     private ImageView cancel;
@@ -70,7 +71,7 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
 
     private void alertBox() {
         LayoutInflater li = LayoutInflater.from(getContext());
-        View promptsView = li.inflate(R.layout.pnr_dialog, null);
+        promptsView = li.inflate(R.layout.pnr_dialog, null);
         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
         alertDialogBuilder.setView(promptsView);
         userInput = (EditText) promptsView.findViewById(R.id.pnr);
@@ -153,6 +154,7 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
             alertBox();
         } else {
             fetchInfoByPNR(pnr);
+
         }
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
