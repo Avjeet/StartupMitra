@@ -18,6 +18,7 @@
         diagonal:angle="10"
         diagonal:diagonalColor="@color/background"
         diagonal:diagonalGravity="left" />
+
     <LinearLayout
 
         android:layout_width="match_parent"
@@ -41,28 +42,58 @@
             android:layout_height="match_parent"
 
             android:layout_gravity="bottom"
- android:orientation="vertical">
+            android:orientation="vertical">
 
             <com.teamshunya.silencio.Classes.CustomFontTextView
                 android:id="@+id/username"
                 android:layout_width="wrap_content"
-                android:layout_weight="2"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:fontFamily="sans-serif-light"
                 android:text="@string/NAME"
-                android:layout_marginLeft="20dp"
                 android:textColor="@android:color/black"
                 android:textSize="30sp" />
 
             <com.teamshunya.silencio.Classes.CustomFontTextView
                 android:id="@+id/emailid"
-                android:layout_weight="2"
-                android:layout_marginLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:fontFamily="sans-serif-light"
                 android:text="@string/many"
                 android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <com.teamshunya.silencio.Classes.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/curve"
+                    android:padding="10dp"
+                    android:text="Zara Dress" />
+
+                <com.teamshunya.silencio.Classes.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/curve"
+                    android:padding="10dp"
+                    android:text="Dominos Pizza" />
+
+                <com.teamshunya.silencio.Classes.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/curve"
+                    android:padding="10dp"
+                    android:text="Chroma" />
+            </LinearLayout>
 
             <Button
                 android:id="@+id/logut"
@@ -70,9 +101,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_gravity="bottom"
-               android:background="@color/colorPrimary"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorPrimary"
                 android:text="@string/Logout"
-                android:layout_marginTop="24dp"
                 android:textColor="#fff" />
         </LinearLayout>
     </LinearLayout>
