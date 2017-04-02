@@ -19,8 +19,8 @@
         <com.teamshunya.silencio.Classes.CustomFontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
             android:text="@string/feedbackTitle"
+            android:layout_marginBottom="20dp"
             android:textSize="16sp" />
 
         <LinearLayout
@@ -28,19 +28,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.teamshunya.silencio.Classes.CustomFontTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="6"
-                android:text="@string/aname"
-                android:textSize="16sp" />
-
             <Spinner
                 android:id="@+id/spinner_airport_name"
                 style="@style/Widget.AppCompat.Spinner.Underlined"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
+                android:textAlignment="center"
                 android:padding="10dp" />
         </LinearLayout>
 

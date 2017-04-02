@@ -28,20 +28,15 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.teamshunya.silencio.Classes.CustomFontTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="6"
-                android:text="@string/aname"
-                android:textSize="16sp" />
-
             <Spinner
                 android:id="@+id/spinner_airport_name"
                 style="@style/Widget.AppCompat.Spinner.Underlined"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="3"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:textAlignment="center" />
         </LinearLayout>
 
         <LinearLayout
@@ -49,20 +44,15 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.teamshunya.silencio.Classes.CustomFontTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="6"
-                android:text="@string/ctype"
-                android:textSize="16sp" />
-
             <Spinner
                 android:id="@+id/spinner_complain_type"
                 style="@style/Widget.AppCompat.Spinner.Underlined"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="3"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:textAlignment="center" />
         </LinearLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -132,7 +122,8 @@
         <com.teamshunya.silencio.Classes.CustomFontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/nationality" />
+            android:text="@string/nationality"
+            android:textSize="16sp" />
 
         <RadioGroup
             android:id="@+id/radioGroupn"
@@ -161,7 +152,8 @@
         <com.teamshunya.silencio.Classes.CustomFontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Number of Flights" />
+            android:text="@string/visits"
+            android:textSize="16sp" />
 
         <RadioGroup
             android:id="@+id/radioGroupnf"
@@ -186,13 +178,23 @@
                 android:text="@string/sevenplus"
                 android:textSize="18sp" />
         </RadioGroup>
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageButton2"
+            android:background="@android:color/transparent"
+            android:layout_alignWithParentIfMissing="true"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+
 
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/doneComplain"
-            android:src="@drawable/ic_done_white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_done_white" />
     </LinearLayout>
 </ScrollView>

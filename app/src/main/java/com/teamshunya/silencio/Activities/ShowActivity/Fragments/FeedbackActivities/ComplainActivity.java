@@ -1,20 +1,33 @@
 package com.teamshunya.silencio.Activities.ShowActivity.Fragments.FeedbackActivities;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.teamshunya.silencio.Classes.StoreSession;
 import com.teamshunya.silencio.R;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,11 +35,19 @@ public class ComplainActivity extends AppCompatActivity implements AdapterView.O
     private Spinner spinner_airport, spinner_complain;
     private FloatingActionButton SubmitbuttonComplains;
     private int radioID1, radioID2;
+    private ImageButton mSelectImage;
+    private static final int TAKE_PICTURE = 1;
+    private Uri imageUri;
+
     private String item1, item2;
     String finalRadioValue1, finalRadioValue2;
     private EditText name, number, email_id, age, flight_no;
     private String nameValue, numberValue, emailidValue, flight_noValue, ageValue;
     private RadioGroup radiogrup1, radiogrup2;
+
+    private StorageReference mStorageRef;
+    private DatabaseReference mDatabase;
+    private ProgressDialog mprogressbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +55,11 @@ public class ComplainActivity extends AppCompatActivity implements AdapterView.O
         setContentView(R.layout.activity_complain);
         bindViews();
 
+        imageUri = null;
+        mprogressbar = new ProgressDialog(this);
         spinner_airport.setOnItemSelectedListener(this);
         List<String> list = new ArrayList<String>();
-        list.add("Select Airport");
+        list.add("Airport Name");
         list.add("Allahabad");
         list.add("New Delhi");
         list.add("Mumbai");
@@ -56,21 +79,38 @@ public class ComplainActivity extends AppCompatActivity implements AdapterView.O
 
         spinner_complain.setOnItemSelectedListener(this);
         List<String> list1 = new ArrayList<String>();
-        list1.add("Select Airport");
-        list1.add("Allahabad");
-        list1.add("New Delhi");
-        list1.add("Mumbai");
-        list1.add("Bengaluru");
-        list1.add("Chennai");
+        list1.add("Complain Type");
+        list1.add("Airline");
+        list1.add("AAI Services");
+        list1.add("Contractor/Vendor Services");
+        list1.add("Immeggration/Customs");
+        list1.add("Security");
+
 
         // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
+        ArrayAdapter<String> dataAdapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list1);
 
         // Drop down layout style - list view with radio button
         dataAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // attaching data adapter to spinner
         spinner_complain.setAdapter(dataAdapter1);
+
+
+        mStorageRef = FirebaseStorage.getInstance().getReference();
+
+        mSelectImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                File photo = new File(Environment.getExternalStorageDirectory(), "Pic.jpg");
+                intent.putExtra(MediaStore.EXTRA_OUTPUT,
+                        Uri.fromFile(photo));
+                imageUri = Uri.fromFile(photo);
+                startActivityForResult(intent, TAKE_PICTURE);
+            }
+        });
+
 
         SubmitbuttonComplains.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,20 +142,43 @@ public class ComplainActivity extends AppCompatActivity implements AdapterView.O
                         break;
                 }
 
+//                Log.d("asdasd", String.valueOf(imageUri));
 //                Log.d("VALUES : ", item1 + item2 +
 //                        emailidValue + nameValue + numberValue + ageValue +
 //                        flight_noValue + finalRadioValue1 + finalRadioValue2);
 
-                DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("Feedback").child(StoreSession.getInstance().readPreferencesString("PNR", "")).child("COMPLAINS");
-                database.child("emailID").setValue(emailidValue);
-                database.child("NAME").setValue(nameValue);
-                database.child("Age").setValue(ageValue);
-                database.child("Number").setValue(numberValue);
-                database.child("FlightNo").setValue(flight_noValue);
-                database.child("NATIONALITY").setValue(finalRadioValue1);
-                database.child("No of visits in past twelve months").setValue(finalRadioValue2);
-                database.child("AirportName").setValue(item1);
-                database.child("Complain type").setValue(item2);
+                Uri file = Uri.fromFile(new File(String.valueOf(imageUri)));
+                StorageReference riversRef = mStorageRef.child(StoreSession.getInstance().readPreferencesString("PNR", "")).child("IMAGES");
+
+                riversRef.putFile(file)
+                        .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                            @Override
+                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                // Get a URL to the uploaded content
+                                Uri downloadUrl = taskSnapshot.getDownloadUrl();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception exception) {
+                                // Handle unsuccessful uploads
+                                // ...
+                                Toast.makeText(getApplicationContext(), "Unabel to post Please TRY AGAIN!!!!",
+                                        Toast.LENGTH_LONG).show();
+                            }
+                        });
+
+//
+//                DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("Feedback").child(StoreSession.getInstance().readPreferencesString("PNR", "")).child("COMPLAINS");
+//                database.child("emailID").setValue(emailidValue);
+//                database.child("NAME").setValue(nameValue);
+//                database.child("Age").setValue(ageValue);
+//                database.child("Number").setValue(numberValue);
+//                database.child("FlightNo").setValue(flight_noValue);
+//                database.child("NATIONALITY").setValue(finalRadioValue1);
+//                database.child("No of visits in past twelve months").setValue(finalRadioValue2);
+//                database.child("AirportName").setValue(item1);
+//                database.child("Complain type").setValue(item2);
             }
         });
 
@@ -130,6 +193,7 @@ public class ComplainActivity extends AppCompatActivity implements AdapterView.O
         flight_no = (EditText) findViewById(R.id.input_flightNumber);
         radiogrup1 = (RadioGroup) findViewById(R.id.radioGroupn);
         radiogrup2 = (RadioGroup) findViewById(R.id.radioGroupnf);
+        mSelectImage = (ImageButton) findViewById(R.id.imageButton2);
         spinner_airport = (Spinner) findViewById(R.id.spinner_airport_name);
         spinner_complain = (Spinner) findViewById(R.id.spinner_complain_type);
         SubmitbuttonComplains = (FloatingActionButton) findViewById(R.id.doneComplain);

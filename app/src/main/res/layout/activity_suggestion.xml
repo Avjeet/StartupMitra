@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:padding="10dp"
+
     android:scrollbars="none"
     tools:context="com.teamshunya.silencio.Activities.ShowActivity.Fragments.FeedbackActivities.FeedbackActivity">
 
@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <com.teamshunya.silencio.Classes.CustomFontTextView
             android:layout_width="wrap_content"
@@ -28,20 +29,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.teamshunya.silencio.Classes.CustomFontTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="6"
-                android:text="@string/aname"
-                android:textSize="16sp" />
-
             <Spinner
                 android:id="@+id/spinner_airport_name"
                 style="@style/Widget.AppCompat.Spinner.Underlined"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:padding="10dp" />
+                android:textAlignment="center" />
         </LinearLayout>
 
         <LinearLayout
@@ -60,7 +54,8 @@
                 android:id="@+id/input_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/name" />
+                android:hint="@string/name"
+                android:padding="10dp" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -73,7 +68,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/num"
-                android:inputType="number" />
+                android:inputType="number"
+                android:padding="10dp" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -85,7 +81,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email ID"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:padding="10dp" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -98,7 +95,8 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/age"
                 android:inputType="number"
-                android:maxLength="2" />
+                android:maxLength="2"
+                android:padding="10dp" />
         </android.support.design.widget.TextInputLayout>
 
 
@@ -111,21 +109,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/fn"
-                android:inputType="number" />
+                android:inputType="number"
+                android:padding="10dp" />
         </android.support.design.widget.TextInputLayout>
 
 
         <com.teamshunya.silencio.Classes.CustomFontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/nationality" />
+            android:text="@string/nationality"
+            android:textSize="16sp" />
 
         <RadioGroup
             android:id="@+id/radioGroupn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/activity_horizontal_margin"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="10dp">
 
             <RadioButton
                 android:id="@+id/radioButtoni"
@@ -147,14 +148,16 @@
         <com.teamshunya.silencio.Classes.CustomFontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No. of visits in past twelve months" />
+            android:text="@string/visits"
+            android:textSize="16sp" />
 
         <RadioGroup
             android:id="@+id/radioGroupnf"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/activity_horizontal_margin"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="10dp">
 
             <RadioButton
                 android:id="@+id/radioButton1to7"
@@ -177,14 +180,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditTexttimes
+            <EditText
                 android:id="@+id/suggestionBox"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/curve"
-                android:hint="@string/writeSuggestion"
+                android:hint="@string/writeAppreciation"
                 android:maxLines="5"
                 android:padding="10dp" />
         </android.support.design.widget.TextInputLayout>

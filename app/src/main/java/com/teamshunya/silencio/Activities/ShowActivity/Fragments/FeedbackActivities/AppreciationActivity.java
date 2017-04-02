@@ -36,7 +36,7 @@ public class AppreciationActivity extends AppCompatActivity implements AdapterVi
         bindViews();
         spinner_airport.setOnItemSelectedListener(this);
         List<String> list = new ArrayList<String>();
-        list.add("Select Airport");
+        list.add("Airport Name");
         list.add("Allahabad");
         list.add("New Delhi");
         list.add("Mumbai");
