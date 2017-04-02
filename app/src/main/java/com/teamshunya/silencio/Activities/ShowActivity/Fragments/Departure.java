@@ -181,29 +181,12 @@ public class Departure extends Fragment implements SwipeRefreshLayout.OnRefreshL
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                showAlert(departureList.get(position));
 //                Snackbar.make(parentView, "Flight from " + departureList.get(position).getSource() + " is expected to depart at " + departureList.get(position).getEta() + " hrs." + "Kindly check-in from" + departureList.get(position).getGate() + " Counter :)", Snackbar.LENGTH_LONG).show();
             }
         });
     }
 
-    private void showAlert(com.teamshunya.silencio.Models.Departure departure) {
-        final Dialog dialog = new Dialog((getActivity()));
-        dialog.setContentView(R.layout.dialog_custom);
-        ImageView logo_response = (ImageView) dialog.findViewById(R.id.logo_response);
-        CustomFontTextView text = (CustomFontTextView) dialog.findViewById(R.id.text_details);
-        CustomFontTextView ok = (CustomFontTextView) dialog.findViewById(R.id.ok);
-        dialog.setTitle(departure.getSource());
-        text.setText(departure.getEta());
-        Picasso.with(activity).load(departure.getLogo()).placeholder(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher).into(logo_response);
-        ok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-        dialog.show();
-    }
+
 
     private void loadDepartureList() {
 

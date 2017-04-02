@@ -1,17 +1,22 @@
 package com.teamshunya.silencio.Activities.ShowActivity.Fragments;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.squareup.picasso.Picasso;
 import com.teamshunya.silencio.Activities.ShowActivity.ShowActivity;
 import com.teamshunya.silencio.Adapter.mDepartureAdapter;
 import com.teamshunya.silencio.Adapter.mOfferAdapter;
+import com.teamshunya.silencio.Classes.CustomFontTextView;
 import com.teamshunya.silencio.Models.Offer;
 import com.teamshunya.silencio.Models.OfferList;
 import com.teamshunya.silencio.R;
@@ -87,15 +92,34 @@ public class DealsFragment extends android.support.v4.app.Fragment implements Sw
         listView = (ListView) view.findViewById(R.id.arrival_list);
         listView.setDivider(null);
 
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Snackbar.make(parentView, "Offer of" + offerList.get(position).getName() + " is avaible at  " + offerList.get(position).getPromocode()  + "Expiry Date is " + offerList.get(position).getExpiry() + ".Enjoy :)", Snackbar.LENGTH_LONG).show();
-//            }
-//        });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                showAlert(offerList.get(position));
 
-
+            }
+        });
     }
+
+    private void showAlert(Offer offer) {
+        final Dialog dialog = new Dialog((getActivity()));
+        dialog.setContentView(R.layout.dialog_custom);
+        CustomFontTextView text = (CustomFontTextView) dialog.findViewById(R.id.text_details);
+        CustomFontTextView expiry = (CustomFontTextView) dialog.findViewById(R.id.expiryy);
+
+        CustomFontTextView ok = (CustomFontTextView) dialog.findViewById(R.id.ok);
+        dialog.setTitle("Offers");
+        text.setText(offer.getPromocode());
+        expiry.setText("Expiry Date :" + offer.getExpiry());
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+    }
+
 
     @Override
     public void onAttach(Activity activity) {
