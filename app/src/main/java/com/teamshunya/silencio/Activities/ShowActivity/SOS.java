@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -21,6 +22,7 @@ import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
+import com.teamshunya.silencio.Activities.ShowActivity.ShakeListener.ShakeListener;
 import com.teamshunya.silencio.Classes.GPSTracker;
 import com.teamshunya.silencio.Classes.MyLocationListener;
 import com.teamshunya.silencio.Database.db;
@@ -40,59 +42,69 @@ public class SOS extends AppCompatActivity {
     double latitude, longitude;
     Button ClickMe;
 
-
+    private ShakeListener mShaker;
 
 
     //btnsend
-    public void message(View view) {
-        if (dbhandler.number() == 2) {
-            String phoneNo1 = dbhandler.databaseToPhoneFirst();
-            String phoneNo2 = dbhandler.databaseToPhoneSecond();
-            Double latitude = 0.0, longitude;
-            String message = "Need Your Help. I am in danger.Please Contact me ASAP";
-            LocationManager mlocManager = null;
-            LocationListener mlocListener;
-            mlocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-            mlocListener = new MyLocationListener();
-            mlocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, mlocListener);
-            if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-                latitude = MyLocationListener.latitude;
-                longitude = MyLocationListener.longitude;
-                message = message + "\n My Location is - " + latitude + "," + longitude;
-                Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
-                if (latitude == 0.0) {
-                    Toast.makeText(getApplicationContext(), "Currently gps has not found your location....", Toast.LENGTH_LONG).show();
-                }
 
-            } else {
-                Toast.makeText(getApplicationContext(), "GPS is currently off...", Toast.LENGTH_LONG).show();
-            }
-            try {
-                SmsManager smsManager = SmsManager.getDefault();
-                smsManager.sendTextMessage(phoneNo1, null, message, null, null);
-                //Toast.makeText(getApplicationContext(), "SMS1 sent.", Toast.LENGTH_LONG).show();
-            } catch (Exception e) {
-                // Toast.makeText(getApplicationContext(), "SMS1 faild, please try again.", Toast.LENGTH_LONG).show();
-                e.printStackTrace();
-            }
-            try {
-                SmsManager smsManager = SmsManager.getDefault();
-                smsManager.sendTextMessage(phoneNo2, null, message, null, null);
-                //Toast.makeText(getApplicationContext(), "SMS2 sent.", Toast.LENGTH_LONG).show();
-                // Toast.makeText(getApplicationContext(), "You have sent this message: "+ message, Toast.LENGTH_LONG).show();
-            } catch (Exception e) {
-                // Toast.makeText(getApplicationContext(), "SMS2 faild, please try again.", Toast.LENGTH_LONG).show();
-                e.printStackTrace();
-            }
-        } else {
-            Toast.makeText(getApplicationContext(), "Please add two phone numbers of close ones first.....", Toast.LENGTH_LONG).show();
-        }
+
+
+    public void message(View view) {
+
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sos);
+        final Vibrator vibe = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+        mShaker = new ShakeListener(this);
+        mShaker.setOnShakeListener(new ShakeListener.OnShakeListener () {
+            public void onShake()
+            {
+                vibe.vibrate(900);
+                if (dbhandler.number() == 2) {
+                    String phoneNo1 = dbhandler.databaseToPhoneFirst();
+                    String phoneNo2 = dbhandler.databaseToPhoneSecond();
+                    Double latitude = 0.0, longitude;
+                    String message = "Need Your Help. I am in danger.Please Contact me ASAP";
+                    LocationManager mlocManager = null;
+                    LocationListener mlocListener;
+                    mlocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                    mlocListener = new MyLocationListener();
+                    mlocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, mlocListener);
+                    if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                        latitude = MyLocationListener.latitude;
+                        longitude = MyLocationListener.longitude;
+                        message = message + "\n My Location is - " + latitude + "," + longitude;
+                        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+                        if (latitude == 0.0) {
+                            Toast.makeText(getApplicationContext(), "Currently gps has not found your location....", Toast.LENGTH_LONG).show();
+                        }
+
+                    } else {
+                        Toast.makeText(getApplicationContext(), "GPS is currently off...", Toast.LENGTH_LONG).show();
+                    }
+                    try {
+                        SmsManager smsManager = SmsManager.getDefault();
+                        smsManager.sendTextMessage(phoneNo1, null, message, null, null);
+                        //Toast.makeText(getApplicationContext(), "SMS1 sent.", Toast.LENGTH_LONG).show();
+                    } catch (Exception e) {
+                        // Toast.makeText(getApplicationContext(), "SMS1 faild, please try again.", Toast.LENGTH_LONG).show();
+                        e.printStackTrace();
+                    }
+                    try {
+                        SmsManager smsManager = SmsManager.getDefault();
+                        smsManager.sendTextMessage(phoneNo2, null, message, null, null);
+                        //Toast.makeText(getApplicationContext(), "SMS2 sent.", Toast.LENGTH_LONG).show();
+                        // Toast.makeText(getApplicationContext(), "You have sent this message: "+ message, Toast.LENGTH_LONG).show();
+                    } catch (Exception e) {
+                        // Toast.makeText(getApplicationContext(), "SMS2 faild, please try again.", Toast.LENGTH_LONG).show();
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
 
 
         ClickMe = (Button) findViewById(R.id.Clickme);
@@ -129,5 +141,16 @@ public class SOS extends AppCompatActivity {
         dbhandler.addnumber1(n1);
         dbhandler.addnumber2(n2);
     }
-
+    @Override
+    public void onResume()
+    {
+        mShaker.resume();
+        super.onResume();
+    }
+    @Override
+    public void onPause()
+    {
+        mShaker.pause();
+        super.onPause();
+    }
 }
