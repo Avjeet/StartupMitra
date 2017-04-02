@@ -13,6 +13,7 @@ import android.widget.RadioGroup;
 
 import com.teamshunya.silencio.Classes.CustomFontTextView;
 import com.teamshunya.silencio.Classes.PrefManager;
+import com.teamshunya.silencio.Classes.StoreSession;
 import com.teamshunya.silencio.R;
 import com.teamshunya.silencio.SplashActivity;
 
@@ -25,6 +26,7 @@ public class SetLanguage extends AppCompatActivity implements RadioGroup.OnCheck
     private RadioButton mEng, mHindi;
     private Button Continue;
     private PrefManager prefManager;
+    String langPref = "Language";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,24 +37,20 @@ public class SetLanguage extends AppCompatActivity implements RadioGroup.OnCheck
         if (!prefManager.isFirstTimeLaunch()) {
             launchHomeScreen();
             finish();
-        }
-        else {
+        } else {
             Continue.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     prefManager.setFirstTimeLaunch(false);
-                    startActivity(new Intent(SetLanguage.this,ShowActivity.class));
+                    startActivity(new Intent(SetLanguage.this, ShowActivity.class));
                     finish();
                 }
             });
         }
-
-
-
     }
 
     private void launchHomeScreen() {
-        startActivity(new Intent(SetLanguage.this,SplashActivity.class));
+        startActivity(new Intent(SetLanguage.this, SplashActivity.class));
     }
 
     private void loadLocale() {
@@ -67,7 +65,7 @@ public class SetLanguage extends AppCompatActivity implements RadioGroup.OnCheck
 
 
     private void addListenerOnButton() {
-        pick = (CustomFontTextView)findViewById(R.id.pick);
+        pick = (CustomFontTextView) findViewById(R.id.pick);
         mLanguage = (RadioGroup) findViewById(R.id.language);
         mEng = (RadioButton) findViewById(R.id.eng);
         mHindi = (RadioButton) findViewById(R.id.hindi);
@@ -75,11 +73,13 @@ public class SetLanguage extends AppCompatActivity implements RadioGroup.OnCheck
     }
 
     public void saveLocale(String lang) {
-        String langPref = "Language";
+
         SharedPreferences prefs = getSharedPreferences("CommonPrefs", Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString(langPref, lang);
         editor.commit();
+
+
     }
 
     public void changeLang(String lang) {
