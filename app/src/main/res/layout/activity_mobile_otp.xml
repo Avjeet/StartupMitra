@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="16dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_media_route_connecting_01_light"
+                android:layout_marginTop="80dp"/>
+
+            <com.teamshunya.silencio.Classes.CustomFontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="Verify Your OTP"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/Number1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/Number1Text"
+                android:layout_marginBottom="5dp"
+
+                android:hint="OTP"
+                android:gravity="center"
+
+                android:inputType="phone"
+                android:paddingLeft="@dimen/activity_horizontal_margin" />
+            <!-- This is a comment -->
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="99dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorPrimary"
+                android:onClick="Onclick"
+                android:text="Resend OTP"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

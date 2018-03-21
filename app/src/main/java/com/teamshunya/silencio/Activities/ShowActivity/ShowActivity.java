@@ -24,6 +24,7 @@ import com.clevertap.android.sdk.exceptions.CleverTapMetaDataNotFoundException;
 import com.clevertap.android.sdk.exceptions.CleverTapPermissionsNotSatisfied;
 
 
+import com.teamshunya.silencio.Activities.ShowActivity.Fragments.Scheme;
 import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Cabs;
 import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Weather;
 import com.teamshunya.silencio.Classes.CustomFontTextView;
@@ -77,7 +78,7 @@ public class ShowActivity extends AppCompatActivity {
                     return true;
                 switch (id) {
                     case R.id.action_search:
-                        fragment = new Arrival();
+                        fragment = new Scheme();
                         break;
                     case R.id.action_cart:
                         fragment = new Departure();

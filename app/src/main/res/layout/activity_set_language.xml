@@ -10,7 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:orientation="vertical"
-        android:paddingTop="20dp">
+        android:paddingTop="20dp"
+        android:id="@+id/linearLayout">
 
         <ImageView
             android:layout_width="100dp"
@@ -55,15 +56,36 @@
                 android:text="@string/hindi"
                 android:id="@+id/hindi"
                 android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/marathi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/linearLayout"
+                android:layout_alignStart="@+id/linearLayout"
+                android:layout_below="@+id/linearLayout"
+                android:layout_marginTop="22dp"
+                android:text="Marathi" />
+
+            <RadioButton
+                android:id="@+id/gujarati"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/linearLayout"
+                android:layout_alignStart="@+id/linearLayout"
+                android:layout_below="@+id/linearLayout"
+                android:layout_marginTop="24dp"
+                android:text="Gujarati" />
         </RadioGroup>
     </LinearLayout>
 
     <Button
+        android:id="@+id/continuee"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/continuee"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimary"
         android:text="@string/continuee"
         android:textColor="#fff" />
+
 </RelativeLayout>

@@ -20,7 +20,7 @@ public class Addnums extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add__numbers);
+        setContentView(R.layout.activity_mobile_otp);
 
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         dbhandler= new db(this,null,null,1);
