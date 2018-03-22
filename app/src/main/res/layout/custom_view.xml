@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:fadingEdgeLength="2dp"
+    android:orientation="vertical"
+    android:shadowColor="#000"
+    android:shadowDx="00"
+    android:shadowDy="30">
+
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <com.teamshunya.silencio.Classes.CustomFontTextView
+            android:id="@+id/src_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:gravity="start"
+            android:text="@string/src"
+            android:textAllCaps="true"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/flightss"
+
+            />
+
+        <com.teamshunya.silencio.Classes.CustomFontTextView
+            android:id="@+id/status_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:gravity="end"
+            android:text="@string/des"
+            android:textAllCaps="true"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <com.teamshunya.silencio.Classes.CustomFontTextView
+            android:id="@+id/flight_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:gravity="start"
+            android:text="@string/des"
+            android:textAllCaps="true" />
+
+
+        <com.teamshunya.silencio.Classes.CustomFontTextView
+            android:id="@+id/time_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginLeft="150dp"
+            android:layout_weight="4"
+            android:drawableLeft="@drawable/clock"
+            android:gravity="center_vertical"
+            android:text="@string/des"
+            android:textAllCaps="true"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</LinearLayout>

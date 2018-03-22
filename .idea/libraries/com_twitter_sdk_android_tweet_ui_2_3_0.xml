@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.twitter.sdk.android:tweet-ui-2.3.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/ca11f0c720cffab29c17d93f951074175bb6280d/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/ca11f0c720cffab29c17d93f951074175bb6280d/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.twitter.sdk.android/tweet-ui/2.3.0/280a231eb2ab2552dfdf9f54f13add346ab4d75a/tweet-ui-2.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

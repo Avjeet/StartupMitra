@@ -1,0 +1,5 @@
+<root>
+    <item name='android.app.Fragment void startActivityForResult(android.content.Intent, int)'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

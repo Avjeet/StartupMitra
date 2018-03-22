@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Single menu item
+         Set id, icon and Title for each menu item
+    -->
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/profileimage"
+        android:title="Profile"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_searchh"
+        android:icon="@drawable/se"
+        android:title="@android:string/search_go"
+        android:visible="true"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always|collapseActionView" />
+    <item
+        android:id="@+id/SOS"
+        android:title="Sos"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_profile"
+        android:title="@string/cabs"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/car">
+    </item>
+    <item
+        android:id="@+id/action_search"
+        android:title="@string/Arrival"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/arrivalimage">
+    </item>
+    <item
+        android:id="@+id/action_cart"
+        android:title="@string/Departure"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/dep">
+    </item>
+
+    <item
+        android:id="@+id/action_hot_deals"
+        android:title="@string/Offers"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/offerimage">
+    </item>
+    <item
+        android:id="@+id/action_feedback"
+        android:title="@string/Feedback"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/feedbackimage" />
+
+
+</menu>
