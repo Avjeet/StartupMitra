@@ -1,7 +1,3 @@
-# Silencio
-An App for Airport to make it noise free. A part of Smart India Hackathon.
-We are adding all features in it keeping the UX in mind.
-The Hackathon is on 1st -2nd April . 
-
-
-
+﻿#Startup Mitra
+An App for providing all schemes and loan related information by Government to startups.This project is a part of Smart India Hackathon 2018.
+The Hackathon is on 30-31 March 2018.

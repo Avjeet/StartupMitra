@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.github.paolorotolo:appintro-4.1.0">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/d25f14ed92ab17a20efae3d1987eabb3f5a982d0/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/d25f14ed92ab17a20efae3d1987eabb3f5a982d0/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/4811f99ec4682124b159baeedd8acc69edbb4388/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/4811f99ec4682124b159baeedd8acc69edbb4388/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
