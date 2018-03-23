@@ -17,6 +17,7 @@ import static com.facebook.FacebookSdk.getApplicationContext;
 public class RecommendorFragment extends Fragment {
 
 
+
     private RecyclerView mRecyclerView;
     private CategoriesAdapter categoriesadapter;
     private CategoriesAdapter subCategoriesAdapter;

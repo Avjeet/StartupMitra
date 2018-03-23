@@ -61,7 +61,6 @@ public class Addnums extends ActionBarActivity {
         else {
             Intent i = new Intent(this, SOS.class);
             i.putExtra("Number1", n1);
-            ;
             startActivity(i);
             overridePendingTransition  (R.anim.enter_from_left, R.anim.exit_to_right);
         }

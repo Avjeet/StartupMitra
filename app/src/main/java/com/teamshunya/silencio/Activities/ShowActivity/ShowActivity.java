@@ -24,13 +24,17 @@ import com.clevertap.android.sdk.exceptions.CleverTapMetaDataNotFoundException;
 import com.clevertap.android.sdk.exceptions.CleverTapPermissionsNotSatisfied;
 
 
+
 import com.teamshunya.silencio.Activities.ShowActivity.Fragments.RecommendorFragment;
+
 import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Cabs;
 import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Weather;
 import com.teamshunya.silencio.Classes.CustomFontTextView;
 import com.teamshunya.silencio.Classes.StoreSession;
 import com.teamshunya.silencio.R;
+
 import com.teamshunya.silencio.Activities.ShowActivity.Fragments.Schemes;
+
 import com.teamshunya.silencio.Activities.ShowActivity.Fragments.Profile;
 
 public class ShowActivity extends AppCompatActivity {
