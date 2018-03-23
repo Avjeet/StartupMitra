@@ -68,7 +68,13 @@
         <activity
             android:name=".Activities.ShowActivity.ShowActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemee" />
+            android:theme="@style/AppThemee" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -97,11 +103,7 @@
             android:name=".Activities.ShowActivity.Addnums"
             android:theme="@style/AppThemee" />
         <activity android:name=".Activities.ShowActivity.SetLanguage">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

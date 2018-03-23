@@ -2,7 +2,7 @@
     <string name="app_name">Silencio</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello Profile fragment</string>
+    <string name="hello_blank_fragmen">Hello Profile fragmet</string>
     <string name="title_activity_feedback">Feedback</string>
     <string name="API_KEY">AIzaSyD0Y79UiTb37BscDBhKVbejUTdlx-foL5I</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -114,6 +114,9 @@
     <string name="Offers">Offers</string>
     <string name="Feedback">Feedback</string>
     <string name="airpot">Airport Name</string>
+    <string name="home">Home</string>
+
+    <string name="schemes">Schemes</string>
 
 
 </resources>

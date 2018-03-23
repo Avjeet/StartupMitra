@@ -10,7 +10,7 @@ import java.util.List;
  */
 
 public class DepartureList {
-    @SerializedName("Departure")
+    @SerializedName("Schemes")
     @Expose
     private List<Departure> departure = null;
 

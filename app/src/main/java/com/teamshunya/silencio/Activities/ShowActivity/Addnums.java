@@ -14,7 +14,7 @@ import com.teamshunya.silencio.R;
 
 
 public class Addnums extends ActionBarActivity {
-    EditText Number1,Number2;
+    EditText Number1;
     db dbhandler;
 
     @Override
@@ -28,9 +28,9 @@ public class Addnums extends ActionBarActivity {
             String phoneNo1 = dbhandler.databaseToPhoneFirst();
             String phoneNo2 = dbhandler.databaseToPhoneSecond();
             Number1=(EditText)findViewById(R.id.Number1);
-            Number2=(EditText)findViewById(R.id.Number2);
+
             Number1.setHint(phoneNo1);
-            Number2.setHint(phoneNo2);
+
         }
 
     }
@@ -51,17 +51,17 @@ public class Addnums extends ActionBarActivity {
     public void Onclick(View view)
     {
         Number1=(EditText)findViewById(R.id.Number1);
-        Number2=(EditText)findViewById(R.id.Number2);
+
         String n1=Number1.getText().toString();
-        String n2=Number2.getText().toString();
-        if(n1.length()!=10 || n2.length()!=10)
+
+        if(n1.length()!=10 )
         {
             Toast.makeText(Addnums.this,"Invalid Phone Number. Please enter both 10 digit phone numbers....", Toast.LENGTH_LONG).show();
         }
         else {
             Intent i = new Intent(this, SOS.class);
             i.putExtra("Number1", n1);
-            i.putExtra("Number2", n2);
+            ;
             startActivity(i);
             overridePendingTransition  (R.anim.enter_from_left, R.anim.exit_to_right);
         }

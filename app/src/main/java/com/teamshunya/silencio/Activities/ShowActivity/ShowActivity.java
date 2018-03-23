@@ -24,16 +24,13 @@ import com.clevertap.android.sdk.exceptions.CleverTapMetaDataNotFoundException;
 import com.clevertap.android.sdk.exceptions.CleverTapPermissionsNotSatisfied;
 
 
-import com.teamshunya.silencio.Activities.ShowActivity.Fragments.Scheme;
+import com.teamshunya.silencio.Activities.ShowActivity.Fragments.RecommendorFragment;
 import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Cabs;
 import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Weather;
 import com.teamshunya.silencio.Classes.CustomFontTextView;
 import com.teamshunya.silencio.Classes.StoreSession;
 import com.teamshunya.silencio.R;
-import com.teamshunya.silencio.Activities.ShowActivity.Fragments.Arrival;
-import com.teamshunya.silencio.Activities.ShowActivity.Fragments.DealsFragment;
-import com.teamshunya.silencio.Activities.ShowActivity.Fragments.Departure;
-import com.teamshunya.silencio.Activities.ShowActivity.Fragments.Feedback;
+import com.teamshunya.silencio.Activities.ShowActivity.Fragments.Schemes;
 import com.teamshunya.silencio.Activities.ShowActivity.Fragments.Profile;
 
 public class ShowActivity extends AppCompatActivity {
@@ -60,7 +57,7 @@ public class ShowActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.enter_from_left, R.anim.exit_to_right);
         setContentView(R.layout.activity_show);
-        launchDeparture();
+        launchHome();
         toolbar();
         //open app
         toolbar_title = (CustomFontTextView) findViewById(R.id.toolbar_title);
@@ -77,17 +74,11 @@ public class ShowActivity extends AppCompatActivity {
                 if (selectedMenu == id)
                     return true;
                 switch (id) {
-                    case R.id.action_search:
-                        fragment = new Scheme();
+                    case R.id.action_schemes:
+                        fragment= new Schemes();
                         break;
-                    case R.id.action_cart:
-                        fragment = new Departure();
-                        break;
-                    case R.id.action_hot_deals:
-                        fragment = new DealsFragment();
-                        break;
-                    case R.id.action_feedback:
-                        fragment = new Feedback();
+                    case R.id.action_home:
+                        fragment = new RecommendorFragment();
                         break;
                     case R.id.action_profile:
                         fragment = new Cabs();
@@ -166,8 +157,8 @@ public class ShowActivity extends AppCompatActivity {
 
     }
 
-    private void launchDeparture() {
-        fragment = new Departure();
+    private void launchHome() {
+        fragment = new Schemes();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
@@ -181,7 +172,7 @@ public class ShowActivity extends AppCompatActivity {
             return;
         }
         this.doubleBackToExitPressedOnce = true;
-        fragment = new Departure();
+        fragment = new Schemes();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left);

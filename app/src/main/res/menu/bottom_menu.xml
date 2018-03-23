@@ -3,37 +3,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_profile"
-        android:title="@string/cabs"
+        android:id="@+id/action_schemes"
+        android:title="@string/schemes"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@drawable/car">
     </item>
+
+
     <item
-        android:id="@+id/action_search"
-        android:title="@string/Arrival"
-        app:showAsAction="ifRoom"
-        android:enabled="true"
-        android:icon="@drawable/arrivalimage">
-    </item>
-    <item
-        android:id="@+id/action_cart"
-        android:title="@string/Departure"
+        android:id="@+id/action_home"
+        android:title="@string/home"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@drawable/dep">
     </item>
 
     <item
-        android:id="@+id/action_hot_deals"
-        android:title="@string/Offers"
-        app:showAsAction="ifRoom"
-        android:enabled="true"
-        android:icon="@drawable/offerimage">
-    </item>
-    <item
-        android:id="@+id/action_feedback"
-        android:title="@string/Feedback"
+        android:id="@+id/action_profile"
+        android:title="@string/profile"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@drawable/feedbackimage" />
