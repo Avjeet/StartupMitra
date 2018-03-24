@@ -35,8 +35,6 @@ import com.teamshunya.silencio.R;
 
 import com.teamshunya.silencio.Activities.ShowActivity.Fragments.Schemes;
 
-import com.teamshunya.silencio.Activities.ShowActivity.Fragments.Profile;
-
 
 public class ShowActivity extends AppCompatActivity {
     private Fragment fragment;
@@ -201,7 +199,7 @@ public class ShowActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.menu_profile:
-                                Fragment fragment = new Profile();
+                                Fragment fragment = new HomeProfile();
                                 FragmentManager manager = getSupportFragmentManager();
                                 FragmentTransaction transaction = manager.beginTransaction();
                                 transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left);

@@ -24,11 +24,11 @@ android:layout_height="wrap_content">
         android:paddingRight="3dp">
 
         <com.vansuita.materialabout.views.CircleImageView
-            android:layout_width="@dimen/profile_picture_size"
+            android:layout_width="100dp"
             android:layout_height="@dimen/profile_picture_size"
             android:layout_gravity="center_horizontal"
             android:scaleType="centerCrop"
-            android:src="@drawable/healthcare" />
+            android:src="@drawable/profile" />
 
         <TextView
             android:id="@+id/name"
