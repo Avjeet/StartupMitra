@@ -1,14 +1,14 @@
 <component name="libraryTable">
   <library name="com.android.support:transition-25.2.0">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/f450d1cf7212c3bc16caa5fa249aa9edba2dbd39/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/f450d1cf7212c3bc16caa5fa249aa9edba2dbd39/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/5551af8a6de3afc458d2a7d85c261676dad3de9c/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/5551af8a6de3afc458d2a7d85c261676dad3de9c/output/res" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/Android/Sdk/extras/android/m2repository/com/android/support/transition/25.2.0/transition-25.2.0-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/transition/25.2.0/transition-25.2.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/Android/Sdk/extras/android/m2repository/com/android/support/transition/25.2.0/transition-25.2.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/transition/25.2.0/transition-25.2.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
