@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="me.dm7.barcodescanner:zxing-1.9">
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/c3501602c5401e8856d79bdd05420dc70c594744/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/c3501602c5401e8856d79bdd05420dc70c594744/output/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/f40c090b5197bc017fbf287545ce7b381185fb65/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/f40c090b5197bc017fbf287545ce7b381185fb65/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

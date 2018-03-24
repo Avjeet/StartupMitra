@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="62f25cdf2134e9e2a52a040f2c199b46116ee36a">
+        sha1="c3b52045b3b52d4b20dad161aa3c3c1aee9c1d06">
         <dex dex="/home/shrreya/AndroidStudioProjects/StartupMitra/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_3f3823d9c4fbac129a9c6939a49f53c1b929190d/classes.dex" />
     </item>
 

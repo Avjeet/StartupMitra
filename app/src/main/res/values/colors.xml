@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="stroke">#b4b4b4</color>
     <color name="colorPrimary">#33cccc</color>
     <color name="colorPrimaryDark">#33cccc</color>
     <color name="colorAccent">#33cccc</color>

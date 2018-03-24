@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Silencio</string>
+    <string name="app_name">Startup Mitra</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragmen">Hello Profile fragmet</string>
@@ -120,6 +120,9 @@
     <string name="schemes">Schemes</string>
 
     <string name="health">Health</string>
+    <string name="gujarati">Gujarati</string>
+    <string name="startup_id">Startup Id:</string>
+    <string name="startup_name">First StartUp Name</string>
 
 
 

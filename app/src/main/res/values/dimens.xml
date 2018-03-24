@@ -13,4 +13,8 @@
     <dimen name="slide_title">30dp</dimen>
     <dimen name="slide_desc">16dp</dimen>
     <dimen name="desc_padding">40dp</dimen>
+
+    <dimen name="card_radius">3dp</dimen>
+    <dimen name="card_elevation">3dp</dimen>
+    <dimen name="profile_picture_size">100dp</dimen>
 </resources>

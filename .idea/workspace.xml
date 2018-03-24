@@ -4219,6 +4219,7 @@
 <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   </component>
   <component name="ChangeListManager">
@@ -4226,6 +4227,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/ShowActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/ShowActivity.java" />
 =======
+=======
+>>>>>>> Stashed changes
 </component>
 <component name="ChangeListManager">
     <list default="true" id="a506df24-c04a-46dd-b9bf-261e9e50a079" name="Default" comment="">
@@ -4352,7 +4355,10 @@
         <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
         <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+<<<<<<< Updated upstream
 >>>>>>> shrreya/master
+=======
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -4369,6 +4375,7 @@
 </component>
 <component name="ExternalProjectsManager">
     <system id="GRADLE">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <state>
         <projects_view />
@@ -4471,6 +4478,25 @@
             </projects_view>
         </state>
     </system>
+=======
+        <state>
+            <projects_view>
+                <tree_state>
+                    <PATH>
+                        <PATH_ELEMENT>
+                            <option name="myItemId" value="" />
+                            <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+                        </PATH_ELEMENT>
+                        <PATH_ELEMENT>
+                            <option name="myItemId" value="StartupMitra" />
+                            <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+                        </PATH_ELEMENT>
+                    </PATH>
+                </tree_state>
+            </projects_view>
+        </state>
+    </system>
+>>>>>>> Stashed changes
 </component>
 <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -4591,7 +4617,10 @@
                 </provider>
             </entry>
         </file>
+<<<<<<< Updated upstream
 >>>>>>> shrreya/master
+=======
+>>>>>>> Stashed changes
     </leaf>
 </component>
 <component name="FileTemplateManagerImpl">
@@ -7261,6 +7290,7 @@
 </component>
 <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add__numbers.xml" />
@@ -7317,6 +7347,34 @@
 </component>
 <component name="ProjectInspectionProfilesVisibleTreeState">
 >>>>>>> shrreya/master
+=======
+        <list>
+            <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add__numbers.xml" />
+            <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_mobile_otp.xml" />
+            <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_set_language.xml" />
+            <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+            <option value="$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/ShowActivity.java" />
+            <option value="$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/MyApplication.java" />
+            <option value="$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/Fragments/ImageAdapter.java" />
+            <option value="$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/Fragments/Scheme.java" />
+            <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_gridlayout.xml" />
+            <option value="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" />
+            <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+            <option value="$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/Fragments/FeedbackActivities/Govt_schemes.java" />
+            <option value="$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/HomeActivity/GovtSchemes.java" />
+            <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+            <option value="$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/Addnums.java" />
+            <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_scheme_gridlayout.xml" />
+        </list>
+    </option>
+</component>
+<component name="ProjectFrameBounds">
+    <option name="y" value="-4" />
+    <option name="width" value="1366" />
+    <option name="height" value="772" />
+</component>
+<component name="ProjectInspectionProfilesVisibleTreeState">
+>>>>>>> Stashed changes
     <entry key="Project Default">
         <profile-state>
             <expanded-state>
@@ -7353,6 +7411,7 @@
         <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <pane id="Scratches" />
       <pane id="AndroidView">
@@ -7594,6 +7653,8 @@
       </pane>
       <pane id="PackagesPane" />
 =======
+=======
+>>>>>>> Stashed changes
         <pane id="Scratches" />
         <pane id="ProjectPane" />
         <pane id="PackagesPane" />
@@ -7858,7 +7919,10 @@
             </subPane>
         </pane>
         <pane id="Scope" />
+<<<<<<< Updated upstream
 >>>>>>> shrreya/master
+=======
+>>>>>>> Stashed changes
     </panes>
 </component>
 <component name="PropertiesComponent">
@@ -7871,12 +7935,22 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.teamshunya.silencio.Activities.ShowActivity.Fragments" />
+=======
+</component>
+<component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+        <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+        <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v21" />
     </key>
+>>>>>>> Stashed changes
+    <key name="CreateClassDialog.RecentsKey">
+        <recent name="com.teamshunya.silencio.Activities.ShowActivity.Fragments" />
+    </key>
+<<<<<<< Updated upstream
 =======
 </component>
 <component name="RecentsManager">
@@ -7895,6 +7969,10 @@
 </component>
 <component name="RunDashboard">
 >>>>>>> shrreya/master
+=======
+</component>
+<component name="RunDashboard">
+>>>>>>> Stashed changes
     <option name="ruleStates">
         <list>
             <RuleState>
@@ -7958,6 +8036,7 @@
         </method>
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -8101,6 +8180,56 @@
         </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
+=======
+        <module name="" />
+        <option name="DEPLOY" value="true" />
+        <option name="ARTIFACT_NAME" value="" />
+        <option name="PM_INSTALL_OPTIONS" value="" />
+        <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+        <option name="MODE" value="default_activity" />
+        <option name="CLEAR_LOGCAT" value="false" />
+        <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+        <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+        <option name="FORCE_STOP_RUNNING_APP" value="true" />
+        <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+        <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+        <option name="PREFERRED_AVD" value="" />
+        <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+        <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+        <option name="DEBUGGER_TYPE" value="Auto" />
+        <Auto>
+            <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+            <option name="SHOW_STATIC_VARS" value="true" />
+            <option name="WORKING_DIR" value="" />
+            <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+            <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        </Auto>
+        <Hybrid>
+            <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+            <option name="SHOW_STATIC_VARS" value="true" />
+            <option name="WORKING_DIR" value="" />
+            <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+            <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        </Hybrid>
+        <Java />
+        <Native>
+            <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+            <option name="SHOW_STATIC_VARS" value="true" />
+            <option name="WORKING_DIR" value="" />
+            <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+            <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        </Native>
+        <Profilers>
+            <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        </Profilers>
+        <option name="DEEP_LINK" value="" />
+        <option name="ACTIVITY_CLASS" value="" />
+        <method>
+            <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521791561232" />
+        </method>
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
+>>>>>>> Stashed changes
         <module name="" />
         <option name="TESTING_TYPE" value="0" />
         <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
@@ -8146,7 +8275,10 @@
         <method>
             <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521791561232" />
         </method>
+<<<<<<< Updated upstream
 >>>>>>> shrreya/master
+=======
+>>>>>>> Stashed changes
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
         <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -8286,6 +8418,7 @@
         <method />
     </configuration>
     <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <module name="app" />
       <option name="DEPLOY" value="true" />
@@ -8334,6 +8467,8 @@
         <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521882645858" />
       </method>
 =======
+=======
+>>>>>>> Stashed changes
         <module name="app" />
         <option name="DEPLOY" value="true" />
         <option name="ARTIFACT_NAME" value="" />
@@ -8380,7 +8515,10 @@
         <method>
             <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521791561234" />
         </method>
+<<<<<<< Updated upstream
 >>>>>>> shrreya/master
+=======
+>>>>>>> Stashed changes
     </configuration>
     <list size="2">
         <item index="0" class="java.lang.String" itemvalue="Android App.app" />
@@ -8433,6 +8571,7 @@
     <history-entry file="drawable-v21_in_app - 2018.03.22 at 20h 26m 03s.xml">
         <configuration name="drawable-v21 in app" configurationId="AndroidJUnit" />
     </history-entry>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   </component>
   <component name="ToolWindowManager">
@@ -8499,6 +8638,12 @@
 <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
     <layout>
+=======
+</component>
+<component name="ToolWindowManager">
+    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
+    <layout>
+>>>>>>> Stashed changes
         <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
         <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
         <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
@@ -8531,7 +8676,10 @@
         <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
         <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
         <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+<<<<<<< Updated upstream
 >>>>>>> shrreya/master
+=======
+>>>>>>> Stashed changes
     </layout>
 </component>
 <component name="Vcs.Log.Tabs.Properties">
@@ -8566,10 +8714,13 @@
 <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   </component>
   <component name="editorHistoryManager">
 =======
+=======
+>>>>>>> Stashed changes
 </component>
 <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values-hi/strings.xml">
@@ -8579,7 +8730,10 @@
             </state>
         </provider>
     </entry>
+<<<<<<< Updated upstream
 >>>>>>> shrreya/master
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_set_language.xml">
         <provider selected="true" editor-type-id="android-designer2">
             <state />
@@ -8615,6 +8769,7 @@
         </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/Fragments/Feedback.java">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -8622,6 +8777,8 @@
         </state>
       </provider>
 =======
+=======
+>>>>>>> Stashed changes
         <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
                 <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
@@ -8630,7 +8787,10 @@
                 </folding>
             </state>
         </provider>
+<<<<<<< Updated upstream
 >>>>>>> shrreya/master
+=======
+>>>>>>> Stashed changes
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/Fragments/DealsFragment.java">
         <provider selected="true" editor-type-id="text-editor">
@@ -8649,6 +8809,7 @@
                 <folding />
             </state>
         </provider>
+<<<<<<< Updated upstream
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/BottomNavigationViewHelper.java">
 <<<<<<< HEAD
@@ -8679,6 +8840,30 @@
             </state>
         </provider>
     </entry>
+=======
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/BottomNavigationViewHelper.java">
+        <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+                <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+                <folding>
+                    <element signature="imports" expanded="false" />
+                </folding>
+            </state>
+        </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu.xml">
+        <provider selected="true" editor-type-id="android-designer2">
+            <state />
+        </provider>
+        <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+            </state>
+        </provider>
+    </entry>
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_menu.xml">
         <provider editor-type-id="android-designer2">
             <state />
@@ -8762,6 +8947,7 @@
         </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -8784,6 +8970,16 @@
         </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml">
+=======
+        <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+                <caret line="10" column="12" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="10" selection-end-column="12" />
+                <folding />
+            </state>
+        </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml">
+>>>>>>> Stashed changes
         <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
                 <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
@@ -8801,10 +8997,14 @@
                 <folding />
             </state>
         </provider>
+<<<<<<< Updated upstream
 >>>>>>> shrreya/master
+=======
+>>>>>>> Stashed changes
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_gridlayout.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/MyApplication.java">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -8812,6 +9012,8 @@
         </state>
       </provider>
 =======
+=======
+>>>>>>> Stashed changes
         <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
                 <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
@@ -8829,10 +9031,14 @@
                 <folding />
             </state>
         </provider>
+<<<<<<< Updated upstream
 >>>>>>> shrreya/master
+=======
+>>>>>>> Stashed changes
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
     <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -8867,6 +9073,46 @@
           <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
         </state>
       </provider>
+=======
+        <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+            </state>
+        </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+        <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+            </state>
+        </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+        <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+                <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+                <folding />
+            </state>
+        </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.properties">
+        <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+            </state>
+        </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+        <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-581">
+                <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+                <folding />
+            </state>
+        </provider>
+>>>>>>> Stashed changes
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v21/001-plant.png" />
 =======
@@ -8940,6 +9186,7 @@
         </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/Fragments/Profile.java">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -8962,6 +9209,16 @@
         </provider>
     </entry>
     <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-25/android.jar!/android/app/Fragment.class">
+=======
+        <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+                <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+                <folding />
+            </state>
+        </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-25/android.jar!/android/app/Fragment.class">
+>>>>>>> Stashed changes
         <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="134">
                 <caret line="265" column="16" lean-forward="false" selection-start-line="265" selection-start-column="16" selection-end-line="265" selection-end-column="16" />
@@ -8976,7 +9233,10 @@
                 <folding />
             </state>
         </provider>
+<<<<<<< Updated upstream
 >>>>>>> shrreya/master
+=======
+>>>>>>> Stashed changes
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/Fragments/FeedbackActivities/Govt_schemes.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v21/arrow.png">
@@ -9000,6 +9260,7 @@
         </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/WelcomeActivity.java">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -9007,13 +9268,18 @@
         </state>
       </provider>
 =======
+=======
+>>>>>>> Stashed changes
         <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
                 <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
                 <folding />
             </state>
         </provider>
+<<<<<<< Updated upstream
 >>>>>>> shrreya/master
+=======
+>>>>>>> Stashed changes
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_feedback.xml">
         <provider editor-type-id="android-designer2">
@@ -9026,8 +9292,11 @@
             </state>
         </provider>
     </entry>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/Fragments/FeedbackActivities/FeedbackActivity.java">
         <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1278">
@@ -9054,6 +9323,7 @@
         </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
@@ -9061,6 +9331,8 @@
         </state>
       </provider>
 =======
+=======
+>>>>>>> Stashed changes
         <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="422">
                 <caret line="116" column="18" lean-forward="false" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
@@ -9080,7 +9352,10 @@
                 <folding />
             </state>
         </provider>
+<<<<<<< Updated upstream
 >>>>>>> shrreya/master
+=======
+>>>>>>> Stashed changes
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v21/calendar.png" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/Fragments/Scheme.java" />
@@ -9104,6 +9379,7 @@
         </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/HomeActivity/GovtSchemes.java">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -9206,4 +9482,41 @@
     </entry>
 </component>
 >>>>>>> shrreya/master
+=======
+        <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+                <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+                <folding>
+                    <element signature="imports" expanded="true" />
+                </folding>
+            </state>
+        </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/teamshunya/silencio/Activities/ShowActivity/ShowActivity.java">
+        <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+                <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+                <folding />
+            </state>
+        </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_scheme_gridlayout.xml">
+        <provider editor-type-id="android-designer2">
+            <state />
+        </provider>
+        <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+                <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+                <folding>
+                    <element signature="e#1546#2983#0" expanded="false" />
+                    <element signature="e#1933#2933#0" expanded="false" />
+                    <element signature="e#4476#7588#0" expanded="false" />
+                    <element signature="e#7597#10719#0" expanded="false" />
+                    <element signature="e#12386#13825#0" expanded="false" />
+                </folding>
+            </state>
+        </provider>
+    </entry>
+</component>
+>>>>>>> Stashed changes
 </project>

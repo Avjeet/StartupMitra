@@ -27,9 +27,7 @@ import com.clevertap.android.sdk.exceptions.CleverTapPermissionsNotSatisfied;
 import com.teamshunya.silencio.Activities.ShowActivity.Fragments.HomeProfile;
 import com.teamshunya.silencio.Activities.ShowActivity.Fragments.RecommendorFragment;
 
-import com.teamshunya.silencio.Activities.ShowActivity.Fragments.RecommendorFragment;
 
-import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Cabs;
 import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Weather;
 import com.teamshunya.silencio.Classes.CustomFontTextView;
 import com.teamshunya.silencio.Classes.StoreSession;
@@ -170,6 +168,9 @@ public class ShowActivity extends AppCompatActivity {
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
         transaction.add(R.id.main_container, fragment).commit();
+
+
+
     }
 
     @Override
