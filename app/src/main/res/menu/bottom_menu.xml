@@ -7,7 +7,7 @@
         android:title="@string/schemes"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@drawable/car">
+        android:icon="@drawable/schemes">
     </item>
 
 
@@ -16,15 +16,18 @@
         android:title="@string/home"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@drawable/dep">
+        android:icon="@drawable/home">
     </item>
 
     <item
-        android:id="@+id/action_profile"
+
+
+
+        android:id="@+id/action_homeProfile"
         android:title="@string/profile"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@drawable/feedbackimage" />
+        android:icon="@drawable/profile" />
 
 
 </menu>

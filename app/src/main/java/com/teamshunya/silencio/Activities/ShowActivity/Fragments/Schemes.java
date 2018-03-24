@@ -40,8 +40,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class Schemes extends Fragment  {
 
+public class Schemes extends Fragment {
 
     public Schemes() {
 
@@ -54,7 +54,9 @@ public class Schemes extends Fragment  {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_blank, container, false);
+
+        return inflater.inflate(R.layout.activity_scheme_gridlayout, container, false);
+
     }
 
     @Override
@@ -62,17 +64,11 @@ public class Schemes extends Fragment  {
         super.onViewCreated(view, savedInstanceState);
 
 
-
-
     }
-
-
-
-
-
-
-
 }
+
+
+
 
 
 

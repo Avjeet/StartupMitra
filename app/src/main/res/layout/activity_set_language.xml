@@ -75,7 +75,7 @@
                 android:layout_alignStart="@+id/linearLayout"
                 android:layout_below="@+id/linearLayout"
                 android:layout_marginTop="24dp"
-                android:text="Gujarati" />
+                android:text="@string/gujarati" />
         </RadioGroup>
     </LinearLayout>
 

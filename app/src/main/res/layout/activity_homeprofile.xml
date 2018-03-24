@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <!--<ImageView-->
+        <!--android:id="@+id/cover"-->
+        <!--style="@style/Cover"-->
+        <!--android:src="@drawable/profileimage" />-->
+
+
+        <LinearLayout
+            android:background="@color/tw__light_gray"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="@dimen/profile_picture_size"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profileimage" />
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/Name"
+                android:paddingTop="10dp"
+                android:text="Shrreya Behll" />
+
+            <TextView
+                android:id="@+id/phone_no"
+                style="@style/SubTitle"
+                android:text="+91 98XXXXXXXX" />
+
+            <TextView
+                android:id="@+id/email"
+                style="@style/SubTitle"
+                android:text="shrreya.behll@gmail.com" />
+
+
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/app_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/social_media_driver"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                   <android.support.v7.widget.CardView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginBottom="5dp"
+                       app:cardCornerRadius="10dp">
+
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:padding="5dp">
+
+
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_centerVertical="true"
+                               android:orientation="vertical">
+
+
+                               <RelativeLayout
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                  >
+
+                                   <TextView
+                                       android:id="@+id/startup_no1"
+                                       style="@style/Name"
+                                       android:layout_width="wrap_content"
+                                       android:layout_alignParentLeft="true"
+                                       android:text="@string/startup_name"
+                                       android:layout_marginBottom="10dp"/>
+
+                                   <TextView
+                                       android:id="@+id/viewMore1"
+                                       style="@style/ViewMore"
+                                       android:layout_width="wrap_content"
+                                       android:layout_alignParentRight="true"
+                                       android:text="View More>>" />
+                               </RelativeLayout>
+
+                               <View
+                                   android:layout_width="match_parent"
+                                   android:layout_height="2dp"
+                                   android:background="@drawable/ic_cast_grey"/>
+
+                               <TextView
+                                   android:id="@+id/startup_id1"
+                                   style="@style/TextLabel"
+                                   android:gravity="left"
+                                   android:layout_marginTop="10dp"
+                                   android:layout_marginBottom="5dp"
+                                   android:text="@string/startup_id" />
+
+                               <TextView
+                                   android:id="@+id/aadhar_verified1"
+                                   style="@style/TextLabel"
+                                   android:gravity="left"
+
+                                   android:paddingBottom="5dp"
+                                   android:text="Aadhar Verfied" />
+
+
+                           </LinearLayout>
+                       </RelativeLayout>
+                   </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:orientation="vertical">
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/startup_no2"
+                                        style="@style/Name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:text="@string/startup_name"
+                                        android:layout_marginBottom="10dp"/>
+
+                                    <TextView
+                                        android:id="@+id/viewMore2"
+                                        style="@style/ViewMore"
+                                        android:layout_width="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:text="View More>>" />
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@drawable/ic_cast_grey"/>
+
+                                <TextView
+                                    android:id="@+id/startup_id2"
+                                    style="@style/TextLabel"
+                                    android:gravity="left"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:text="@string/startup_id" />
+
+                                <TextView
+                                    android:id="@+id/aadhar_verified2"
+                                    style="@style/TextLabel"
+                                    android:gravity="left"
+
+                                    android:paddingBottom="5dp"
+                                    android:text="Aadhar Verfied" />
+
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="5dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:orientation="vertical">
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/startup_no3"
+                                        style="@style/Name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:text="@string/startup_name"
+                                        android:layout_marginBottom="10dp"/>
+
+                                    <TextView
+                                        android:id="@+id/viewMore3"
+                                        style="@style/ViewMore"
+                                        android:layout_width="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:text="View More>>" />
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@drawable/ic_cast_grey"/>
+
+                                <TextView
+                                    android:id="@+id/startup_id3"
+                                    style="@style/TextLabel"
+                                    android:gravity="left"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:text="@string/startup_id" />
+
+                                <TextView
+                                    android:id="@+id/aadhar_verified3"
+                                    style="@style/TextLabel"
+                                    android:gravity="left"
+
+                                    android:paddingBottom="5dp"
+                                    android:text="Aadhar Verfied" />
+
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</android.support.v7.widget.CardView>

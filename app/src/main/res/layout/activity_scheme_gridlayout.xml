@@ -4,10 +4,11 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:weightSum="10">
+    android:weightSum="10"
+    >
 
     <RelativeLayout
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
@@ -26,17 +27,17 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="8"
+            android:layout_weight="9"
             >
 
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
+
         android:columnCount="1"
         android:columnOrderPreserved="false"
-        android:alignmentMode="alignMargins"
+
         android:rowCount="4"
         >
 
@@ -47,14 +48,16 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:gravity="center_horizontal"
-            android:padding="20dp">
+            android:padding="20dp"
+            >
 
             <android.support.v7.widget.CardView
-                android:background="@color/authui_colorPrimaryDark"
+
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="100dp"
                 android:layout_marginRight="30dp"
+                android:background="@color/authui_colorPrimaryDark"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
@@ -86,7 +89,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="100dp"
-                android:layout_marginRight="30dp"
+
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
@@ -160,7 +163,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="100dp"
-                android:layout_marginRight="30dp"
+
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
@@ -234,7 +237,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="100dp"
-                android:layout_marginRight="30dp"
+
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
@@ -308,7 +311,6 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="100dp"
-                android:layout_marginRight="30dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 

@@ -24,10 +24,10 @@ import com.clevertap.android.sdk.exceptions.CleverTapMetaDataNotFoundException;
 import com.clevertap.android.sdk.exceptions.CleverTapPermissionsNotSatisfied;
 
 
-
+import com.teamshunya.silencio.Activities.ShowActivity.Fragments.HomeProfile;
 import com.teamshunya.silencio.Activities.ShowActivity.Fragments.RecommendorFragment;
 
-import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Cabs;
+
 import com.teamshunya.silencio.Activities.ShowActivity.SwipableLayout.Weather;
 import com.teamshunya.silencio.Classes.CustomFontTextView;
 import com.teamshunya.silencio.Classes.StoreSession;
@@ -35,7 +35,6 @@ import com.teamshunya.silencio.R;
 
 import com.teamshunya.silencio.Activities.ShowActivity.Fragments.Schemes;
 
-import com.teamshunya.silencio.Activities.ShowActivity.Fragments.Profile;
 
 public class ShowActivity extends AppCompatActivity {
     private Fragment fragment;
@@ -61,7 +60,7 @@ public class ShowActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.enter_from_left, R.anim.exit_to_right);
         setContentView(R.layout.activity_show);
-        launchHome();
+        launchSchemes();
         toolbar();
         //open app
         toolbar_title = (CustomFontTextView) findViewById(R.id.toolbar_title);
@@ -69,11 +68,12 @@ public class ShowActivity extends AppCompatActivity {
         bottomNavigation.inflateMenu(R.menu.bottom_menu);
         fragmentManager = getSupportFragmentManager();
         BottomNavigationViewHelper.disableShiftMode(bottomNavigation);
-        bottomNavigation.getMenu().getItem(2).setChecked(true);
-        selectedMenu = bottomNavigation.getMenu().getItem(2).getItemId();
+        bottomNavigation.getMenu().getItem(0).setChecked(true);
+        selectedMenu = bottomNavigation.getMenu().getItem(0).getItemId();
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                CharSequence title=item.getTitle();
                 int id = item.getItemId();
                 if (selectedMenu == id)
                     return true;
@@ -84,13 +84,14 @@ public class ShowActivity extends AppCompatActivity {
                     case R.id.action_home:
                         fragment = new RecommendorFragment();
                         break;
-                    case R.id.action_profile:
-                        fragment = new Cabs();
+                    case R.id.action_homeProfile:
+                        fragment =new HomeProfile();
                         break;
                 }
                 selectedMenu = id;
                 final FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.main_container, fragment).commit();
+                toolbar_title.setText(title);
                 return true;
             }
         });
@@ -161,12 +162,15 @@ public class ShowActivity extends AppCompatActivity {
 
     }
 
-    private void launchHome() {
+    private void launchSchemes() {
         fragment = new Schemes();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
         transaction.add(R.id.main_container, fragment).commit();
+
+
+
     }
 
     @Override
@@ -197,7 +201,7 @@ public class ShowActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.menu_profile:
-                                Fragment fragment = new Profile();
+                                Fragment fragment = new HomeProfile();
                                 FragmentManager manager = getSupportFragmentManager();
                                 FragmentTransaction transaction = manager.beginTransaction();
                                 transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left);
