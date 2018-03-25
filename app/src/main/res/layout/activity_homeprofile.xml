@@ -72,7 +72,8 @@ android:layout_height="wrap_content">
             android:background="@drawable/social_media_driver"
             android:gravity="center"
             android:orientation="vertical"
-            android:paddingTop="10dp">
+            android:paddingTop="10dp"
+            android:backgroundTint="@color/bg_screen2">
 
             <RelativeLayout
                 android:layout_width="match_parent"

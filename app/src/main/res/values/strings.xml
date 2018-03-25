@@ -35,8 +35,8 @@
     <string name="claening">Cleanliness of Airport Terminal</string>
     <string name="aval">Availability of Bank/Atm Facilities/Money Changers</string>
     <string name="Complain">Complain</string>
-    <string name="suggestion">Suggestion</string>
-    <string name="appreciation">Appreciation</string>
+    <string name="suggestion">Suggestions</string>
+    <string name="registerStartup">Register Your Startup</string>
     <string name="writeSuggestion">Enter your Suggestion!</string>
     <string name="writeAppreciation">Write your appreciation comments here</string>
     <string name="aname">Airport Name</string>

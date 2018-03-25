@@ -1,35 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@color/bg_screen2"
+    android:layout_weight="2">>
 
-    <RelativeLayout
-        android:layout_weight="2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp">
-
-
-        <TextView
-            android:id="@+id/Relative_Profiletext"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Looks like you haven't registered your StartUp yet!"
-            android:textAlignment="center"
-            android:textColor="@android:color/background_dark"
-            android:textSize="34sp"/>
-
-        <Button
-            android:id="@+id/button_registerStartup"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="152dp"
-            android:text="Register Your Startup" />
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/car"/>
+
+            <TextView
+                android:id="@+id/Relative_Profiletext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Looks like you haven't registered your StartUp yet!"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/slide_title"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_registerStartup"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="50dp"
+                android:text="Register Your Startup"
+                android:textSize="15dp"
+                android:background="@color/white"/>
+
+
+        </LinearLayout>
+
+
+
 
 
     </RelativeLayout>
-</android.support.constraint.ConstraintLayout>
