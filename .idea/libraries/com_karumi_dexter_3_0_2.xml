@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.karumi:dexter-3.0.2">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/7d2bd8766931ebd947798b1342bcf4469b122485/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/7d2bd8766931ebd947798b1342bcf4469b122485/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/3cef617446b8c22494ccbddcf796bb14dd92bc97/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/3cef617446b8c22494ccbddcf796bb14dd92bc97/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
